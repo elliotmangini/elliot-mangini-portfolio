@@ -15,7 +15,7 @@ export default function Elliot () {
             languages: ["React", "Ruby on Rails", "CSS"],
             timeframe: "Three Weeks - Nov. 2022",
             tagline: "Collaborative Engine",
-            body: "Planetariyum is a social platform for creators featuring a digital asset marketplace wrapped in a mini-game.",
+            body: "alskdjfalksjdf. Planetariyum is a social platform for creators featuring a digital asset marketplace wrapped in a mini-game.",
             route: "planetariyum",
         },
         {
