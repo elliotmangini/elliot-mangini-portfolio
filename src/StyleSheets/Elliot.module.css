@@ -156,11 +156,9 @@ input[type="checkbox"]:not(:checked) ~ div {
 .project_title_basic {
   /* border: .2rem solid red; */
   transform-origin: right;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  float: right;
-  text-align: right;
-  font-size: 7rem;
+  margin-top: 1.2vmax;
+  margin-bottom: 1.2vmax;
+  font-size: 5vmax;
   min-width: 0%;
   font-family: system-ui, sans-serif;
   font-weight: bold;

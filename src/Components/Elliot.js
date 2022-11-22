@@ -35,7 +35,7 @@ export default function Elliot () {
             route: "mountain",
         },
         {
-            title: "Foley Generator 3000!",
+            title: "Foley G-3000!",
             languages: ["Javascript", "CSS", "HTML"],
             timeframe: "One Week - Sept. 2022",
             tagline: "Concept To-Do",
@@ -46,7 +46,7 @@ export default function Elliot () {
             title: "174!",
             languages: ["Javascript", "CSS", "HTML"],
             timeframe: "Two Weeks - Aug 2022",
-            tagline: "Concept To-Do",
+            tagline: "Drum n Bass Sequencer",
             body: "174! is a step-sequencer drum machine built on vanilla Javascript.",
             route: "oneseventyfour",
         },
