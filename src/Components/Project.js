@@ -39,10 +39,6 @@ export default function ElliotProject ({ p, isClicked, setIsClicked, selectedPro
                 <Navigate to={`/${p.route}`} />
             : null}
 
-            { !isClicked ?
-            <h1 className={`${style.project_title_basic} ${style.absolute_title}`}><span>Elliot Mangini</span></h1>
-            : null }
-
             {/* BIG TITLES */}
             <div>
                 <div className={style.big_titles_container}>

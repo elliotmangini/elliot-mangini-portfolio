@@ -42,14 +42,14 @@ export default function Elliot () {
             body: "Minimalist To Do List with several experimental modes",
             route: "foley",
         },
-        {
-            title: "174!",
-            languages: ["Javascript", "CSS", "HTML"],
-            timeframe: "Two Weeks - Aug 2022",
-            tagline: "Drum n Bass Sequencer",
-            body: "174! is a step-sequencer drum machine built on vanilla Javascript.",
-            route: "oneseventyfour",
-        },
+        // {
+        //     title: "174!",
+        //     languages: ["Javascript", "CSS", "HTML"],
+        //     timeframe: "Two Weeks - Aug 2022",
+        //     tagline: "Drum n Bass Sequencer",
+        //     body: "174! is a step-sequencer drum machine built on vanilla Javascript.",
+        //     route: "oneseventyfour",
+        // },
     ]
 
     const projects = projectsData.map((p) => {
@@ -71,16 +71,6 @@ export default function Elliot () {
             </video>
             </div>
 
-            
-
-
-            {/* <div id={style.cog}>
-                <div className={style.glyphbar}></div>
-                <div className={style.glyphbar}></div>
-                <div className={style.glyphbar}></div>
-            </div> */}
-
-
             {/* { !isEntered ? */}
             {/* <li>
                 <input type="checkbox" />
@@ -90,8 +80,12 @@ export default function Elliot () {
 
 
             {/* { isEntered ? */}
-            <div className={style.projects_container}>
-                {projects}
+
+            <div className={style.reactive_width_container}>
+            <h1 className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title}`}><span>Elliot Mangini</span></h1>
+                <div className={`${style.add_drift_up} ${style.position_projects}`}>
+                    {projects}
+                </div>
             </div>
             {/* : null } */}
 
