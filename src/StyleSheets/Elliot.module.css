@@ -9,7 +9,7 @@
 .elliot {
   margin: 0px;
   overflow: hidden;
-  height:100vh;
+  /* height:100vh; */
   overflow-y: scroll;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -19,6 +19,7 @@
   user-select: none;
 
   --txt: hotpink;
+  --midtxt: rgb(189, 75, 132);
   --dimtxt: rgb(155, 62, 109);
   --bkg: #14151a;
 
@@ -112,28 +113,25 @@ input[type="checkbox"]:not(:checked) ~ div {
 
 .big_titles_container {
   /* border: 2px solid red; */
-  width: 90%;
-  height: 100%;
+  width: 100%;
+  /* height: 100%; */
   position: relative;
-  margin: auto;
+  /* margin: auto; */
   display: flex;
   justify-content: right;
-  right: 0%;
+  right: 7%;
 }
 
-.project_container {
+.projects_container {
   /* border: .2rem solid red; */
-  height: 10rem;
-  /* top: 12%;
-  right: 10%; */
-  /* POSSIBLE PROBLEM HERE */
-  /* position: relative; */
-  /* top: 20%; */
-  right: 0%;
-  padding-top: 10rem;
+  /* position: fixed; */
+  /* height: 10rem; */
+  padding-top: 22vh;
   width: 100%;
-  height: 100%;
-  margin: 0;
+  max-width: calc(600px + 50vw);
+  margin: auto;
+  /* height: 100vh; */
+  /* margin: 0; */
   animation: driftup 1.5s ease-in-out forwards;
   -webkit-animation: driftup 1.5s ease-in-out forwards;
   transform: translateY(100%);
@@ -156,10 +154,11 @@ input[type="checkbox"]:not(:checked) ~ div {
 .project_title_basic {
   /* border: .2rem solid red; */
   transform-origin: right;
-  margin-top: 1.2vmax;
-  margin-bottom: 1.2vmax;
-  font-size: 5vmax;
-  min-width: 0%;
+  margin-top: 1.2vmin;
+  margin-bottom: 1.2vmin;
+  font-size:calc(12px + 5vmax);
+
+  /* min-width: 0%; */
   font-family: system-ui, sans-serif;
   font-weight: bold;
   -webkit-text-stroke-width: 0.05rem;
@@ -178,16 +177,17 @@ input[type="checkbox"]:not(:checked) ~ div {
 }
 
 .absolute_title {
-  text-align: right;
+  text-align: left;
   position: fixed;
-  width: 36rem;
+  width: 100vw;
   top: 9%;
-  left: 7%;
-  margin-right: 4rem;
+  left: 6%;
   animation: blurfadein 9s ease-in-out;
   transform-origin: left;
   animation-fill-mode: forwards;
   color: var(--txt);
+  font-size: calc(10px + 5vmax);
+
   /* border: .2rem solid red; */
 }
 
@@ -224,7 +224,7 @@ input[type="checkbox"]:not(:checked) ~ div {
 
 @keyframes swing_away {
   0% {
-    transform: perspective(40rem) rotateY(-8deg);
+    transform: perspective(40rem) rotateY(-9deg);
     opacity: 100%;
     filter: blur(0)
   }
@@ -262,19 +262,23 @@ input[type="checkbox"]:not(:checked) ~ div {
 .project_text_container {
   /* align-items: left; */
   position: fixed;
+  /* right: 10%; */
+  top: 75%;
   right: 10%;
-  top: 50%;
   border: .2rem solid transparent;
-  max-height: 0rem;
-  width: 36rem;
-  margin-left: -30rem;
+  /* max-height: 0rem; */
+  width: 100vw;
+  max-width: calc(21rem + 10vw);
+  /* height: fit-content; */
   /* border: .2rem solid red; */
 }
 
 .project_details {
   position: absolute;
   color: hotpink;
-  max-width: 37rem;
+  max-width: calc(21rem + 10vw);
+  right: 0%;
+  /* height: 100%; */
   border: .2rem solid transparent;
   /* border: .2rem solid red; */
 }
@@ -339,16 +343,17 @@ input[type="checkbox"]:not(:checked) ~ div {
 }
 
 .tagline {
+  font-size: calc(1.2rem + .5vw);
   position: relative;
   margin-bottom: 0;
   /* right: 5%; */
   text-align: left;
 }
 
-#thin_description_line {
+#thin_tagline_line {
   position: absolute;
   /* align-self: right; */
-  right: 2%;
+  right: 5%;
   margin-left: 3rem;
   margin-top: .3rem;
   margin-bottom: 1rem;
@@ -359,22 +364,21 @@ input[type="checkbox"]:not(:checked) ~ div {
   -webkit-transform: translateX(200%);
   animation: slide-in 1.5s ease-in-out forwards;
   -webkit-animation: slide-in 1.5s ease-in-out forwards;
+  /* border: 2px solid red; */
 }
 
-#timelang {
-  position: relative;
-  right: -2%;
-  display: inline-flex;
-  width: 37rem;
+#time_and_language {
+  display: flex;
+  /* width: 37rem; */
   /* height: 6rem; */
-  /* border: .2rem solid red; */
+  border: .2rem solid red;
   justify-content: flex-end;
 }
 
 .timeframe {
-  position: relative;
+  position: absolute;
   /* justify-content: right; */
-  font-size: 1.1rem;
+  font-size: calc(.6rem + .3vw);
   text-align: right;
   margin: 0;
   right: 3%;
@@ -385,24 +389,14 @@ input[type="checkbox"]:not(:checked) ~ div {
 .inline_block_p {
   position: relative;
   left: 0%;
-  /* top: 15%; */
-  /* right: -64%; */
-  /* display: inline-block; */
   justify-content: left;
-  /* margin-right: auto; */
-  margin-right: 1.3rem;
-  margin-top: .085rem;
   /* border: .2rem solid red; */
 }
 
 .language_p {
   position: relative;
-  /* left: 5%; */
   display: inline-block;
-  margin-top: -3rem;
-  /* margin: 0; */
-  font-size: .6rem;
-  /* border: .2rem solid red; */
+  font-size: calc(.5rem + .2vw);
 }
 
 #cog {
@@ -441,18 +435,70 @@ input[type="checkbox"]:not(:checked) ~ div {
   animation-fill-mode: forwards;
 }
 
+
+/* THIS IS PENTAGON CONTAINER */
+#up_pentagon_container {
+  position: absolute;
+  animation: fade-in 8s ease-in-out forwards;
+  /* border: .2rem solid red; */
+  /* bottom: 0%; */
+  top: 12%;
+  right: 3%;
+  width: 5rem;
+  /* height: 5rem; */
+  /* margin-top: -6%; */
+}
+
+#pentagon {
+  border-top: 2rem solid var(--midtxt);
+  animation: blinking .4 infinite;
+
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 4rem;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+}
+
+#pentagon:after{
+  position: absolute;
+  content: '';
+  border-bottom: 2rem solid var(--midtxt);
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  bottom: 2rem;
+  left: -1rem;
+}
+
+#triangle {
+  position: absolute;
+  top: -2rem;
+  left: 43%;
+  border: solid var(--bkg);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3.2px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
 .make_button_relative {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* height: fit-content; */
   /* border: 2px solid green; */
 }
 
 #back_arrow_container {
   position: absolute;
-  bottom: 0%;
+  bottom: -3;
   margin-bottom: 2rem;
   left: -1%;
-  border: 2px solid red;
+  z-index: 2;
+  /* border: 2px solid red; */
 }
 
 #back_arrow_container:hover #back_arrow_block {
@@ -486,32 +532,9 @@ input[type="checkbox"]:not(:checked) ~ div {
   border-right: 1.8rem solid var(--dimtxt);
 }
 
-/* THIS IS PENTAGON CONTAINER */
-#up_pentagon_container {
-  position: absolute;
-  animation: fade-in 8s ease-in-out forwards;
-  /* border: .2rem solid red; */
-  top: 0%;
-  right: 3%;
-  width: 5rem;
-  height: 5rem;
-}
-
 /* .blinking {
   animation: blinking .4;
 } */
-
-#triangle {
-  position: absolute;
-  top: 10%;
-  left: 43%;
-  border: solid var(--bkg);
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3.2px;
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-}
 
 @keyframes blinking {
   0% {
@@ -530,32 +553,6 @@ input[type="checkbox"]:not(:checked) ~ div {
     border-top: 2rem solid var(--bkg);
     border-bottom: 2rem solid var(--bkg);
   }
-}
-
-#pentagon {
-  border-top: 2rem solid var(--txt);
-  animation: blinking .4 infinite;
-
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  width: 4rem;
-  transform: translate(-50%, -50%);
-  height: 0;
-  width: 2rem;
-  border-left: 1rem solid transparent;
-  border-right: 1rem solid transparent;
-}
-
-#pentagon:after{
-  animation: blinking .4;
-  position: absolute;
-  content: '';
-  border-bottom: 2rem solid var(--txt);
-  border-left: 2rem solid transparent;
-  border-right: 2rem solid transparent;
-  bottom: 2rem;
-  left: -1rem;
 }
 
 @keyframes expand {

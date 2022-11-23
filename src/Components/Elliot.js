@@ -31,15 +31,15 @@ export default function Elliot () {
             languages: ["React", "CSS", "HTML"],
             timeframe: "One Week - Sept. 2022",
             tagline: "Concept To-Do",
-            body: "Planetariyum is a social platform for creators featuring a digital asset marketplace wrapped in a mini-game.",
+            body: "Minimalist To Do List with several experimental modes",
             route: "mountain",
         },
         {
-            title: "Foley G-3000!",
+            title: "Foley.G 3K!",
             languages: ["Javascript", "CSS", "HTML"],
             timeframe: "One Week - Sept. 2022",
             tagline: "Concept To-Do",
-            body: "Foley Generator 3000! is a reactive sound generator that uses speech-to-text synthesis to create ambient atmospheres in real time.",
+            body: "Minimalist To Do List with several experimental modes",
             route: "foley",
         },
         {
@@ -90,12 +90,12 @@ export default function Elliot () {
 
 
             {/* { isEntered ? */}
-            <div className={style.project_container}>
+            <div className={style.projects_container}>
                 {projects}
             </div>
             {/* : null } */}
 
-            <div id={style.overscroll}></div>
+            {/* <div id={style.overscroll}></div> */}
             
         </div>
         </>
