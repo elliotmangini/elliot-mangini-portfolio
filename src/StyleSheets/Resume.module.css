@@ -1,0 +1,69 @@
+.dev_box {
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+}
+
+.resume_container {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    width: 90%;
+    max-width: 900px;
+    height: 60%;
+    color: var(--txt);
+    font-size: 1.6vmin;
+
+    overflow: auto;
+}
+
+.scroll_paper {
+    border: 1px solid var(--txt);
+    border-radius: 1rem;
+}
+
+.resume_container span {
+    font-size: 2.9vmin;
+    /* font-weight: bold; */
+    color: var(--txt);
+    text-align: center;
+}
+
+.name {
+    font-size: 3.4vmin;
+    font-weight: bold;
+}
+
+.center_text {
+    text-align: center;
+}
+
+.header_box {
+    /* height: 10%; */
+    text-align: center;
+}
+
+.mission_box {
+    /* height: 14%; */
+    text-align: center;
+    width: 82%;
+    margin: auto;
+}
+
+.competencies_box {
+    /* height: 6%; */
+    text-align: center;
+}
+
+.projects_box {
+    /* height: 48%; */
+}
+
+.experience_box {
+    /* height: 8%; */
+}
+
+.education_box {
+    /* height: 14%; */
+}

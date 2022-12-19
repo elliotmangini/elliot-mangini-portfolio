@@ -22,7 +22,9 @@ export default function ElliotProject ({ p, isClicked, setIsClicked, selectedPro
     }
 
     function deselect () {
-        setGo(false);
+        // setGo(false);
+        setIsLeaving(false);
+        setIsClicked(false);
         setSelectedProject("");
     }
 
@@ -80,7 +82,7 @@ export default function ElliotProject ({ p, isClicked, setIsClicked, selectedPro
                             <div id={style.back_arrow_triangle}></div>
                         </div>
 
-                        <h1 onClick={() => animateAndNavigate()} className={`${style.project_title_basic} ${style.absolute_title}`}>{p.title}</h1>
+                        <h1 onClick={() => animateAndNavigate()} className={`${style.project_title_basic} ${style.selected_project} off_right`}>{p.title}</h1>
                     </>
                     // </div>
                     : null }
