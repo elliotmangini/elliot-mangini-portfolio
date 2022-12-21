@@ -101,6 +101,7 @@ body {
 
   height: 3vh;
   width: 26vmax;
+  min-width: 350px;
   /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
