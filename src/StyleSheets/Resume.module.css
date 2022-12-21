@@ -3,9 +3,14 @@
     /* border: 2px solid red; */
 }
 
+/* .fade_container {
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    -webkit-mask-image: -webkit-gradient(linear, right bottom, right top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+} */
+
 .resume_container {
     position: absolute;
-    top: 25%;
+    top: 18%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, 0%);
@@ -14,13 +19,47 @@
     height: 60%;
     color: var(--txt);
     font-size: 1.6vmin;
-
+    
     overflow: auto;
+    /* mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))); */
+    mask-image: linear-gradient(transparent 0%, black 12%, black 70%, transparent);
 }
 
 .scroll_paper {
+    background: black;
     border: 1px solid var(--txt);
     border-radius: 1rem;
+    box-sizing: border-box;
+    /* color: transparent; */
+    margin: 3vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    
+}
+
+.scroll_fade {
+    content: '';
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(251, 251, 251, 0) 100%);
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    width: 90%;
+    max-width: 900px;
+    height: 10%;
+    color: var(--txt);
+    font-size: 1.6vmin;
+    mix-blend-mode: darken;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    
+
+}
+
+.text_margin {
+    margin: 2vmin 4vmin 3vmin 4vmin;
 }
 
 .resume_container span {

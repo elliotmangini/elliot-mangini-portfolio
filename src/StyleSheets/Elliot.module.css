@@ -8,14 +8,15 @@
 
 body {
   overflow: hidden;
+  background-attachment: fixed;
 
 }
 
 .elliot {
   margin: 0px;
-  overflow: hidden;
-  height:100vh;
-  width: 100vw;
+  /* overflow: hidden; */
+  height:101vh;
+  width: 101vw;
   /* overflow-y: scroll; */
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -33,6 +34,13 @@ body {
   align-content: center;
   /* position: absolute; */
 
+}
+
+h1 span {
+  font-size: 2rem;
+  /* color: var(--txt); */
+  font-size: calc(10px + 2vmax);
+  margin-left: 3vmin;
 }
 
 #cover {
@@ -62,12 +70,17 @@ body {
   z-index: -100;
 }
 
-#darken {
+.darken {
   position: fixed;
   width: 500rem;
   height: 500rem;
   background-color: black;
-  opacity: .70;
+  opacity: .7;
+  transition: opacity 1s ease-in-out;
+}
+
+.darkenest {
+  opacity: 1;
 }
 
 .dynamic_squares_container {
@@ -93,6 +106,7 @@ body {
 }
 
 .social_icons_container {
+  opacity: .7;
   position: absolute;
   bottom: calc(1.5vw + 3.5vh);
   left: 50%;
@@ -100,15 +114,15 @@ body {
   transform: translate(-50%, -50%);
 
   height: 3vh;
-  width: 26vmax;
-  min-width: 350px;
+  width: 32vmax;
+  min-width: 250px;
   /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
 }
 
 .social_icon_container {
-  width: 8.6vmin;
+  width: 8vmin;
   max-width: 4rem;
 }
 
@@ -124,7 +138,8 @@ body {
 }
 
 .social_icon:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
+  opacity: .85;
 }
 
 .fill_square {
@@ -187,7 +202,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   /* margin: auto; */
   display: flex;
   justify-content: right;
-  right: 7%;
+  right: 8%;
 }
 
 .add_drift_up {
@@ -216,12 +231,12 @@ input[type="checkbox"]:not(:checked) ~ div {
   transform-origin: right;
   margin-top: 1.2vmin;
   margin-bottom: 1.2vmin;
-  font-size:calc(12px + 5vmax);
+  font-size:calc(12px + 4vmax);
 
   /* min-width: 0%; */
   font-family: system-ui, sans-serif;
   font-weight: bold;
-  -webkit-text-stroke-width: 0.05rem;
+  -webkit-text-stroke-width: 0.04rem;
   -webkit-text-stroke-color: var(--txt);
   transition: transform 500ms;
 }
@@ -240,13 +255,54 @@ input[type="checkbox"]:not(:checked) ~ div {
   /* text-align: right; */
   position: absolute;
   /* width: 100vw; */
-  top: 9%;
+  top: 5%;
   left: 6%;
   animation: blurfadein 9s ease-in-out;
   transform-origin: left;
   animation-fill-mode: forwards;
+  /* color: var(--bkg); */
   color: var(--txt);
   font-size: calc(10px + 5vmax);
+  /* line-height: 5vmin; */
+}
+
+.absolute_title span {
+  color: var(--dimtxt);
+  display: block;
+}
+
+.stay_on_bottom {
+  position: fixed;
+  top: 45%;
+  left: 0px;
+  height: 30vh;
+  width: 100%;
+  /* border: 2px solid red; */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.video_container {
+  position: absolute;
+  width: 48vmax;
+  margin: auto;
+  height: 30px;
+}
+
+.delay_fade {
+  opacity: 0%;
+  animation: fade-in 1s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.ink {
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  opacity: 100%;
+  /* animation: fade-in 1s ease-in-out forwards;
+  animation-delay: 3s; */
 }
 
 .selected_project {
@@ -254,20 +310,31 @@ input[type="checkbox"]:not(:checked) ~ div {
   text-align: center;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* border: 2px solid red; */
   left: 0%;
   width: 100%;
-  bottom: -30vh;
-  animation: slide-in 3.5s ease-in-out forwards;
+  height: 40vh;
+  /* animation: slide-in 3.5s ease-in-out forwards; */
+  color: rgb(255, 255, 255);
+  background-color: black;
+  mix-blend-mode: multiply;
+  margin: 0;
+  opacity: 100%;
+  -webkit-text-stroke-width: 0.05rem;
+  -webkit-text-stroke-color: black;
+}
+
+@keyframes special-fade {
+  0% {
+    color: black;
+  }
+  100% {
+    color: white;
+  }
 }
 
 .name_plate {
   animation-delay: -4s;
-}
-
-.absolute_title:hover {
-  /* color: var(--bkg); */
+  position:
 }
 
 @keyframes blurfadein {
@@ -346,16 +413,18 @@ input[type="checkbox"]:not(:checked) ~ div {
 .position_projects {
   position: absolute;
   right: 0%;
-  top: 19.5vh;
   width: 100%;
+  height: 100%;
+  top: 19vh;
 }
 
 .project_text_container {
   position: absolute;
-  top: 75%;
+  top: 20%;
   right: 10%;
   border: .2rem solid transparent;
   width: 100vw;
+  height: 100vh;
   max-width: calc(21rem + 10vw);
   /* border: .2rem solid red; */
 }
@@ -365,8 +434,8 @@ input[type="checkbox"]:not(:checked) ~ div {
   color: hotpink;
   max-width: calc(21rem + 10vw);
   right: 0%;
-  height: 100%;
-  border: .2rem solid transparent;
+  height: 100vh;
+  /* border: .2rem solid transparent; */
   /* border: .2rem solid red; */
 }
 
@@ -418,6 +487,12 @@ input[type="checkbox"]:not(:checked) ~ div {
 
 .fade_in {
   animation: fade-in 1s ease-in-out forwards;
+}
+
+.fade_in_6 {
+  animation: fade-in 6s ease-in-out forwards;
+  animation-delay: 3s;
+  opacity: 0%;
 }
 
 @keyframes fade-in {
