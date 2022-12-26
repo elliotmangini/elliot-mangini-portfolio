@@ -100,7 +100,7 @@ export default function Elliot () {
             {/* { isEntered ? */}
 
             <div className={style.reactive_width_container}>
-            <h1 className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title}`}>Elliot Mangini<span>Software Developer ::</span></h1>
+            <h1 className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title}`}>Elliot Mangini<span>Software Engineer ::</span></h1>
                 <div className={`${style.add_drift_up} ${style.position_projects}`}>
                     {projects}
                 </div>

@@ -495,6 +495,12 @@ input[type="checkbox"]:not(:checked) ~ div {
   opacity: 0%;
 }
 
+.fade_in_2 {
+  animation: fade-in 2s ease-in-out forwards;
+  animation-delay: 1s;
+  opacity: 0%;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0%;

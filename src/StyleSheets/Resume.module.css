@@ -10,13 +10,13 @@
 
 .resume_container {
     position: absolute;
-    top: 18%;
+    top: calc(10% + 8vmax);
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, 0%);
     width: 90%;
     max-width: 900px;
-    height: 60%;
+    height: 63%;
     color: var(--txt);
     font-size: 1.6vmin;
     
@@ -32,7 +32,7 @@
     box-sizing: border-box;
     /* color: transparent; */
     margin: 3vh;
-    margin-top: 10vh;
+    margin-top: 5vh;
     margin-bottom: 10vh;
     
 }

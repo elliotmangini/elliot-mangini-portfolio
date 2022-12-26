@@ -10,8 +10,8 @@ export default function ElliotProject ({ p, isClicked, setIsClicked, selectedPro
     const [ isLeaving, setIsLeaving ] = useState(false);
 
     function animate () {
-        setSelectedProject(p.title);
         setIsClicked(true);
+        setSelectedProject(p.title);
     }
 
     function animateAndNavigate() {
@@ -62,7 +62,7 @@ export default function ElliotProject ({ p, isClicked, setIsClicked, selectedPro
                 <div className={`${style.project_details}`}>
                     <h1 className={`${style.tagline} ${style.slide_in} ${style.off_left}`}>{p.tagline} . . .&nbsp;&nbsp;</h1>
                     <div id={`${style.thin_tagline_line}`}></div>
-                    <p className={`${style.fade_in}`}>{p.body}</p>
+                    <p className={`${style.fade_in_2}`}>{p.body}</p>
                     <br />
                     <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>{languages}&nbsp;<span>:</span>&nbsp;: {p.timeframe}</h2>
 
