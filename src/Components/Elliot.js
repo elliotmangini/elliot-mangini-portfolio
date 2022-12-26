@@ -46,17 +46,17 @@ export default function Elliot () {
             body: "UpQuest is a social app for creating city-wide treasure hunts as collections of places to visit and visualizing them as interactive maps.",
             route: "upquest",
         },
+        // {
+        //     chapter: "03 ::",
+        //     title: "Mountain!",
+        //     languages: ["React", "CSS", "HTML"],
+        //     timeframe: "One Week - Sept. 2022",
+        //     tagline: "Concept To-Do",
+        //     body: "Minimalist To Do List with experimental modes",
+        //     route: "mountain",
+        // },
         {
             chapter: "03 ::",
-            title: "Mountain!",
-            languages: ["React", "CSS", "HTML"],
-            timeframe: "One Week - Sept. 2022",
-            tagline: "Concept To-Do",
-            body: "Minimalist To Do List with experimental modes",
-            route: "mountain",
-        },
-        {
-            chapter: "04 ::",
             title: "Foley.G 3K!",
             languages: ["Javascript", "CSS", "HTML"],
             timeframe: "One Week - Sept. 2022",
@@ -73,7 +73,11 @@ export default function Elliot () {
     })
 
     function handleResume () {
-        setSelectedProject(null);
+        if (!isResume) {
+            setSelectedProject(null);
+        } else {
+            setSelectedProject("");
+        }
         setIsResume(!isResume);
     }
 
@@ -108,8 +112,8 @@ export default function Elliot () {
 
 
             
-            <div onClick={handleResume} className={style.social_icons_container}>
-                <a className={style.local_icon_container}>
+            <div className={style.social_icons_container}>
+                <a onClick={() => handleResume()} className={style.local_icon_container}>
                     <img src={ResumeIcon} className={style.social_icon} />
                 </a>
                 <a href="https://www.linkedin.com/in/elliotmangini/" className={style.social_icon_container}>
