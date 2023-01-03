@@ -22,6 +22,7 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
 
     function deselect () {
         // setGo(false);
+        console.log("click");
         setIsLeaving(false);
         setIsClicked(false);
         setSelectedProject("");
@@ -61,7 +62,7 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
                     <div id={`${style.thin_tagline_line}`}></div>
                     <p className={`${style.fade_in_2}`}>{p.body}</p>
                     <br />
-                    <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>{languages}&nbsp;<span>:</span>&nbsp;: {p.timeframe}</h2>
+                    <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>{languages}&nbsp;<span>:</span>&nbsp;<br />: {p.timeframe}</h2>
 
                     { isClicked && !isLeaving && p.title === selectedProject ?
                     <>
