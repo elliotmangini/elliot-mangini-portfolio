@@ -17,6 +17,8 @@ export default function Elliot () {
     const [ selectedProject , setSelectedProject ] = useState("")
     const [ isClicked , setIsClicked ] = useState(false);
     const [ isResume , setIsResume ] = useState(false);
+    const [ go , setGo ] = useState(false);
+    const [ isLeaving, setIsLeaving ] = useState(false);
 
     const projectsData = [
         {
@@ -61,14 +63,14 @@ export default function Elliot () {
             languages: ["Javascript", "CSS", "HTML"],
             timeframe: "One Week - Sept. 2022",
             tagline: "Concept To-Do",
-            body: "Minimalist To Do List with several experimental modes",
+            body: "Minimalist To Do List with experimental modes. Created as a Phase 2 project for Software Engineering bootcamp.",
             route: "foley",
         },
     ]
 
     const projects = projectsData.map((p) => {
         return (
-            <Project setIsClicked={setIsClicked} isClicked={isClicked} selectedProject={selectedProject} setSelectedProject={setSelectedProject} key={uuid()} p={p} />
+            <Project isLeaving={isLeaving} setIsLeaving={setIsLeaving} go={go} setGo={setGo} setIsClicked={setIsClicked} isClicked={isClicked} selectedProject={selectedProject} setSelectedProject={setSelectedProject} key={uuid()} p={p} />
         )
     })
 
@@ -76,6 +78,9 @@ export default function Elliot () {
         if (!isResume) {
             setSelectedProject(null);
         } else {
+            setSelectedProject("");
+            setIsLeaving(false);
+            setIsClicked(false);
             setSelectedProject("");
         }
         setIsResume(!isResume);

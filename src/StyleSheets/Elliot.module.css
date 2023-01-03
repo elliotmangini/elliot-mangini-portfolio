@@ -420,14 +420,14 @@ input[type="checkbox"]:not(:checked) ~ div {
 }
 
 .project_text_container {
-  position: absolute;
+  position: fixed;
   top: 20%;
-  right: 10%;
+  right: 0%;
   border: .2rem solid transparent;
   width: 100vw;
   height: 100vh;
   max-width: calc(21rem + 10vw);
-  /* border: .2rem solid red; */
+  border: .2rem solid red;
 }
 
 .project_details {

@@ -5,9 +5,7 @@ import { v4 as uuid } from "uuid";
 import ink from '../Assets/Pink_ink_water.mp4';
 
 
-export default function ElliotProject ({ p, isClicked, setIsClicked, selectedProject, setSelectedProject }) {
-    const [ go , setGo ] = useState(false);
-    const [ isLeaving, setIsLeaving ] = useState(false);
+export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, isClicked, setIsClicked, selectedProject, setSelectedProject }) {
 
     function animate () {
         setIsClicked(true);
@@ -32,7 +30,6 @@ export default function ElliotProject ({ p, isClicked, setIsClicked, selectedPro
     const languages = p.languages.map((l) =>{
         return (
             <p key={uuid()} className={style.language_p}>&nbsp;&nbsp; . . . {l}</p>
-            
         )
     })
 
@@ -94,7 +91,7 @@ export default function ElliotProject ({ p, isClicked, setIsClicked, selectedPro
                 {/* Project with matching title gets final swing, others become hidden. */}
                 { isLeaving ?
                     <h1 onClick={() => animateAndNavigate()} className={`${style.project_title_basic} ` + ((p.title !== selectedProject) ? `${style.hidden}` : `${style.project_title} ${style.final_swing}` )}>{p.title}</h1>
-                    : null }
+                : null }
 
             </div>  
             : null }
