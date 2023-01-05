@@ -62,7 +62,7 @@ export default function Elliot () {
             title: "Foley.G 3K!",
             languages: ["Javascript", "CSS", "HTML"],
             timeframe: "One Week - Sept. 2022",
-            tagline: "Concept To-Do",
+            tagline: "Real-Time API Powered Audio Engine",
             body: "Minimalist To Do List with experimental modes. Created as a Phase 2 project for Software Engineering bootcamp.",
             route: "foley",
         },
