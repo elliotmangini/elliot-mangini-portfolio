@@ -10,11 +10,9 @@ export default function EmailPopup ({showList}) {
       e.preventDefault();
       emailjs.sendForm('service_n3vp7iv', 'template_cw2hcgb', form.current, 'KXCMfBQM4NBgQ2tuj')
         .then((result) => {
-            // console.log(result.text);
             alert("Thanks for getting in touch! I'll get back to you straight away.");
             showList();
         }, (error) => {
-            // console.log(error.text);
             alert(error);
         });
     };
@@ -33,7 +31,7 @@ export default function EmailPopup ({showList}) {
             <textarea id={style.message_input} name="message" placeholder='message...'/>
             <br />
             <div className={style.margin_div}>
-              <input id={style.send_button} n type="submit" value="Send" />
+              <input id={style.send_button} type="submit" value="Send" />
             </div>
           </form>
         </div>

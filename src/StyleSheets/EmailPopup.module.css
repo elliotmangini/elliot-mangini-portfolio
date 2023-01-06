@@ -1,6 +1,6 @@
 .email_popup_container {
     position: absolute;
-    top: 27%;
+    top: 32%;
     height: 60%;
     width: 90%;
     max-width: 1600px;
@@ -24,9 +24,16 @@
     font-family: monospace;
 }
 
+.form_container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .margin_div {
     margin-left: auto;
-    width: 75px;
+    width: 85px;
 }
 
 #form_container {
@@ -48,6 +55,6 @@
 }
 
 #send_button {
-    width: 75px;
+    width: 85px;
     margin-top: 20px;
 }
