@@ -204,7 +204,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   display: flex;
   justify-content: right;
   right: 8%;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .add_drift_up {
@@ -728,4 +728,23 @@ input[type="checkbox"]:not(:checked) ~ div {
 
 p {
   font-weight: bold;
+}
+
+/* CUBE PARENTS */
+
+
+.fade_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  mask-image: linear-gradient(black 0%, black 80%, transparent 93%, transparent);
+  transition: filter .5s ease-out;
+  filter: brightness(1);
+}
+
+.no_cube {
+  filter: brightness(.2);
 }

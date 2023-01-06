@@ -108,8 +108,9 @@ export default function Elliot () {
                 <video id="myVideo" loop autoPlay muted><source src={video} type="video/mp4" /></video>
             </div>
 
-            {/* { isEntered ? */}
-            <Cube />
+            <div className={`${style.fade_overlay} ${popUp ? style.no_cube : null}`}>
+                <Cube selectedProject={selectedProject} />
+            </div>
 
             <div className={style.reactive_width_container}>
             <h1 className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title}`}>Elliot Mangini<span>Software Engineer ::</span></h1>

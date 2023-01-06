@@ -51,7 +51,7 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
 
                     {/* Project w/ matching title swings slowly, others swing quickly. */}
                     { isClicked && !isLeaving ?
-                    <h1 onClick={() => animateAndNavigate()} className={`${style.project_title_basic} ` + ((p.title !== selectedProject) ? `${style.project_title} ${style.swing_away}` : `${style.project_title} ${style.delay4} ${style.final_swing}` )}><span>{p.chapter}</span> {p.title}</h1> : null }
+                    <h1 className={`${style.project_title_basic} ` + ((p.title !== selectedProject) ? `${style.project_title} ${style.swing_away}` : `${style.project_title} ${style.delay4} ${style.final_swing}` )}><span>{p.chapter}</span> {p.title}</h1> : null }
                 </div>
             </div>
 

@@ -4,7 +4,7 @@ import '../StyleSheets/Cube.css';
 import front from '../Assets/CubeGifs/front.gif';
 
 
-export default function Cube () {
+export default function Cube ({selectedProject}) {
     const cubeRef = useRef();
     useEffect(() => {
     //   const cube = cubeRef.current;
@@ -27,25 +27,25 @@ export default function Cube () {
   
     return (
         <>
-        <div className="cube" ref={cubeRef}>
-            <div className="face front">
-            <img src={front} alt="front gif" />
-            </div>
-            <div className="face back">
-            <img src={front} alt="back gif" />
-            </div>
-            <div className="face left">
-            <img src={front} alt="left gif" />
-            </div>
-            <div className="face right">
-            <img src={front} alt="right gif" />
-            </div>
-            <div className="face top">
-            <img src={front} alt="top gif" />
-            </div>
-            <div className="face bottom">
-            <img src={front} alt="bottom gif" />
-            </div>
+          <div className={`cube ${selectedProject ? "slide_down" : "slide_up"}`} ref={cubeRef}>
+              <div className="face front">
+              <img src={front} alt="front gif" />
+              </div>
+              <div className="face back">
+              <img src={front} alt="back gif" />
+              </div>
+              <div className="face left">
+              <img src={front} alt="left gif" />
+              </div>
+              <div className="face right">
+              <img src={front} alt="right gif" />
+              </div>
+              <div className="face top">
+              <img src={front} alt="top gif" />
+              </div>
+              <div className="face bottom">
+              <img src={front} alt="bottom gif" />
+              </div>
         </div>
         </>
     );
