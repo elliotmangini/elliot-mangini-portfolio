@@ -16,7 +16,7 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
         console.log("click");
         setIsLeaving(true);
         setTimeout(() => {
-            setGo(true)
+            setGo(p.route)
         }, 800);
     }
 
@@ -34,9 +34,11 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
         )
     })
 
+    console.log(p.route);
+
     return (
         <>
-            { go ?
+            { go === p.route ?
                 <Navigate to={`/${p.route}`} />
             : null}
 

@@ -2,10 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 import Elliot from "./Components/Elliot";
-import OneSeventyFour from "./Components/OneSeventyFour";
-import Foley from "./Components/Foley";
-import Mountain from "./Components/Mountain";
-import UpQuest from "./Components/UpQuest";
+import CaseStudy from "./Components/CaseStudy";
 
 
 export default function App() {
@@ -13,10 +10,10 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<Elliot />} />
-        <Route path="/UpQuest" element={<UpQuest />} />
-        <Route path="/174" element={<OneSeventyFour />} />
-        <Route path="/Foley" element={<Foley />} />
-        <Route path="/Mountain" element={<Mountain />} />
+        {/* <Route path="/planetariyum" element={<CaseStudy project={"Planetariyum"} />} />
+        <Route path="/traydpost" element={<CaseStudy project={"Traydpost"} />} />
+        <Route path="/upquest" element={<CaseStudy project={"Upquest"} />} />
+        <Route path="/foley" element={<CaseStudy project={"Foley.G 3K"} />} /> */}
       </Routes>
     </>
   );

@@ -1,0 +1,27 @@
+.title-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, equal width */
+    grid-gap: 10px; /* gap between titles */
+    margin: 10px; /* margin around grid */
+    padding: 10px; /* padding around titles */
+    background: #eee; /* light grey background */
+    border-radius: 10px; /* round corners */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* inner shadow */
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* dark grey text color */
+    background: #fff; /* white background */
+    border-radius: 10px; /* round corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* outer shadow */
+    transition: box-shadow 0.3s; /* transition for hover effect */
+  }
+  
+  .title:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* darker shadow on hover */
+  }

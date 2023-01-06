@@ -204,6 +204,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   display: flex;
   justify-content: right;
   right: 8%;
+  z-index: 2;
 }
 
 .add_drift_up {

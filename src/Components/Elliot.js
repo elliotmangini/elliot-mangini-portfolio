@@ -3,6 +3,7 @@ import video from '../Assets/enterbkg.mp4'
 import { useEffect, useState } from 'react';
 import Project from './Project';
 import Resume from './Resume';
+import Cube from './Cube';
 import EmailPopup from './EmailPopup';
 import { v4 as uuid } from "uuid";
 
@@ -38,7 +39,7 @@ export default function Elliot () {
             timeframe: "One Week - Dec. 2022",
             tagline: "NFT Gallery & Trading dApp",
             body: "Created as a capstone project for Encode Club's Solidity Bootcamp, TraydPost is an ERC721 minting and managing dApp which is optimized for digital asset marketplaces and games. It was built to be ported into Planetariyum.",
-            route: "planetariyum",
+            route: "traydpost",
         },
         {
             chapter: "02 ::",
@@ -107,16 +108,8 @@ export default function Elliot () {
                 <video id="myVideo" loop autoPlay muted><source src={video} type="video/mp4" /></video>
             </div>
 
-            {/* <div className={style.dynamic_squares_container}>
-                <div className={style.dynamic_square}></div>
-                <div className={style.dynamic_square}></div>
-                <div className={style.dynamic_square}></div>
-                <div className={style.dynamic_square}></div>
-                <div className={style.dynamic_square}></div>
-            </div> */}
-
-
             {/* { isEntered ? */}
+            <Cube />
 
             <div className={style.reactive_width_container}>
             <h1 className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title}`}>Elliot Mangini<span>Software Engineer ::</span></h1>
