@@ -3,6 +3,7 @@ import video from '../Assets/enterbkg.mp4'
 import { useEffect, useState } from 'react';
 import Project from './Project';
 import Resume from './Resume';
+import EmailPopup from './EmailPopup';
 import { v4 as uuid } from "uuid";
 
 import OctoCat from '../Assets/octocat_icon_2.png';
@@ -16,9 +17,9 @@ import Airplane from '../Assets/airplane_icon.png';
 export default function Elliot () {
     const [ selectedProject , setSelectedProject ] = useState("")
     const [ isClicked , setIsClicked ] = useState(false);
-    const [ isResume , setIsResume ] = useState(false);
     const [ go , setGo ] = useState(false);
     const [ isLeaving, setIsLeaving ] = useState(false);
+    const [ popUp , setPopUp ] = useState("");
 
     const projectsData = [
         {
@@ -74,16 +75,25 @@ export default function Elliot () {
         )
     })
 
-    function handleResume () {
-        if (!isResume) {
-            setSelectedProject(null);
+    function handlePopups (desired) {
+        if (popUp === desired) {
+            showList();
+            setPopUp("");
         } else {
-            setSelectedProject("");
-            setIsLeaving(false);
-            setIsClicked(false);
-            setSelectedProject("");
+            hideList();
+            setPopUp(desired);
         }
-        setIsResume(!isResume);
+    }
+
+    function showList () {
+        setSelectedProject("");
+        setIsLeaving(false);
+        setIsClicked(false);
+        setSelectedProject("");
+    }
+
+    function hideList () {
+        setSelectedProject(null);
     }
 
     return (
@@ -118,7 +128,7 @@ export default function Elliot () {
 
             
             <div className={style.social_icons_container}>
-                <a onClick={() => handleResume()} className={style.local_icon_container}>
+                <a onClick={() => handlePopups("resume")} className={style.local_icon_container}>
                     <img src={ResumeIcon} className={style.social_icon} />
                 </a>
                 <a href="https://www.linkedin.com/in/elliotmangini/" className={style.social_icon_container}>
@@ -130,13 +140,17 @@ export default function Elliot () {
                 <a href="https://dev.to/elliotmangini" className={style.social_icon_container}>
                     <img src={Blog} className={style.social_icon} />
                 </a>
-                <a href="https://www.linkedin.com/in/elliotmangini/" className={style.local_icon_container}>
-                    <img src={Airplane} className={style.social_icon} />
+                <a className={style.local_icon_container}>
+                    <img  onClick={() => handlePopups("email")} src={Airplane} className={style.social_icon} />
                 </a>
             </div>
 
-            { isResume ?
+            { popUp === "resume" ?
             <Resume />
+            : null}
+
+            { popUp === "email" ?
+            <EmailPopup />
             : null}
             
         </div>
