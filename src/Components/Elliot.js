@@ -78,7 +78,6 @@ export default function Elliot () {
     function handlePopups (desired) {
         if (popUp === desired) {
             showList();
-            setPopUp("");
         } else {
             hideList();
             setPopUp(desired);
@@ -86,6 +85,7 @@ export default function Elliot () {
     }
 
     function showList () {
+        setPopUp("");
         setSelectedProject("");
         setIsLeaving(false);
         setIsClicked(false);
@@ -150,7 +150,7 @@ export default function Elliot () {
             : null}
 
             { popUp === "email" ?
-            <EmailPopup />
+            <EmailPopup showList={showList} />
             : null}
             
         </div>
