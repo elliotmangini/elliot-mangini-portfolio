@@ -108,7 +108,7 @@ export default function Elliot () {
                 <video id="myVideo" loop autoPlay muted><source src={video} type="video/mp4" /></video>
             </div>
 
-            <div className={`${style.fade_overlay} ${popUp ? style.no_cube : null}`}>
+            <div className={`${style.fade_overlay} ${popUp ? style.focus_cube : null}`}>
                 <Cube selectedProject={selectedProject} />
             </div>
 

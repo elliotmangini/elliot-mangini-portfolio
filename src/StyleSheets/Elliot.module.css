@@ -322,7 +322,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   margin: 0;
   opacity: 100%;
   -webkit-text-stroke-width: 0.05rem;
-  -webkit-text-stroke-color: black;
+  /* -webkit-text-stroke-color: black; */
 }
 
 @keyframes special-fade {
@@ -563,7 +563,6 @@ input[type="checkbox"]:not(:checked) ~ div {
   margin: 0;
   right: 3%;
   /* border: .2rem solid red; */
-
 }
 
 .inline_block_p {
@@ -741,10 +740,40 @@ p {
   display: flex;
   justify-content: center;
   mask-image: linear-gradient(black 0%, black 80%, transparent 93%, transparent);
-  transition: filter .5s ease-out;
-  filter: brightness(1);
+  /* transition: filter, transform, padding-top .5s ease-out; */
+  transition: all 2s ease-in-out;
+  transition-delay: .75s;
+  filter: brightness(.9);
+  transform: scale(1);
+  padding-top: 0%;
 }
 
-.no_cube {
+/* .no_cube {
   filter: brightness(.2);
+} */
+
+.focus_cube {
+  transform: scale(3);
+  padding-top: 5%;
+  filter: brightness(.2);
+}
+
+.arrows_container {
+  /* border: 2px solid red; */
+  position: absolute;
+  width: 50%;
+  height: 0%;
+  top: 2%;
+  display: flex;
+  justify-content: center;
+  margin-top: -5%;
+}
+
+.arrow_one {
+  position: absolute;
+  width: 12%;
+  top: 0%;
+  margin: auto;
+  transform: rotate(79deg);
+  margin-left: 20px;
 }

@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import { v4 as uuid } from "uuid";
 import ink from '../Assets/Pink_ink_water.mp4';
+import arrow from '../Assets/arrow-gif.gif';
 
 
 export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, isClicked, setIsClicked, selectedProject, setSelectedProject }) {
@@ -85,6 +86,9 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
                                     <video src={ink} loop autoPlay muted className={style.ink}></video>
                                 </div>
                                 <h1 onClick={() => animateAndNavigate()} className={`${style.project_title_basic} ${style.selected_project} off_right`}>{p.title}</h1>
+                                <div className={style.arrows_container}>
+                                    <img className={style.arrow_one} src={arrow}></img>
+                                </div>
                             </div>
                         </div>
                     </>
