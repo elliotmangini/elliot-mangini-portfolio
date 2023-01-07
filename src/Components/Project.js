@@ -16,9 +16,9 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
 
     function animateAndNavigate() {
         setIsLeaving(true);
-        // setTimeout(() => {
-        //     setGo(p.route)
-        // }, 800);
+        setTimeout(() => {
+            setGo(p.route)
+        }, 6000);
     }
 
 
