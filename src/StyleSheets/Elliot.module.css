@@ -275,7 +275,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   transform: perspective(40rem) rotateY(0deg);
   animation: none;
   animation-delay: 0s;
-  animation: blurfadeout 6.5s ease-in forwards;
+  animation: blurfadeout 5.5s ease-in forwards;
 }
 
 .stay_on_bottom {

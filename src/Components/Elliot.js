@@ -61,7 +61,7 @@ export default function Elliot () {
             languages: ["Javascript", "CSS", "HTML"],
             timeframe: "One Week - Sept. 2022",
             tagline: "Real-Time API Powered Audio Engine",
-            body: "Minimalist To Do List with experimental modes. Created as a Phase 2 project for Software Engineering bootcamp.",
+            body: "Using voice recognition and the Freesound API to dynamically generate soundscapes alongside a speaker. Ideal for DnD campaigns, children's storytelling, and musicians.",
             route: "foley",
         },
     ]
