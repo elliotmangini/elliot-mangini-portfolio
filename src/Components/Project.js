@@ -1,9 +1,10 @@
-import style from '../StyleSheets/Elliot.module.css'
+import style from '../StyleSheets/Elliot.module.css';
 import { Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import { v4 as uuid } from "uuid";
 import ink from '../Assets/Pink_ink_water.mp4';
 import arrow from '../Assets/arrow-gif.gif';
+import Curtains from './Curtains';
 
 
 export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, isClicked, setIsClicked, selectedProject, setSelectedProject }) {
@@ -14,13 +15,15 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
     }
 
     function animateAndNavigate() {
-        console.log("click");
         setIsLeaving(true);
-        setTimeout(() => {
-            setGo(p.route)
-        }, 800);
+        // setTimeout(() => {
+        //     setGo(p.route)
+        // }, 800);
     }
 
+
+
+    // "back" button function
     function deselect () {
         // setGo(false);
         console.log("click");
@@ -43,7 +46,7 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
                 <Navigate to={`/${p.route}`} />
             : null}
 
-            {/* BIG TITLES */}
+            {/* List of Projects */}
             <div>
                 <div className={style.big_titles_container}>
                     {/* LOAD ALL SAME */}
@@ -57,8 +60,11 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
             </div>
 
 
-            {/* RENDER DETAILS */}
-            { isClicked && !isLeaving && (p.title === selectedProject) ?
+            {/* Project Details */}
+            { isClicked && (p.title === selectedProject) ?
+            <>
+            { !isLeaving ?
+            // show the project's quick breakdown
             <div className={style.project_text_container}>
                 <div className={`${style.project_details}`}>
                     <h1 className={`${style.tagline} ${style.slide_in} ${style.off_left}`}>{p.tagline} . . .&nbsp;&nbsp;</h1>
@@ -66,49 +72,57 @@ export default function ElliotProject ({ go, setGo, isLeaving, setIsLeaving, p, 
                     <p className={`${style.fade_in_2}`}>{p.body}</p>
                     <br />
                     <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>{languages}&nbsp;<span>:</span>&nbsp;<br />: {p.timeframe}</h2>
-
-                    { isClicked && !isLeaving && p.title === selectedProject ?
                     <>
-                        {/* <div onClick={() => animateAndNavigate()} className={`${style.fade_in}`} id={style.up_pentagon_container}>
-                            <div id={style.pentagon}></div>
-                            <div id={style.triangle}></div>
-                        </div> */}
-                        <div className={`${style.fade_in_6}`} onClick={() => deselect()} id={style.back_arrow_container}>
-                            <div id={style.back_arrow_block}></div>
-                            <div id={style.back_arrow_triangle}></div>
-                        </div>
-
-
-
+                    {/* Large mask Title */}
                         <div className={style.delay_fade}>
                             <div className={style.stay_on_bottom}>
                                 <div className={style.video_container}>
                                     <video src={ink} loop autoPlay muted className={style.ink}></video>
                                 </div>
-                                <h1 onClick={() => animateAndNavigate()} className={`${style.project_title_basic} ${style.selected_project} off_right`}>{p.title}</h1>
-                                <div className={style.arrows_container}>
+                                <h1 onClick={() => animateAndNavigate()} className={`${style.project_title_basic} ${style.selected_project}`}>{p.title}</h1>
+
+                                <div className={`${style.arrows_container} ${style.long_delay_fade}`}>
                                     <img className={style.arrow_one} src={arrow}></img>
                                 </div>
                             </div>
                         </div>
                     </>
-                    : null }
                 </div>
-                
-                {/* Project with matching title gets final swing, others become hidden. */}
-                { isLeaving ?
-                    <h1 onClick={() => animateAndNavigate()} className={`${style.project_title_basic} ` + ((p.title !== selectedProject) ? `${style.hidden}` : `${style.project_title} ${style.final_swing}` )}>{p.title}</h1>
-                : null }
-
             </div>  
+            :
+            // isLeaving is true, case study is entered, quick-look dissapears
+            <>
+            <div className={`${style.project_text_container} ${style.fade_out_4}`}>
+                <div className={`${style.project_details}`}>
+                    <h1 className={`${style.tagline}`}>{p.tagline} . . .&nbsp;&nbsp;</h1>
+                    <div id={`${style.thin_tagline_stabilized}`}></div>
+                    <p className={``}>{p.body}</p>
+                    <br />
+                    <h2 className={`${style.timeframe}`}>{languages}&nbsp;<span>:</span>&nbsp;<br />: {p.timeframe}</h2>
+                    <>
+                    {/* Large mask Title */}
+                        <div className={``}>
+                            <div className={style.stay_on_bottom}>
+                                <div className={style.video_container}>
+                                    <video src={ink} loop autoPlay muted className={style.ink}></video>
+                                </div>
+                                <h1 onClick={() => animateAndNavigate()} className={`${style.project_title_basic} ${style.selected_project}`}>{p.title}</h1>
+
+                                <div className={`${style.arrows_container} ${style.long_delay_fade}`}>
+                                    <img className={style.arrow_one} src={arrow}></img>
+                                </div>
+                            </div>
+                        </div>
+                    </>
+                </div>
+            </div>
+            </>
+            }
+            </>
+
+
             : null }
             
-            {/* REDIRECT ANIMATION */}
-            { isLeaving ?
-            <div className={style.expanding_circle}></div> : null }
-
-            {/* <div className={style.stay_on_bottom}>
-            </div> */}
         </>
     )
 }

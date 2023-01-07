@@ -12,7 +12,7 @@
   .slide_up {
     animation: slide-up 4.5s ease-out;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: .2s;
   }
 
   .slide_down {

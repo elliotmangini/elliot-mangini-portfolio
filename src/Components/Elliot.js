@@ -3,15 +3,11 @@ import video from '../Assets/enterbkg.mp4'
 import { useEffect, useState } from 'react';
 import Project from './Project';
 import Resume from './Resume';
+import SocialLinks from './SocialLinks';
 import Cube from './Cube';
 import EmailPopup from './EmailPopup';
 import { v4 as uuid } from "uuid";
-
-import OctoCat from '../Assets/octocat_icon_2.png';
-import LinkedIn from '../Assets/linkedin_icon.png';
-import Blog from '../Assets/blog_icon_1.png';
-import ResumeIcon from '../Assets/resume_icon.png';
-import Airplane from '../Assets/airplane_icon.png';
+import Curtains from './Curtains';
 
 
 
@@ -99,55 +95,52 @@ export default function Elliot () {
 
     return (
         <>
-        <div className={style.elliot}>
+            <div className={style.elliot}>
 
-            {/* KEEP THIS SHIT AT THE TOP */}
-            <div id={style.video_container}>
-                <div id={style.cover}></div>
-                <div className={`${style.darken} ${selectedProject ? style.darkenest : null}`}></div>
-                <video id="myVideo" loop autoPlay muted><source src={video} type="video/mp4" /></video>
-            </div>
-
-            <div className={`${style.fade_overlay} ${popUp ? style.focus_cube : null}`}>
-                <Cube selectedProject={selectedProject} />
-            </div>
-
-            <div className={style.reactive_width_container}>
-            <h1 className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title}`}>Elliot Mangini<span>Software Engineer ::</span></h1>
-                <div className={`${style.add_drift_up} ${style.position_projects}`}>
-                    {projects}
+                {/* KEEP THIS SHIT AT THE TOP */}
+                {/* background video */}
+                <div id={style.video_container}>
+                    <div id={style.cover}></div>
+                    <div className={`${style.darken} ${selectedProject ? style.darkenest : null}`}></div>
+                    <video id="myVideo" loop autoPlay muted><source src={video} type="video/mp4" /></video>
                 </div>
+
+
+                {/* rotating cube of gifs */}
+                <div className={`${style.fade_overlay} ${popUp ? style.focus_cube : null}`}>
+                    <Cube selectedProject={selectedProject} />
+                </div>
+
+                {/* main contained stuff */}
+                <div className={style.reactive_width_container}>
+
+                    {/* site title */}
+                    <h1 className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title} ${isLeaving ? style.main_title_away : null }`}>Elliot Mangini<span>Software Engineer ::</span></h1>
+
+                    {/* projects */}
+                    <div className={`${style.add_drift_up} ${style.position_projects}`}>
+                        {projects}
+                    </div>
+                </div>
+
+                { isLeaving ? <Curtains animation={"coming"} /> : null }
+
+                    
+                {/* links */}
+                <SocialLinks isLeaving={isLeaving} handlePopups={handlePopups} isLeaving={isLeaving} />
+
+
+                {/* popups! */}
+                { popUp === "resume" ?
+                <Resume />
+                : null}
+
+                { popUp === "email" ?
+                <EmailPopup showList={showList} />
+                : null}
+                
             </div>
 
-
-            
-            <div className={style.social_icons_container}>
-                <a onClick={() => handlePopups("resume")} className={style.local_icon_container}>
-                    <img src={ResumeIcon} className={style.social_icon} />
-                </a>
-                <a href="https://www.linkedin.com/in/elliotmangini/" className={style.social_icon_container}>
-                    <img src={LinkedIn} className={style.social_icon} />
-                </a>
-                <a href="https://github.com/elliotmangini" className={style.social_icon_container}>
-                    <img src={OctoCat} className={style.social_icon} />
-                </a>
-                <a href="https://dev.to/elliotmangini" className={style.social_icon_container}>
-                    <img src={Blog} className={style.social_icon} />
-                </a>
-                <a className={style.local_icon_container}>
-                    <img  onClick={() => handlePopups("email")} src={Airplane} className={style.social_icon} />
-                </a>
-            </div>
-
-            { popUp === "resume" ?
-            <Resume />
-            : null}
-
-            { popUp === "email" ?
-            <EmailPopup showList={showList} />
-            : null}
-            
-        </div>
         </>
-    )
-}
+    );
+};

@@ -229,13 +229,10 @@ input[type="checkbox"]:not(:checked) ~ div {
 }
 
 .project_title_basic {
-  /* border: .2rem solid red; */
   transform-origin: right;
   margin-top: 1.2vmin;
   margin-bottom: 1.2vmin;
   font-size:calc(12px + 4vmax);
-
-  /* min-width: 0%; */
   font-family: system-ui, sans-serif;
   font-weight: bold;
   -webkit-text-stroke-width: 0.04rem;
@@ -254,23 +251,31 @@ input[type="checkbox"]:not(:checked) ~ div {
 }
 
 .absolute_title {
-  /* text-align: right; */
   position: absolute;
-  /* width: 100vw; */
   top: 5%;
   left: 6%;
-  animation: blurfadein 9s ease-in-out;
   transform-origin: left;
   animation-fill-mode: forwards;
-  /* color: var(--bkg); */
   color: var(--txt);
   font-size: calc(10px + 5vmax);
-  /* line-height: 5vmin; */
 }
 
 .absolute_title span {
   color: var(--dimtxt);
   display: block;
+}
+
+.name_plate {
+  animation-delay: -4s;
+  /* transition: all 4s ease-in; */
+}
+
+/* this must remain below name_plate!!! */
+.main_title_away {
+  transform: perspective(40rem) rotateY(0deg);
+  animation: none;
+  animation-delay: 0s;
+  animation: blurfadeout 6.5s ease-in forwards;
 }
 
 .stay_on_bottom {
@@ -298,13 +303,17 @@ input[type="checkbox"]:not(:checked) ~ div {
   animation-delay: 2s;
 }
 
+.long_delay_fade {
+  opacity: 0%;
+  animation: fade-in 1s ease-in-out forwards;
+  animation-delay: 6s;
+}
+
 .ink {
   position: absolute;
   width: 100%;
   left: 0%;
   opacity: 100%;
-  /* animation: fade-in 1s ease-in-out forwards;
-  animation-delay: 3s; */
 }
 
 .selected_project {
@@ -334,11 +343,6 @@ input[type="checkbox"]:not(:checked) ~ div {
   }
 }
 
-.name_plate {
-  animation-delay: -4s;
-  position:
-}
-
 @keyframes blurfadein {
   0% {
     transform: perspective(40rem) rotateY(90deg);
@@ -346,13 +350,30 @@ input[type="checkbox"]:not(:checked) ~ div {
     filter: blur(3rem)
   }
   40% {
-    transform: perspective(40rem) rotateY(5deg);
+    transform: perspective(40rem) rotateY(45deg);
     opacity: 90%;
     filter: blur(0);
   }
   100% {
     transform: perspective(40rem) rotateY(0deg);
+    filter: blur(0);
     opacity: 100%;
+  }
+}
+
+@keyframes blurfadeout {
+  0% {
+    transform: perspective(40rem) rotateY(0deg);
+    opacity: 100%;
+    filter: blur(0rem)
+  }
+  50% {
+    filter: blur(0rem);
+  }
+  100% {
+    transform: perspective(40rem) rotateY(90deg);
+    filter: blur(3rem);
+    opacity: 0%;
   }
 }
 
@@ -501,6 +522,10 @@ input[type="checkbox"]:not(:checked) ~ div {
   animation: fade-in 1s ease-in-out forwards;
 }
 
+.fade_out_4 {
+  animation: fade-in 4s ease-in-out reverse forwards;
+}
+
 .fade_in_6 {
   animation: fade-in 6s ease-in-out forwards;
   animation-delay: 3s;
@@ -546,6 +571,25 @@ input[type="checkbox"]:not(:checked) ~ div {
   -webkit-animation: slide-in 1.5s ease-in-out forwards;
   /* border: 2px solid red; */
 }
+
+#thin_tagline_stabilized {
+  /* position: absolute; */
+  align-self: right;
+  right: 0%;
+  /* margin-left: 3rem; */
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+  height: .1rem;
+  width: 100%;
+  background-image: linear-gradient(to right, rgb(157, 63, 110, 0), rgb(157, 63, 110, 1));
+  /* transform: translateX(200%); */
+  /* -webkit-transform: translateX(200%); */
+  /* animation: slide-in 1.5s ease-in-out forwards; */
+  /* -webkit-animation: slide-in 1.5s ease-in-out forwards; */
+  /* border: 2px solid red; */
+}
+
+
 
 #time_and_language {
   display: flex;
@@ -761,9 +805,9 @@ p {
 .arrows_container {
   /* border: 2px solid red; */
   position: absolute;
-  width: 50%;
+  width: 60%;
   height: 0%;
-  top: 2%;
+  top: 0%;
   display: flex;
   justify-content: center;
   margin-top: -5%;
@@ -775,5 +819,20 @@ p {
   top: 0%;
   margin: auto;
   transform: rotate(79deg);
-  margin-left: 20px;
+  margin-left: 12%;
+}
+
+.monochrome {
+  animation: drain-color 5s ease-in-out forwards;
+}
+
+@keyframes drain-color {
+  0% {
+    filter: saturate(100%);
+    filter: blur(.2rem);
+  }
+  100% {
+    filter: saturate(0%);
+    filter: blur(.8rem);
+  }
 }

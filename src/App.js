@@ -10,10 +10,10 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<Elliot />} />
-        {/* <Route path="/planetariyum" element={<CaseStudy project={"Planetariyum"} />} />
+        <Route path="/planetariyum" element={<CaseStudy project={"Planetariyum"} />} />
         <Route path="/traydpost" element={<CaseStudy project={"Traydpost"} />} />
         <Route path="/upquest" element={<CaseStudy project={"Upquest"} />} />
-        <Route path="/foley" element={<CaseStudy project={"Foley.G 3K"} />} /> */}
+        <Route path="/foley" element={<CaseStudy project={"Foley.G 3K"} />} />
       </Routes>
     </>
   );
