@@ -59,6 +59,10 @@
     margin-top: 20px;
 }
 
+#send_button:hover {
+    background-color: rgb(160, 160, 160);
+}
+
 #form_container label {
     color: transparent;
 }

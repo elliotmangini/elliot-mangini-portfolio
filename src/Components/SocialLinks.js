@@ -12,7 +12,7 @@ export default function SocialLinks ({effect, isLeaving , handlePopups}) {
     
 
     return (
-        <div className={`${style.social_icons_container} ${isLeaving || effect === "blurred" ? style.monochrome : null}`}>
+        <div className={`${style.social_icons_container} ${isLeaving || effect === "blurred" ? style.monochrome : null} ${effect === "longest sneakin" ? style.creep : null}`}>
             <a onClick={() => handlePopups("resume")} className={style.local_icon_container}>
                 <img src={ResumeIcon} className={style.social_icon} />
             </a>

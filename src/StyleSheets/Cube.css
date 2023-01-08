@@ -50,6 +50,7 @@
   .face img {
     width: 100%;
     height: 100%;
+    outline: 6px solid black;
   }
   
   .front {

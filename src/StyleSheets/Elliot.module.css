@@ -28,6 +28,7 @@ body {
   --txt: hotpink;
   --midtxt: rgb(189, 75, 132);
   --dimtxt: rgb(155, 62, 109);
+  --darktxt: rgb(108, 39, 73);
   --bkg: #14151a;
 
   display: flex;
@@ -141,6 +142,7 @@ h1 span {
 .social_icon:hover {
   /* cursor: pointer; */
   opacity: .85;
+  transform: scale(.95);
 }
 
 .fill_square {
@@ -309,6 +311,12 @@ input[type="checkbox"]:not(:checked) ~ div {
   animation-delay: 6s;
 }
 
+.short_delay_fade {
+  opacity: 0%;
+  animation: fade-in 1s ease-in-out forwards;
+  animation-delay: 4.5s;
+}
+
 .ink {
   position: absolute;
   width: 100%;
@@ -332,6 +340,11 @@ input[type="checkbox"]:not(:checked) ~ div {
   opacity: 100%;
   -webkit-text-stroke-width: 0.05rem;
   /* -webkit-text-stroke-color: black; */
+  text-shadow: 0 0 20px cyan;
+}
+
+.selected_project:hover {
+  /* transform: scale(.95); */
 }
 
 @keyframes special-fade {
@@ -363,15 +376,19 @@ input[type="checkbox"]:not(:checked) ~ div {
 
 @keyframes blurfadeout {
   0% {
-    transform: perspective(40rem) rotateY(0deg);
+    transform: translateX(0px) perspective(40rem) rotateY(0deg);
     opacity: 100%;
     filter: blur(0rem)
   }
-  50% {
+  25% {
     filter: blur(0rem);
+    transform: translateX(0px) perspective(40rem) rotateY(22.5deg);
   }
+  /* 50% {
+    transform: translateX(0px) perspective(40rem) rotateY(45deg);
+  } */
   100% {
-    transform: perspective(40rem) rotateY(90deg);
+    transform: translateX(-300px) perspective(40rem) rotateY(90deg);
     filter: blur(3rem);
     opacity: 0%;
   }
@@ -443,9 +460,82 @@ input[type="checkbox"]:not(:checked) ~ div {
   box-sizing: border-box;
 }
 
+.cycle_buttons_container {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  left: 10%;
+  bottom: 19%;
+  margin: auto;
+  height: 20%;
+  transform: translateY(-10vh);
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  mask-image: linear-gradient(transparent 0%, black 12%, black 92%, transparent);
+  pointer-events: none;
+}
+
+.cycle_button_animation_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  /* height: 100%; */
+}
+
+.cycle_buttons_enter {
+  animation: delayed-slide-up 9s ease-out forwards;
+  /* animation-delay: 2s; */
+}
+
+@keyframes delayed-slide-up {
+  0% { transform: translateY(200px) }
+  75% { transform: translateY(200px) }
+  100% { transform: translateY(0px) }
+}
+
+.cycle_button {
+  width: 14vmax;
+  height: 5vmax;
+  max-width: 150px;
+  max-height: 60px;
+  background-color: var(--darktxt);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3vmax;
+  border-radius: .3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 .2vmax black, 0 0 0 .3vmin var(--dimtxt);
+  pointer-events: auto;
+}
+
+.cycle_button:hover {
+  background-color: var(--dimtxt);
+}
+
+.cycle_icon {
+  position: absolute;
+  margin-right: -4vmin;
+  box-sizing: border-box;
+  height: 5vmin;
+  filter: hue-rotate(90deg);
+}
+
+.cycle_previous {
+  transform: scaleX(-1);
+}
+
+
+
 .project_text_container {
   position: absolute;
-  top: 20%;
+  top: 14%;
   /* right: 25%; */
   border: .2rem solid transparent;
   height: 100vh;
@@ -524,6 +614,14 @@ input[type="checkbox"]:not(:checked) ~ div {
 
 .fade_out_4 {
   animation: fade-in 4s ease-in-out reverse forwards;
+}
+
+.fade_out_3 {
+  animation: fade-in 3s ease-in-out reverse forwards;
+}
+
+.fade_out_2{
+  animation: fade-in 2s ease-in-out reverse forwards;
 }
 
 .fade_in_6 {
@@ -815,15 +913,18 @@ p {
 
 .arrow_one {
   position: absolute;
-  width: 12%;
+  width: 12vmax;
   top: 0%;
   margin: auto;
   transform: rotate(79deg);
   margin-left: 12%;
+  /* border: 2px solid red; */
+  margin-top: -5vmax;
 }
 
 .monochrome {
   animation: drain-color 5s ease-in-out forwards;
+  /* z-index: 1; */
 }
 
 @keyframes drain-color {
@@ -831,8 +932,32 @@ p {
     filter: saturate(100%);
     filter: blur(.2rem);
   }
+  50% {
+    opacity: 100%;
+  }
   100% {
     filter: saturate(0%);
     filter: blur(.8rem);
+    opacity: 0%;
+  }
+}
+
+.creep {
+  animation: creep 50s ease-in-out forwards;
+}
+
+@keyframes creep {
+  0% {
+    filter: saturate(100%);
+    filter: blur(5rem);
+    opacity: 50%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    filter: saturate(0%);
+    filter: blur(0rem);
+    opacity: 100%;
   }
 }
