@@ -17,7 +17,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
     const [ isClicked , setIsClicked ] = useState(false);
     const [ go , setGo ] = useState(false);
     const [ isLeaving, setIsLeaving ] = useState(false);
-    const [ popUp , setPopUp ] = useState("");
+    const [ popUpOpen , setPopUpOpen ] = useState("");
     const [ hasEverSelected , setHasEverSelected ] = useState(false);
 
 
@@ -31,33 +31,43 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
 
     const projects = projectsData.map((p) => {
         return (
-            <Project setIsInternalRoute={setIsInternalRoute} hasEverSelected={hasEverSelected} setHasEverSelected={setHasEverSelected} projectsData={projectsData} isLeaving={isLeaving} setIsLeaving={setIsLeaving} go={go} setGo={setGo} setIsClicked={setIsClicked} isClicked={isClicked} selectedProject={selectedProject} setSelectedProject={setSelectedProject} key={uuid()} p={p} />
+            <Project 
+            setIsInternalRoute={setIsInternalRoute} 
+            hasEverSelected={hasEverSelected} 
+            setHasEverSelected={setHasEverSelected} 
+            projectsData={projectsData} 
+            isLeaving={isLeaving} 
+            setIsLeaving={setIsLeaving} 
+            go={go} 
+            setGo={setGo} 
+            setIsClicked={setIsClicked} 
+            isClicked={isClicked} 
+            selectedProject={selectedProject} 
+            setSelectedProject={setSelectedProject} 
+            key={uuid()} p={p} />
         )
     })
 
-    function handlePopups (desired) {
-        if (popUp === desired) {
+    function handlePopups (popUpClicked) {
+        if (popUpOpen === popUpClicked) {
             showList();
             setHasEverSelected(false);
-            setTargetString("Software Engineer ::")
+            setTargetString("Software Engineer ::");
         } else {
-            // IF THERE IS NO CURRENT POPUP
+            // IF THERE IS NO CURRENT popUpOpen
             hideList();
-            setPopUp(desired);
+            setPopUpOpen(popUpClicked);
             setHasEverSelected(true);
-            if (desired === "email") {
+            if (popUpClicked === "email") {
                 setTargetString("Looking forward to meeting you ^_^")
+                setStringStable(false);
             } else {
-                setTimeout(() => {
-                    setTargetString(phrases[0])
-                }, 3500);
             }
         }
     }
 
     function showList () {
-        setPopUp("");
-        setSelectedProject("");
+        setPopUpOpen("");
         setIsLeaving(false);
         setIsClicked(false);
         setSelectedProject("");
@@ -69,6 +79,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
 
     let [currentString, setCurrentString] = useState("Software Engineer ::");
     let [targetString, setTargetString] = useState("Software Engineer ::");
+    let [stringStable , setStringStable] = useState(true);
 
 
     function matrixString (difficulty) {
@@ -97,28 +108,51 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
                 }
             }
             setCurrentString(newString);
+        } else {
+            setStringStable(true);
         }
     }
     
     useEffect(() => {
-        if (currentString !== "Looking forward to meeting you ^_^") {
-            if (currentString !== targetString) {
-                setTimeout(() => {
-                    matrixString(.06);
-                }, 55)
-            } else {
-                setTimeout(() => {
-                        if (targetString !== "Software Engineer ::") {
-                            for (let i = 0; i < phrases.length; i++) {
-                                if (currentString === phrases[i]) {
-                                    setTargetString(phrases[(i + 1) % phrases.length]);
-                                }
-                            }
-                        }
-                }, 4500)
-            }
+        if (!stringStable && currentString !== "Looking forward to meeting you ^_^") {
+            setTimeout(() => {
+                matrixString(.06);
+                console.log("action")
+            }, 55)
         }
     }, [currentString, targetString])
+
+
+    function nextPhrase () {
+        console.log("inside nextPhrase popUpOpen is . . .")
+        console.log(popUpOpen)
+        if (popUpOpen) {
+            let newString = phrases[0];
+            for (let i = 0; i < phrases.length; i++) {
+                if (currentString === phrases[i]) {
+                    newString = phrases[(i + 1) % phrases.length]
+                }
+            }
+            console.log("setting target to: " + newString);
+            setTargetString(newString);
+            setStringStable(false);
+        }
+    }
+
+    // Handle Phrase Target Setting
+    useEffect(() => {
+        console.log("popUpOpen or stringStabilization change")
+        console.log("inside useEffect popUpOpen is . . .")
+        console.log(popUpOpen);
+        console.log("Stabilized: "+ stringStable);
+        if (stringStable && popUpOpen) {
+            console.log("calling next phrase in 5 seconds")
+            setTimeout(() => {
+                console.log("calling next phrase")
+                nextPhrase();
+            }, 4500)
+        }
+    }, [stringStable, popUpOpen])
 
     return (
         <>
@@ -138,7 +172,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
 
 
                 {/* rotating cube of gifs */}
-                <div className={`${style.fade_overlay} ${popUp ? style.focus_cube : null}`}>
+                <div className={`${style.fade_overlay} ${popUpOpen ? style.focus_cube : null}`}>
                     <Cube selectedProject={selectedProject} />
                 </div>
 
@@ -167,11 +201,11 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
 
 
                 {/* popups! */}
-                { popUp === "resume" ?
+                { popUpOpen === "resume" ?
                 <Resume />
                 : null}
 
-                { popUp === "email" ?
+                { popUpOpen === "email" ?
                 <EmailPopup showList={showList} />
                 : null}
                 

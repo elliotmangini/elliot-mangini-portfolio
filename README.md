@@ -5,7 +5,7 @@ PROBLEMS
 -Make 3 more videos
 
 -glitch where elements flash in between project selection and theatre
--the play button needs to not linger and has bugs
+<!-- -the play button needs to not linger and has bugs -->
 -matrix text has bugs
 -fix resume formatting
 -the main button to go to the case study needs to work EVERY time
