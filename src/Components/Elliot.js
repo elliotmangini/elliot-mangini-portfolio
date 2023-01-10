@@ -19,6 +19,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
     const [ isLeaving, setIsLeaving ] = useState(false);
     const [ popUpOpen , setPopUpOpen ] = useState("");
     const [ hasEverSelected , setHasEverSelected ] = useState(false);
+    const [ readyForMatrix , setReadyForMatrix ] = useState(false);
 
 
     const phrases = [
@@ -50,31 +51,37 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
 
     function handlePopups (popUpClicked) {
         if (popUpOpen === popUpClicked) {
-            showList();
+            closePopUps();
             setHasEverSelected(false);
-            setTargetString("Software Engineer ::");
         } else {
-            // IF THERE IS NO CURRENT popUpOpen
-            hideList();
-            setPopUpOpen(popUpClicked);
-            setHasEverSelected(true);
+            openPopUp(popUpClicked);
             if (popUpClicked === "email") {
                 setTargetString("Looking forward to meeting you ^_^")
                 setStringStable(false);
             } else {
+                // setTimeout(() => {
+                    // setReadyForMatrix(true);
+                // }, 4500)
             }
         }
     }
 
-    function showList () {
+    function closePopUps () {
         setPopUpOpen("");
         setIsLeaving(false);
         setIsClicked(false);
         setSelectedProject("");
+        setReadyForMatrix(false);
+        setTargetString("Software Engineer ::");
+        SetIsDelayNeeded(true);
     }
 
-    function hideList () {
+    function openPopUp (popUpClicked) {
+        console.log("setting pop up open to the one you just clicked");
+        setPopUpOpen(popUpClicked);
+        console.log("it is now: " + popUpClicked);
         setSelectedProject(null);
+        setHasEverSelected(true);
     }
 
     let [currentString, setCurrentString] = useState("Software Engineer ::");
@@ -82,6 +89,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
     let [stringStable , setStringStable] = useState(true);
 
 
+    // if EVER the target string and current string arent the same, it will start animating
     function matrixString (difficulty) {
         if (currentString !== targetString) {
             let newString = "";
@@ -109,24 +117,38 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
             }
             setCurrentString(newString);
         } else {
-            setStringStable(true);
+            console.log("")
+            SetIsDelayNeeded(true);
         }
     }
-    
     useEffect(() => {
-        if (!stringStable && currentString !== "Looking forward to meeting you ^_^") {
+        if ((currentString !== targetString) && (currentString !== "Looking forward to meeting you ^_^")) {
             setTimeout(() => {
                 matrixString(.06);
                 console.log("action")
             }, 55)
+        } else {
+            setStringStable(true);
+            SetIsDelayNeeded(true);
         }
     }, [currentString, targetString])
 
+    // Handle Phrase Target Setting
+    useEffect(() => {
+        setTimeout(() => {
+            if (stringStable && popUpOpen && isDelayNeeded) {
+                SetIsDelayNeeded(false);
+            }
+        }, 3500);
+    }, [stringStable, popUpOpen])
+
+    const [ isDelayNeeded , SetIsDelayNeeded ] = useState(true);
+    console.log(isDelayNeeded);
 
     function nextPhrase () {
         console.log("inside nextPhrase popUpOpen is . . .")
         console.log(popUpOpen)
-        if (popUpOpen) {
+        if (stringStable && popUpOpen) {
             let newString = phrases[0];
             for (let i = 0; i < phrases.length; i++) {
                 if (currentString === phrases[i]) {
@@ -139,20 +161,17 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
         }
     }
 
-    // Handle Phrase Target Setting
     useEffect(() => {
-        console.log("popUpOpen or stringStabilization change")
-        console.log("inside useEffect popUpOpen is . . .")
-        console.log(popUpOpen);
-        console.log("Stabilized: "+ stringStable);
-        if (stringStable && popUpOpen) {
-            console.log("calling next phrase in 5 seconds")
-            setTimeout(() => {
-                console.log("calling next phrase")
-                nextPhrase();
-            }, 4500)
+        if (!isDelayNeeded && stringStable && popUpOpen) {
+            nextPhrase()
+        } else {
+            SetIsDelayNeeded(true);
         }
-    }, [stringStable, popUpOpen])
+    }, [isDelayNeeded])
+
+    // useEffect(() => {
+    //     console.log("anytime popUpOpen changes ... : " + popUpOpen);
+    // }, [popUpOpen])
 
     return (
         <>
@@ -206,7 +225,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
                 : null}
 
                 { popUpOpen === "email" ?
-                <EmailPopup showList={showList} />
+                <EmailPopup closePopUps={closePopUps} />
                 : null}
                 
             </div>

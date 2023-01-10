@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 
 import style from '../StyleSheets/EmailPopup.module.css'
 
-export default function EmailPopup ({showList}) {
+export default function EmailPopup ({closePopUps}) {
     const form = useRef();
   
     function sendEmail (e) {
@@ -11,7 +11,7 @@ export default function EmailPopup ({showList}) {
       emailjs.sendForm('service_n3vp7iv', 'template_cw2hcgb', form.current, 'KXCMfBQM4NBgQ2tuj')
         .then((result) => {
             alert("Thanks for getting in touch! I'll get back to you straight away.");
-            showList();
+            closePopUps();
         }, (error) => {
             alert(error);
         });

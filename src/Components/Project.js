@@ -53,7 +53,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
             : null}
 
             {/* List of Projects */}
-            {!hasEverSelected ?
+            {!selectedProject ?
             <div>
                 <div className={style.big_titles_container}>
                     {/* LOAD ALL SAME */}
