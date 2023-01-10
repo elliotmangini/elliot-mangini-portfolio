@@ -2,48 +2,32 @@
 import style from '../StyleSheets/CaseStudy.module.css';
 import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
+import {useLayoutEffect} from 'react'
 
 import SocialLinks from './SocialLinks';
 import Curtains from './Curtains';
 import StageBack from './StageBack';
 
 
-export default function CaseStudy ({project, projectsData}) {
+export default function CaseStudy ({isInternalRoute , project, projectsData}) {
     const [ isIntroing , setIsIntroing ] = useState(true);
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [ isPlaying, setIsPlaying] = useState(isInternalRoute);
     const [ route , setRoute ] = useState((projectsData[(((project.index + 1) + projectsData.length) % projectsData.length)].route));
 
-    // check for a refresh
+    // Play after curtain animation.
     setTimeout(() => {
         setIsIntroing(false);
-        setTimeout(() => {
-            checkIfPlaying();
-        }, 100)
     }, 8000);
 
     const videoRef = useRef(null);
-
-    // Function to check if the video is playing
-    const checkIfPlaying = () => {
-        // Check if the video is paused
-        if (videoRef.current.paused) {
-        // Update the isPlaying state
-        setIsPlaying(false);
-        } else {
-        // Update the isPlaying state
-        setIsPlaying(true);
-        }
-    }
-
     function handlePlay () {
-        videoRef.current.play();
         setIsPlaying(true);
+        videoRef.current.play();
     }
 
     function findNextVideo () {
         // setIsPlaying(false);
         setRoute(projectsData[(((project.index + 1) + projectsData.length) % projectsData.length)].route);
-
     }
 
     return (
@@ -51,6 +35,7 @@ export default function CaseStudy ({project, projectsData}) {
             <StageBack />
             <div className={style.video_container}>
             <div className={style.placeholder_screen}></div>
+
             { !isIntroing ? 
             <>
                 <video id={style.caseVideo} autoPlay ref={videoRef}>
@@ -62,6 +47,7 @@ export default function CaseStudy ({project, projectsData}) {
                 : null }
             </>
             : null }
+
             </div>
             <SocialLinks effect={"longest sneakin"} />
             <Curtains effect={isIntroing ? "swoosh" : "stable"} />

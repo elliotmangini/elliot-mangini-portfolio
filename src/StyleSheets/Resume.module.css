@@ -106,3 +106,11 @@
 .education_box {
     /* height: 14%; */
 }
+
+.mission_header {
+    color: hotpink;
+    font-size: 4rem;
+    position: absolute;
+    top: 18%;
+    font-style: oblique;
+}

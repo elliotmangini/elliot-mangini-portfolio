@@ -7,7 +7,7 @@ import arrow from '../Assets/arrow-gif.gif';
 import arrowIcon from '../Assets/arrow.png';
 
 
-export default function ElliotProject ({ hasEverSelected, setHasEverSelected, projectsData, go, setGo, isLeaving, setIsLeaving, p, isClicked, setIsClicked, selectedProject, setSelectedProject }) {
+export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, setHasEverSelected, projectsData, go, setGo, isLeaving, setIsLeaving, p, isClicked, setIsClicked, selectedProject, setSelectedProject }) {
 
     function bringUpDetails () {
         if (selectedProject !== "") {
@@ -20,6 +20,7 @@ export default function ElliotProject ({ hasEverSelected, setHasEverSelected, pr
     function goToCaseStudy() {
         setIsLeaving(true);
         setTimeout(() => {
+            setIsInternalRoute(true);
             setGo(p.route)
         }, 6000);
     }

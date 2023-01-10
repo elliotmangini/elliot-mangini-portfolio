@@ -52,6 +52,10 @@
     height: 100%;
     outline: 6px solid black;
   }
+
+  /* .face:hover {
+    filter: brightness(2);
+  } */
   
   .front {
     transform: translateZ(100px);

@@ -263,8 +263,11 @@ input[type="checkbox"]:not(:checked) ~ div {
 }
 
 .absolute_title span {
+  margin-top: 1vmin;
   color: var(--dimtxt);
   display: block;
+  font-family: monospace;
+  font-size: calc(3.2vmin);
 }
 
 .name_plate {

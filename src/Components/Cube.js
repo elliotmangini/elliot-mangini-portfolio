@@ -1,16 +1,22 @@
 import React, { useRef, useEffect } from 'react';
 import '../StyleSheets/Cube.css';
 
-import front from '../Assets/CubeGifs/front.gif';
+import gif1 from '../Assets/CubeGifs/planetariyumGif.gif';
+import gif2 from '../Assets/CubeGifs/174Gif.gif';
+import gif3 from '../Assets/CubeGifs/TraydPostGif.gif';
+import gif4 from '../Assets/CubeGifs/UpQuestGif.gif';
+import gif5 from '../Assets/CubeGifs/BigSisHypeGif.gif';
+import gif6 from '../Assets/CubeGifs/BigSisHypeGif.gif';
+
 
 
 export default function Cube ({selectedProject}) {
     const cubeRef = useRef();
     useEffect(() => {
-    //   const cube = cubeRef.current;
-    //   let rotation = 0;
+      const cube = cubeRef.current;
+      // let rotation = 0;
       function rotateCube() {
-        const cube = cubeRef.current;
+        // const cube = cubeRef.current;
       
         // Calculate new rotation values
         let rotationX = Math.sin(Date.now() / 50000);
@@ -29,22 +35,22 @@ export default function Cube ({selectedProject}) {
         <>
           <div className={`cube ${selectedProject ? "slide_down" : "slide_up"}`} ref={cubeRef}>
               <div className="face front">
-              <img src={front} alt="front gif" />
+              <img src={gif2} alt="front gif" />
               </div>
               <div className="face back">
-              <img src={front} alt="back gif" />
+              <img src={gif2} alt="back gif" />
               </div>
               <div className="face left">
-              <img src={front} alt="left gif" />
+              <img src={gif2} alt="left gif" />
               </div>
               <div className="face right">
-              <img src={front} alt="right gif" />
+              <img src={gif2} alt="right gif" />
               </div>
               <div className="face top">
-              <img src={front} alt="top gif" />
+              <img src={gif2} alt="top gif" />
               </div>
               <div className="face bottom">
-              <img src={front} alt="bottom gif" />
+              <img src={gif2} alt="bottom gif" />
               </div>
         </div>
         </>

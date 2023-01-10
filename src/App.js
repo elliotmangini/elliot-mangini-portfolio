@@ -1,13 +1,15 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 import Elliot from "./Components/Elliot";
 import CaseStudy from "./Components/CaseStudy";
 
-import planetariyumVideo from './Assets/planetariyumVideo.mp4';
+import planetariyumVideo from './Assets/LargeFiles/planetariyumVideo.mp4';
 
 
 export default function App() {
+  const [ isInternalRoute , setIsInternalRoute ] = useState(false);
   const projectsData = [
     {
         index: 0,
@@ -58,11 +60,11 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Elliot projectsData={projectsData} />} />
-        <Route path="/planetariyum" element={<CaseStudy projectsData={projectsData} project={projectsData[0]} />} />
-        <Route path="/traydpost" element={<CaseStudy projectsData={projectsData} project={projectsData[1]} />} />
-        <Route path="/upquest" element={<CaseStudy projectsData={projectsData} project={projectsData[2]} />} />
-        <Route path="/foley" element={<CaseStudy projectsData={projectsData} project={projectsData[3]} />} />
+        <Route path="/" element={<Elliot setIsInternalRoute={setIsInternalRoute} projectsData={projectsData} />} />
+        <Route path="/planetariyum" element={<CaseStudy isInternalRoute={isInternalRoute} projectsData={projectsData} project={projectsData[0]} />} />
+        <Route path="/traydpost" element={<CaseStudy isInternalRoute={isInternalRoute} projectsData={projectsData} project={projectsData[1]} />} />
+        <Route path="/upquest" element={<CaseStudy isInternalRoute={isInternalRoute} projectsData={projectsData} project={projectsData[2]} />} />
+        <Route path="/foley" element={<CaseStudy isInternalRoute={isInternalRoute} projectsData={projectsData} project={projectsData[3]} />} />
       </Routes>
     </>
   );
