@@ -114,3 +114,15 @@
     top: 18%;
     font-style: oblique;
 }
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.nudgeBottom {
+    margin-bottom: 5px;
+}

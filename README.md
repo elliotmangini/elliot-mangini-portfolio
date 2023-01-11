@@ -6,7 +6,7 @@ PROBLEMS
 
 -glitch where elements flash in between project selection and theatre
 <!-- -the play button needs to not linger and has bugs -->
--matrix text has bugs
+<!-- -matrix text has bugs -->
 -fix resume formatting
 -the main button to go to the case study needs to work EVERY time
 -i believe it is the cube's movement that is causing scroll problems on mobile
@@ -15,7 +15,8 @@ PROBLEMS
 -on refresh the page looks bad/glitchy, we need a cover fadeout, maybe i reincorporate the enter splashscreen
 -when a film finishes, it should ask the user if they want to get in contact with me, or watch another film
 -prevent the sending of a message if all fields are not valid
-
+-lighting inconsistency in transition to theatre
+-when you click resume from project focus the list comes back
 
 
 WISHES

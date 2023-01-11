@@ -55,45 +55,45 @@ export default function Resume () {
                                 <div><strong>Planetariyum</strong></div>
                                 <div>Full Stack Developer - Collaborative engine, social platform for creators featuring a digital asset marketplace wrapped in a mini-game.</div>
                                 <ul>
-                                    <li>Generated core concept and devised systems to support and deliver a multi-objective full stack application in under three weeks.</li>
-                                    <li>Designed UX and styled UI to create a world class, visually stunning, and original aesthetic.</li>
-                                    <li>Configured environments for development, testing, and production to deploy smoothly and on time.</li>
-                                    <li>Presented for members of the public and authored case studies to showcase the development cycle and final product.</li>
-                                    <li>Enhanced feature set by porting and integrating an existing project from JS, CSS, and HTML to React with Ruby on Rails.</li>
+                                    <li className={style.nudgeBottom}>• Generated core concept and devised systems to support and deliver a multi-objective full stack application in under three weeks.</li>
+                                    <li className={style.nudgeBottom}>• Designed UX and styled UI to create a world class, visually stunning, and original aesthetic.</li>
+                                    <li className={style.nudgeBottom}>• Configured environments for development, testing, and production to deploy smoothly and on time.</li>
+                                    <li className={style.nudgeBottom}>• Presented for members of the public and authored case studies to showcase the development cycle and final product.</li>
+                                    <li className={style.nudgeBottom}>• Enhanced feature set by porting and integrating an existing project from JS, CSS, and HTML to React with Ruby on Rails.</li>
                                 </ul>
                                 <br />
 
                                 <div><strong>TraydPost</strong></div>
                                 <div>Group Leader & Front End Engineer - ERC721 management DApp.</div>
                                 <ul>
-                                    <li>Generated wireframes, planned tasks and meetings, and performed Git merges leading to smooth operations within a new team.</li>
-                                    <li>Oversaw Smart Contract development and designed front end, planned contract features enhancing meta attribute functionality.</li>
-                                    <li>Created video and promotional materials to give our team an edge and maintain a positive atmosphere.</li>
+                                    <li className={style.nudgeBottom}>• Generated wireframes, planned tasks and meetings, and performed Git merges leading to smooth operations within a new team.</li>
+                                    <li className={style.nudgeBottom}>• Oversaw Smart Contract development and designed front end, planned contract features enhancing meta attribute functionality.</li>
+                                    <li className={style.nudgeBottom}>• Created video and promotional materials to give our team an edge and maintain a positive atmosphere.</li>
                                 </ul>
                                 <br />
 
                                 <div><strong>UpQuest!</strong></div>
                                 <div>Group Leader & Back End Engineer - Social app for creating treasure hunts as collections of sites visualized through interactive maps.</div>
                                 <ul>
-                                    <li>Built and maintained database using Ruby and Sinatra to meet all deliverables and oversaw management of GitHub repositories.</li>
-                                    <li>Advised in strategy, formed wireframes that determined project success, and worked overtime to reach stretch goals.</li>
-                                    <li>Provided technical support among self-organizing cross-functional teams and supervised test driven development.</li>
+                                    <li className={style.nudgeBottom}>• Built and maintained database using Ruby and Sinatra to meet all deliverables and oversaw management of GitHub repositories.</li>
+                                    <li className={style.nudgeBottom}>• Advised in strategy, formed wireframes that determined project success, and worked overtime to reach stretch goals.</li>
+                                    <li className={style.nudgeBottom}>• Provided technical support among self-organizing cross-functional teams and supervised test driven development.</li>
                                 </ul>
                                 <br />
 
                                 <div><strong>Foley Generator 3000!</strong></div>
                                 <div>Frontend Engineer & Team Lead - Reactive sound generator using speech-to-text synthesis to create ambient atmospheres in real time.</div>
                                 <ul>
-                                    <li>Developed central idea and designed codebase. Identified limitations of stack and derived novel solutions.</li>
-                                    <li>Demonstrated and instructed in functionality of code to ensure team members’ comprehension of technologies utilized.</li>
+                                    <li className={style.nudgeBottom}>• Developed central idea and designed codebase. Identified limitations of stack and derived novel solutions.</li>
+                                    <li className={style.nudgeBottom}>• Demonstrated and instructed in functionality of code to ensure team members’ comprehension of technologies utilized.</li>
                                 </ul>
                                 <br />
 
                                 <div><strong>174!</strong></div>
                                 <div>Solo Development - Step-sequencer drum machine built primarily on vanilla Javascript.</div>
                                 <ul>
-                                    <li>Conceptualized, planned, and delivered with limited stack (JavaScript, CSS, HTML)</li>
-                                    <li>Demonstrated and instructed in functionality of code to ensure team members’ comprehension of technologies utilized.</li>
+                                    <li className={style.nudgeBottom}>• Conceptualized, planned, and delivered with limited stack (JavaScript, CSS, HTML)</li>
+                                    <li className={style.nudgeBottom}>• Demonstrated and instructed in functionality of code to ensure team members’ comprehension of technologies utilized.</li>
                                 </ul>
                                 <br />
                             </div>
@@ -103,12 +103,13 @@ export default function Resume () {
                                 
                                 <div>
                                     <div><strong>Project Director</strong></div>
-                                    <div>Palace Media Studios, Tokyo, Japan</div><div>08/2017 – 08/2021</div>
+                                    <div className={style.alignright}>08/2017 – 08/2021</div>
+                                    <div>Palace Media Studios, Tokyo, Japan</div>
                                 </div>
                                 <ul>
-                                    <li>Collaborated with artist organizations in Japan to shape internal and external communities and communications.</li>
-                                    <li>Led brand projects and produced action plans to help artists implement quality content pipelines and enhance audience growth.</li>
-                                    <li>Published and distributed training resources and coached/mentored individuals to assist development and maximize potential.</li>
+                                    <li className={style.nudgeBottom}>• Collaborated with artist organizations in Japan to shape internal and external communities and communications.</li>
+                                    <li className={style.nudgeBottom}>• Led brand projects and produced action plans to help artists implement quality content pipelines and enhance audience growth.</li>
+                                    <li className={style.nudgeBottom}>• Published and distributed training resources and coached/mentored individuals to assist development and maximize potential.</li>
                                 </ul>
                                 <br />
 
@@ -118,20 +119,26 @@ export default function Resume () {
 
                                 <div>
                                     <div><strong>Full Stack Software Engineering</strong></div>
-                                    <div>Certificate, Flatiron School</div><div>Denver, CO</div>
-                                    <div>Ruby on Rails, React, Javascript, CSS, HTML</div><div>08/2022 – 11/2022</div>
+                                    <div className={style.alignright}>Denver, CO</div>
+                                    <div>Certificate, Flatiron School</div>
+                                    <div className={style.alignright}>08/2022 – 11/2022</div>
+                                    <div>Ruby on Rails, React, Javascript, CSS, HTML</div>
                                 </div>
                                 <br />
                                 <div>
                                     <div><strong>Smart Contract Development & Web 3.0</strong></div>
-                                    <div>Certificate, Encode Club</div><div>Denver, CO</div>
-                                    <div>Solidity, TypeScript, Angular, NestJS, HardHat, Mocha, Chai, Ethers</div><div>10/2022 – 11/2022</div>
+                                    <div className={style.alignright}>Denver, CO</div>
+                                    <div>Certificate, Encode Club</div>
+                                    <div className={style.alignright}>10/2022 – 11/2022</div>
+                                    <div>Solidity, TypeScript, Angular, NestJS, HardHat, Mocha, Chai, Ethers</div>
                                 </div>
                                 <br />
                                 <div>
                                     <div><strong>Audio Engineering & Music Production</strong></div>
-                                    <div>1300 hrs towards B.A. - w/ Ithaca College Professors/Staff</div><div>Denver, CO</div>
-                                    <div>Curriculum Developer - Music Production, Composition, Sound Design and Engineering</div><div>08/2017 – 08/2021</div>
+                                    <div className={style.alignright}>Denver, CO</div>
+                                    <div>1300 hrs towards B.A. - w/ Ithaca College Professors/Staff</div>
+                                    <div className={style.alignright}>08/2017 – 08/2021</div>
+                                    <div>Music Production, Composition, Sound Design and Engineering</div>
                                 </div>
                                 <br />
 
