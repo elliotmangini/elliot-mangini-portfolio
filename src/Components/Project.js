@@ -17,12 +17,15 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
         setSelectedProject(p.title);
     }
 
+    let timeoutId;
     function goToCaseStudy() {
-        setIsLeaving(true);
-        setTimeout(() => {
-            setIsInternalRoute(true);
-            setGo(p.route)
-        }, 6000);
+        if (selectedProject === p.title) {
+            setIsLeaving(true);
+            timeoutId = setTimeout(() => {
+                setIsInternalRoute(true);
+                setGo(p.route)
+            }, 6000);
+        }
     }
 
 
@@ -32,6 +35,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
         setIsLeaving(false);
         setIsClicked(false);
         setSelectedProject("");
+        clearTimeout(timeoutId);
     }
 
     const languages = p.languages.map((l) =>{
@@ -47,13 +51,14 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
 
     useEffect(() => {
         function handleKeyDown(event) {
-          if (event.key === 'ArrowLeft') {
+          if (event.key === 'ArrowLeft' && selectedProject) {
             switchProject(-1);
-          } else if (event.key === 'ArrowRight') {
+          } else if (event.key === 'ArrowRight' && selectedProject) {
             switchProject(1);
           } else if (event.key === 'Enter') {
-            console.log('Enter pressed');
-          } else if (event.key === 'Escape') {
+                goToCaseStudy();
+          } else if (event.key === 'Escape' && !isLeaving) {
+            // Would be better if escape key interupted the routing sequence, but this is good for now.
             deselect();
           }
         }
