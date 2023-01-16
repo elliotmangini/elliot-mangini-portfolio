@@ -1,6 +1,6 @@
 import style from '../StyleSheets/Elliot.module.css';
 import { Navigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { v4 as uuid } from "uuid";
 import ink from '../Assets/Pink_ink_water.mp4';
 import arrow from '../Assets/arrow-gif.gif';
@@ -28,8 +28,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
 
     // "back" button function
     function deselect () {
-        // setGo(false);
-        console.log("click");
+        setHasEverSelected(false);
         setIsLeaving(false);
         setIsClicked(false);
         setSelectedProject("");
@@ -46,6 +45,25 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
         setSelectedProject(projectsData[(((p.index + increment) + projectsData.length) % projectsData.length)].title);
     }
 
+    useEffect(() => {
+        function handleKeyDown(event) {
+          if (event.key === 'ArrowLeft') {
+            switchProject(-1);
+          } else if (event.key === 'ArrowRight') {
+            switchProject(1);
+          } else if (event.key === 'Enter') {
+            console.log('Enter pressed');
+          } else if (event.key === 'Escape') {
+            deselect();
+          }
+        }
+        document.addEventListener('keydown', handleKeyDown);
+    
+        return () => {
+          document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
     return (
         <>
             { go === p.route ?
@@ -53,7 +71,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
             : null}
 
             {/* List of Projects */}
-            {/* {!hasEverSelected ? */}
+            {!hasEverSelected ?
             <div>
                 <div className={style.big_titles_container}>
                     {/* LOAD ALL SAME */}
@@ -65,7 +83,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                     <h1 className={`${style.project_title_basic} ` + ((p.title !== selectedProject) ? `${style.project_title} ${style.swing_away}` : `${style.project_title} ${style.delay4} ${style.final_swing}` )}><span>{p.chapter}</span> {p.title}</h1> : null }
                 </div>
             </div>
-            {/* : null } */}
+            : null }
 
 
             {/* Project Details */}
@@ -118,10 +136,10 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
             {/* forward and backward arrows */}
                 <div className={`${style.cycle_buttons_container}`}>
                     <div className={`${style.cycle_button_animation_container} ${style.fade_out_2}`}>
-                        <div onClick={() => switchProject(-1)} className={`${style.cycle_button} ${style.cycle_previous}`}>
+                        <div className={`${style.cycle_button} ${style.cycle_previous}`}>
                             <img className={style.cycle_icon} src={arrowIcon}></img>
                         </div>
-                        <div onClick={() => switchProject(1)} className={`${style.cycle_button} ${style.cycle_next}`}>
+                        <div className={`${style.cycle_button} ${style.cycle_next}`}>
                             <img className={style.cycle_icon} src={arrowIcon}></img>
                         </div>
                     </div>
@@ -141,7 +159,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                                     <div className={style.video_container}>
                                         <video src={ink} loop autoPlay muted className={style.ink}></video>
                                     </div>
-                                    <h1 onClick={() => goToCaseStudy()} className={`${style.project_title_basic} ${style.selected_project}`}>{p.title}</h1>
+                                    <h1 className={`${style.project_title_basic} ${style.selected_project}`}>{p.title}</h1>
 
                                     <div className={`${style.arrows_container} ${style.long_delay_fade}`}>
                                         <img className={style.arrow_one} src={arrow}></img>

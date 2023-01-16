@@ -28,7 +28,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
     "Humorist · Explorer · Humble Human",
     "Enthusiastic · Flexible · Focused",
     "Student · Teacher · Seeker",
-  ]
+    ]
 
     const projects = projectsData.map((p) => {
         return (
