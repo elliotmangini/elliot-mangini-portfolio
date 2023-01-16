@@ -53,7 +53,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
             : null}
 
             {/* List of Projects */}
-            {!hasEverSelected ?
+            {/* {!hasEverSelected ? */}
             <div>
                 <div className={style.big_titles_container}>
                     {/* LOAD ALL SAME */}
@@ -65,7 +65,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                     <h1 className={`${style.project_title_basic} ` + ((p.title !== selectedProject) ? `${style.project_title} ${style.swing_away}` : `${style.project_title} ${style.delay4} ${style.final_swing}` )}><span>{p.chapter}</span> {p.title}</h1> : null }
                 </div>
             </div>
-            : null }
+            {/* : null } */}
 
 
             {/* Project Details */}
@@ -127,7 +127,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                     </div>
                 </div>
 
-                <div  lassName={`${style.project_text_container} ${style.fade_out_3}`}>
+                <div  className={`${style.project_text_container} ${style.fade_out_3}`}>
                     <div className={`${style.project_details}`}>
                         <h1 className={`${style.tagline}`}>{p.tagline} . . .&nbsp;&nbsp;</h1>
                         <div id={`${style.thin_tagline_stabilized}`}></div>
