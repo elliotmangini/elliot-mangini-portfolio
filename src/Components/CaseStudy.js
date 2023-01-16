@@ -35,7 +35,9 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
         if (videoRef.current) {
             videoRef.current.src = activeProject.video;
             return () => {
-                videoRef.current.src = ''
+                if (videoRef.current) {
+                    videoRef.current.src = ''
+                }
             }
         }
     }, [activeProject]);

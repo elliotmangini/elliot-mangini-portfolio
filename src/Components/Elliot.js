@@ -77,9 +77,9 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
     }
 
     function openPopUp (popUpClicked) {
-        console.log("setting pop up open to the one you just clicked");
+        // console.log("setting pop up open to the one you just clicked");
         setPopUpOpen(popUpClicked);
-        console.log("it is now: " + popUpClicked);
+        // console.log("it is now: " + popUpClicked);
         setSelectedProject(null);
         setHasEverSelected(true);
     }
@@ -117,7 +117,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
             }
             setCurrentString(newString);
         } else {
-            console.log("")
+            // console.log("")
             SetIsDelayNeeded(true);
         }
     }
@@ -125,7 +125,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
         if ((currentString !== targetString) && (currentString !== "Looking forward to meeting you ^_^")) {
             setTimeout(() => {
                 matrixString(.06);
-                console.log("action")
+                // console.log("action")
             }, 55)
         } else {
             setStringStable(true);
@@ -143,11 +143,11 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
     }, [stringStable, popUpOpen])
 
     const [ isDelayNeeded , SetIsDelayNeeded ] = useState(true);
-    console.log(isDelayNeeded);
+    // console.log(isDelayNeeded);
 
     function nextPhrase () {
-        console.log("inside nextPhrase popUpOpen is . . .")
-        console.log(popUpOpen)
+        // console.log("inside nextPhrase popUpOpen is . . .")
+        // console.log(popUpOpen)
         if (stringStable && popUpOpen) {
             let newString = phrases[0];
             for (let i = 0; i < phrases.length; i++) {
@@ -155,7 +155,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
                     newString = phrases[(i + 1) % phrases.length]
                 }
             }
-            console.log("setting target to: " + newString);
+            // console.log("setting target to: " + newString);
             setTargetString(newString);
             setStringStable(false);
         }

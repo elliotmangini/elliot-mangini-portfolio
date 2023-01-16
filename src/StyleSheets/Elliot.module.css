@@ -35,6 +35,9 @@ body {
   justify-content: center;
   align-content: center;
   /* position: absolute; */
+
+  /* POSITION RELATIVE HERE IS NEEDED TO MAKE THE OVERFLOW HIDDEN WORK */
+  position: relative;
   overflow: hidden;
 
 }
