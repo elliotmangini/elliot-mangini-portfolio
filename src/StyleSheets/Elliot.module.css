@@ -35,6 +35,7 @@ body {
   justify-content: center;
   align-content: center;
   /* position: absolute; */
+  overflow: hidden;
 
 }
 
@@ -48,7 +49,7 @@ h1 span {
 #cover {
   display: flex;
   position: absolute;
-  max-width: 100%;
+  width: 100%;
   max-height: 100%;
   background-color: var(--bkg);
   animation: fadeout 1.5s;
@@ -59,8 +60,10 @@ h1 span {
 }
 
 #video_container {
-  margin: -1rem;
+  /* margin: -1rem;  */
   position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 #myVideo {
@@ -74,7 +77,7 @@ h1 span {
 
 .darken {
   position: fixed;
-  width: 500rem;
+  width: 100%;
   height: 500rem;
   background-color: black;
   opacity: .7;
@@ -333,7 +336,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   display: flex;
   justify-content: center;
   left: 0%;
-  width: 100%;
+  width: 101%;
   height: 40vh;
   /* animation: slide-in 3.5s ease-in-out forwards; */
   color: rgb(255, 255, 255);
@@ -449,7 +452,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   height: 100%;
   width: 100%;
   max-width: calc(600px + 50vw);
-  margin: auto;
+  /* margin: auto; */
   /* border: 3px solid red; */
 }
 
