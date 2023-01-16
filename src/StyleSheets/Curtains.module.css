@@ -61,9 +61,11 @@
 @keyframes left-enter {
     0% {
         transform: translateX(calc(-700px + 14vw ));
+        filter: brightness(.5);
     }
     100% {
         transform: translateX(calc(-300px + 14vw ));
+        filter: brightness(1);
     }
 }
 
@@ -75,9 +77,11 @@
 @keyframes right-enter {
     0% {
         transform: scaleX(-1) translateX(calc(-700px + 14vw ));
+        filter: brightness(.5);
     }
     100% {
         transform: scaleX(-1) translateX(calc(-300px + 14vw ));
+        filter: brightness(1);
     }
 }
 
