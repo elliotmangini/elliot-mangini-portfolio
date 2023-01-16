@@ -21,7 +21,7 @@ PROBLEMS
 
 WISHES
 -incorporate more of the gifs I made
--overall site is too bright
+-overall site is too dark
 -add the "please contact me" popup thing
 -the cycle button project-switching deserve a different animation
 -the cube can be reused on the quick details page but in its glitch state only and top right, blurring in and out as well, smaller

@@ -1,4 +1,4 @@
-
+// import colors from '../StyleSheets/Elliot.module.css'
 import style from '../StyleSheets/CaseStudy.module.css';
 import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
@@ -6,6 +6,8 @@ import { useState, useRef, useEffect } from 'react';
 import SocialLinks from './SocialLinks';
 import Curtains from './Curtains';
 import StageBack from './StageBack';
+import Resume from './Resume';
+import EmailPopup from './EmailPopup';
 
 
 export default function CaseStudy ({isInternalRoute , project, projectsData}) {
@@ -14,6 +16,19 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
     const [ nextRoute ,setNextRoute ] = useState(projectsData[(((project.index + 1) + projectsData.length) % projectsData.length)]);
     const [ activeProject , setActiveProject ] = useState(project);
     const [ isFinished, setIsFinished] = useState(false);
+    const [ popUpOpen , setPopUpOpen ] = useState("");
+
+    function closePopUps() {
+        setPopUpOpen("");
+    }
+
+    function handlePopUps(target) {
+        if (popUpOpen) {
+            setPopUpOpen("");
+        } else {
+            setPopUpOpen(target);
+        }
+    }
 
     // Play after curtain animation.
     setTimeout(() => {
@@ -62,7 +77,7 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
             : null }
 
             </div>
-            <SocialLinks effect={"longest sneakin"} />
+            <SocialLinks handlePopups={handlePopUps} effect={"longest sneakin"} />
             <Curtains effect={isIntroing ? "swoosh" : "stable"} />
             <div className={style.theatre_controls}>
                 <div className={`${style.theatre_button} ${style.exit_theatre}`}><Link className={style.exit_link} to="/">Exit Theatre</Link></div>
@@ -71,8 +86,19 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
             <div className={style.fancy_title}><span>All About</span><br />{project.title}</div>
 
             {isFinished ?
-            <div className={style.theatrePopUp}>Get in contact with me or-- <br />check out another short film!</div>
+            <div className={style.theatrePopUp}>
+                Get in contact with me or-- <br />check out another short film!
+            </div>
             : null }
+
+            {/* popups! */}
+            { popUpOpen === "resume" ?
+            <Resume />
+            : null}
+
+            { popUpOpen === "email" ?
+            <EmailPopup closePopUps={closePopUps} />
+            : null}
         </>
     )
 }

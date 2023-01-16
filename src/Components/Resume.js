@@ -4,19 +4,6 @@ import style from '../StyleSheets/Resume.module.css'
 
 export default function Resume () {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     return (
         <>
             {/* <div className={style.mission_header}>I am . . . </div> */}
