@@ -7,8 +7,8 @@ PROBLEMS
 -glitch where elements flash in between project selection and theatre
 <!-- -the play button needs to not linger and has bugs -->
 <!-- -matrix text has bugs -->
--fix resume formatting
--the main button to go to the case study needs to work EVERY time
+<!-- -fix resume formatting -->
+<!-- -the main button to go to the case study needs to work EVERY time -->
 -i believe it is the cube's movement that is causing scroll problems on mobile
 -the NEXT FILM button needs to work
 -cycle buttons take too long to come in

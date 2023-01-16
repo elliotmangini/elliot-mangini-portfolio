@@ -912,6 +912,7 @@ p {
   display: flex;
   justify-content: center;
   margin-top: -5%;
+  pointer-events: none;
 }
 
 .arrow_one {
