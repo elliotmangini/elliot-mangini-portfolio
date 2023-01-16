@@ -45,11 +45,14 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
     })
 
     function switchProject (increment) {
-        setHasEverSelected(true);
-        setSelectedProject(projectsData[(((p.index + increment) + projectsData.length) % projectsData.length)].title);
+        if (selectedProject === p.title) {
+            setHasEverSelected(true);
+            setSelectedProject(projectsData[(((p.index + increment) + projectsData.length) % projectsData.length)].title);
+        }
     }
 
     useEffect(() => {
+        // console.log(selectedProject);
         function handleKeyDown(event) {
           if (event.key === 'ArrowLeft' && selectedProject) {
             switchProject(-1);

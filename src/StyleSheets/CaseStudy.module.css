@@ -161,4 +161,13 @@
   top: 50%;
   text-align: center;
   color: white;
+  font-size: 3rem;
+}
+
+.theatrePopUp span {
+  text-decoration: underline;
+}
+
+.theatrePopUp span:hover {
+  color: grey;
 }

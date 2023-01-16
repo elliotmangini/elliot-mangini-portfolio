@@ -218,11 +218,11 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
 
                 {/* popups! */}
                 { popUpOpen === "resume" ?
-                <Resume />
+                <Resume closePopUps={() => handlePopups("resume")} />
                 : null}
 
                 { popUpOpen === "email" ?
-                <EmailPopup closePopUps={closePopUps} />
+                <EmailPopup closePopUps={() => handlePopups("email")} />
                 : null}
                 
             </div>

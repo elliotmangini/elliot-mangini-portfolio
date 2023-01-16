@@ -1,8 +1,23 @@
 import style from '../StyleSheets/Resume.module.css'
+import { useEffect } from 'react';
 
 
 
-export default function Resume () {
+export default function Resume ({closePopUps}) {
+
+    useEffect(() => {
+        function handleKeyDown(event) {
+          if (event.key === 'Escape') {
+            closePopUps();
+          }
+        }
+        document.addEventListener('keydown', handleKeyDown);
+    
+        return () => {
+          document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
 
     return (
         <>

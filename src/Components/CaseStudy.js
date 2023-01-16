@@ -23,7 +23,7 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
     }
 
     function handlePopUps(target) {
-        if (popUpOpen) {
+        if (popUpOpen === target) {
             setPopUpOpen("");
         } else {
             setPopUpOpen(target);
@@ -87,17 +87,17 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
 
             {isFinished ?
             <div className={style.theatrePopUp}>
-                Get in contact with me or-- <br />check out another short film!
+                Get in <span onClick={() => handlePopUps("email")}>contact</span> with me or-- <br />check out <Link onClick={() => findNextVideo()} className={style.exit_link} to={`/${nextRoute.route}`}>Next Film</Link>!
             </div>
             : null }
 
             {/* popups! */}
             { popUpOpen === "resume" ?
-            <Resume />
+            <Resume closePopUps={() => closePopUps()} />
             : null}
 
             { popUpOpen === "email" ?
-            <EmailPopup closePopUps={closePopUps} />
+            <EmailPopup closePopUps={() => closePopUps()} />
             : null}
         </>
     )
