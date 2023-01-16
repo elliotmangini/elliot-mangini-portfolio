@@ -10,10 +10,10 @@ PROBLEMS
 <!-- -fix resume formatting -->
 <!-- -the main button to go to the case study needs to work EVERY time -->
 <!-- -i believe it is the cube's movement that is causing scroll problems on mobile -->
--the NEXT FILM button needs to work
--cycle buttons take too long to come in
--on refresh the page looks bad/glitchy, we need a cover fadeout, maybe i reincorporate the enter splashscreen
--when a film finishes, it should ask the user if they want to get in contact with me, or watch another film
+<!-- -the NEXT FILM button needs to work -->
+<!-- -cycle buttons take too long to come in -->
+<!-- -on refresh the page looks bad/glitchy, we need a cover fadeout, maybe i reincorporate the enter splashscreen -->
+<!-- -when a film finishes, it should ask the user if they want to get in contact with me, or watch another film -->
 -prevent the sending of a message if all fields are not valid
 -lighting inconsistency in transition to theatre
 -when you click resume from project focus the list comes back

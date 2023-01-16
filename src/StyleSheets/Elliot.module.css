@@ -352,10 +352,6 @@ input[type="checkbox"]:not(:checked) ~ div {
   text-shadow: 0 0 20px cyan;
 }
 
-.selected_project:hover {
-  /* transform: scale(.95); */
-}
-
 @keyframes special-fade {
   0% {
     color: black;

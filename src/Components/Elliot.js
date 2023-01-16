@@ -19,7 +19,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
     const [ isLeaving, setIsLeaving ] = useState(false);
     const [ popUpOpen , setPopUpOpen ] = useState("");
     const [ hasEverSelected , setHasEverSelected ] = useState(false);
-    const [ readyForMatrix , setReadyForMatrix ] = useState(false);
+    // const [ readyForMatrix , setReadyForMatrix ] = useState(false);
 
 
     const phrases = [
@@ -71,7 +71,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
         setIsLeaving(false);
         setIsClicked(false);
         setSelectedProject("");
-        setReadyForMatrix(false);
+        // setReadyForMatrix(false);
         setTargetString("Software Engineer ::");
         SetIsDelayNeeded(true);
     }
@@ -201,9 +201,6 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
 
                     {/* site title */}
                     <h1 className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title} ${isLeaving ? style.main_title_away : null }`}>Elliot Mangini<span>{currentString}</span></h1>
-
-                    {/* slot machine */}
-                    {/* <SlotMachine phrases={phrases} /> */}
 
                     {/* projects list */}
                     <div className={`${style.add_drift_up} ${style.position_projects}`}>

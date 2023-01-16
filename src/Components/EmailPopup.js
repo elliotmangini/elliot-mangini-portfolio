@@ -8,6 +8,9 @@ export default function EmailPopup ({closePopUps}) {
   
     function sendEmail (e) {
       e.preventDefault();
+
+      // console.log(form.current);
+
       emailjs.sendForm('service_n3vp7iv', 'template_cw2hcgb', form.current, 'KXCMfBQM4NBgQ2tuj')
         .then((result) => {
             alert("Thanks for getting in touch! I'll get back to you straight away.");

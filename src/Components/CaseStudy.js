@@ -13,6 +13,7 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
     const [ isPlaying, setIsPlaying] = useState(Boolean(isInternalRoute));
     const [ nextRoute ,setNextRoute ] = useState(projectsData[(((project.index + 1) + projectsData.length) % projectsData.length)]);
     const [ activeProject , setActiveProject ] = useState(project);
+    const [ isFinished, setIsFinished] = useState(false);
 
     // Play after curtain animation.
     setTimeout(() => {
@@ -50,7 +51,7 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
 
             { !isIntroing ? 
             <>
-                <video id={style.caseVideo} autoPlay ref={videoRef}>
+                <video id={style.caseVideo} autoPlay ref={videoRef} onEnded={() => setIsFinished(true)}>
                     <source src={project.video} type="video/mp4" />
                 </video>
                 {/* play button! */}
@@ -68,6 +69,10 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
                 <div className={`${style.theatre_button} ${style.next_film}`}><Link onClick={() => findNextVideo()} className={style.exit_link} to={`/${nextRoute.route}`}>Next Film</Link></div>
             </div>
             <div className={style.fancy_title}><span>All About</span><br />{project.title}</div>
+
+            {isFinished ?
+            <div className={style.theatrePopUp}>Get in contact with me or-- <br />check out another short film!</div>
+            : null }
         </>
     )
 }
