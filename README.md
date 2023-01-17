@@ -4,7 +4,9 @@ Portfolio to do
 PROBLEMS
 -Make 3 more videos
 
--glitch where elements flash in between project selection and theatre
+<!-- ??????? -->
+<!-- -glitch where elements flash in between project selection and theatre -->
+
 <!-- -the play button needs to not linger and has bugs -->
 <!-- -matrix text has bugs -->
 <!-- -fix resume formatting -->

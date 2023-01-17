@@ -94,8 +94,11 @@
 }
 
 .exit_link {
-  color: white;
-  
+  color: white; 
+}
+
+.exit_link:hover {
+  color: grey;
 }
 
 .exit_theatre {

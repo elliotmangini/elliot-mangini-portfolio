@@ -64,7 +64,8 @@
 #invalidSend {
     width: 85px;
     margin-top: 20px;
-    color: red;
+    text-decoration: line-through;
+    color: black;
 }
 
 #send_button:hover {

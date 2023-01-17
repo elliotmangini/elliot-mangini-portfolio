@@ -58,6 +58,11 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
         }
     }, [activeProject]);
 
+    function videoEnded () {
+        setIsFinished(true);
+        // setIsPlaying(false);
+    }
+
     return (
         <>
             <StageBack />
@@ -66,7 +71,7 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
 
             { !isIntroing ? 
             <>
-                <video id={style.caseVideo} autoPlay ref={videoRef} onEnded={() => setIsFinished(true)}>
+                <video id={style.caseVideo} autoPlay ref={videoRef} onEnded={() => videoEnded()}>
                     <source src={project.video} type="video/mp4" />
                 </video>
                 {/* play button! */}
@@ -85,9 +90,9 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
             </div>
             <div className={style.fancy_title}><span>All About</span><br />{project.title}</div>
 
-            {isFinished ?
+            {isFinished && !isPlaying ?
             <div className={style.theatrePopUp}>
-                Get in <span onClick={() => handlePopUps("email")}>contact</span> with me or-- <br />check out <Link onClick={() => findNextVideo()} className={style.exit_link} to={`/${nextRoute.route}`}>Next Film</Link>!
+                Get in <span onClick={() => handlePopUps("email")}>Contact</span> with me or-- <br />check out <Link onClick={() => findNextVideo()} className={style.exit_link} to={`/${nextRoute.route}`}>Next Film</Link>!
             </div>
             : null }
 
