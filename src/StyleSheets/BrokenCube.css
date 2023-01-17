@@ -1,0 +1,146 @@
+.brokencube {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 12%;
+    transform-style: preserve-3d;
+    transition: all 2s ease-in-out;
+  }
+
+  .brokenslide_up {
+    /* animation: brokenslide-up 2s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: .6s; */
+    right: 25vw;
+  }
+
+  .brokenslide_down {
+    /* animation: brokenslide-down 1s ease-in-out;
+    animation-fill-mode: forwards; */
+    right: -100%;
+  }
+
+  .smokecontainer {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    right: 22vw;
+    top: 12%;
+  }
+
+  .smoke_in {
+    transition: opacity 3.5s ease-in-out;
+    opacity: 100%;
+    transition-delay: 2.2s;
+  }
+
+  .smoke_out {
+    transition: opacity .4s ease-in-out;
+    transition-delay: 0s;
+    opacity: 0%;
+
+  }
+
+  @keyframes brokenslide-up {
+    0% { 
+      right: -100%;
+    }
+    100% {
+      right: 25vw;
+    }
+  }
+
+  @keyframes brokenslide-down {
+    0% { 
+      right: 25vw;
+    }
+    100% {
+      right: -100%;
+    }
+  }
+  
+  .brokenface {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border: none;
+    backface-visibility: hidden;
+  }
+  
+  .brokenface img {
+    width: 100%;
+    height: 100%;
+    /* outline: 6px solid black; */
+  }
+  
+  .brokenfront {
+    transform: translateZ(80px);
+  }
+  
+  .brokenback {
+    transform: rotateY(180deg) translateZ(80px);
+  }
+  
+  .brokenleft {
+    transform: rotateY(-90deg) translateZ(80px);
+  }
+  
+  .brokenright {
+    transform: rotateY(90deg) translateZ(80px);
+  }
+  
+  .brokentop {
+    transform: rotateX(90deg) translateZ(80px);
+  }
+  
+  .brokenbottom {
+    transform: rotateX(-90deg) translateZ(80px);
+  }
+
+.smoke {
+  position: absolute;
+  width: 6vmin;
+  height: 6vmin;
+  border-radius: 50%;
+  background-color: white;
+  animation: smoke-animation 1s linear infinite;
+  right: 50%;
+  bottom: 83%;
+  filter: blur(3px);
+}
+
+.thicksmoke {
+  position: absolute;
+  width: 8vmin;
+  height: 8vmin;
+  border-radius: 50%;
+  background-color: white;
+  animation: smoke-animation 5.13s linear infinite;
+  right: 60%;
+  bottom: 83%;
+  filter: blur(3px);
+}
+
+@keyframes smoke-animation {
+  0% {
+    bottom: 83%;
+      opacity: .0;
+  }
+  20% {
+      opacity: .05;
+  }
+
+  40% {
+    bottom: 120%;
+      opacity: .1;
+  }
+  100% {
+    bottom: 150%;
+      opacity: 0;
+  }
+}
+
+/* .brokencube .smoke {
+  left: 75px;
+  bottom: -10px;
+} */

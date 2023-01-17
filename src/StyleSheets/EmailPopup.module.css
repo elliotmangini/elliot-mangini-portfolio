@@ -1,9 +1,10 @@
 .email_popup_container {
     position: absolute;
     top: 32%;
-    height: 60%;
-    width: 90%;
-    max-width: 1600px;
+    height: 20%;
+    left: 5%;
+    width: 90vw;
+    /* max-width: 1600px; */
     display: flex;
     justify-content: center;
     /* border: 2px solid red; */
@@ -22,7 +23,6 @@
     font-size: 16px;
     padding: 5px;
     font-family: monospace;
-    spellcheck: false;
 }
 
 .form_container {

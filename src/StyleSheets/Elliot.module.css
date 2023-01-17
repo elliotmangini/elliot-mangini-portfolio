@@ -116,12 +116,12 @@ h1 span {
 .social_icons_container {
   opacity: .7;
   position: absolute;
-  bottom: calc(1.5vw + 3.5vh);
+  bottom: calc(1vw + 2.5vh);
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
 
-  height: 3vh;
+  height: 5vh;
   width: 32vmax;
   min-width: 250px;
   /* border: 2px solid red; */
@@ -132,12 +132,14 @@ h1 span {
 .social_icon_container {
   width: 8vmin;
   max-width: 4rem;
+  /* border: 2px solid red; */
 }
 
 .local_icon_container {
   width: 8.6vmin;
   max-width: 4rem;
   transform: scale(.7);
+  /* border: 2px solid red; */
 }
 
 .social_icon {

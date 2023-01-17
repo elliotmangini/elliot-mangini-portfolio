@@ -5,6 +5,7 @@ import Project from './Project';
 import Resume from './Resume';
 import SocialLinks from './SocialLinks';
 import Cube from './Cube';
+import BrokenCube from './BrokenCube';
 import EmailPopup from './EmailPopup';
 import { v4 as uuid } from "uuid";
 import SlotMachine from './SlotMachine';
@@ -124,7 +125,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
     useEffect(() => {
         if ((currentString !== targetString) && (currentString !== "Looking forward to meeting you ^_^")) {
             setTimeout(() => {
-                matrixString(.06);
+                matrixString(.09);
                 // console.log("action")
             }, 55)
         } else {
@@ -189,6 +190,12 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
                     <StageBack animation={"coming"} />
                 </> : null }
 
+
+                {/* { selectedProject && */}
+                <>
+                    <BrokenCube isLeaving={isLeaving} selectedProject={selectedProject} hasEverSelected={hasEverSelected}/>
+                </>
+                {/* } */}
 
                 {/* rotating cube of gifs */}
                 <div className={`${style.fade_overlay} ${popUpOpen ? style.focus_cube : null}`}>
