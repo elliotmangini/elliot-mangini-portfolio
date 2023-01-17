@@ -133,6 +133,7 @@ h1 span {
   width: 8vmin;
   max-width: 4rem;
   /* border: 2px solid red; */
+  /* box-sizing: border-box; */
 }
 
 .local_icon_container {
@@ -140,6 +141,7 @@ h1 span {
   max-width: 4rem;
   transform: scale(.7);
   /* border: 2px solid red; */
+  /* margin: 5px; */
 }
 
 .social_icon {
