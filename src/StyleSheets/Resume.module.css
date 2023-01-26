@@ -130,3 +130,21 @@
 .nudgeBottom {
     margin-bottom: 5px;
 }
+
+.download_container {
+    position: absolute;
+    /* border: 2px solid red; */
+    margin-top: 1rem;
+    filter: invert(54%) sepia(96%) saturate(804%) hue-rotate(295deg) brightness(99%) contrast(105%);
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#download_icon {
+    width: 3rem;
+}
+
+#download_icon:hover {
+    opacity: .6;
+}

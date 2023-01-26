@@ -1,6 +1,9 @@
 import style from '../StyleSheets/Resume.module.css'
 import { useEffect } from 'react';
 
+import DownloadIcon from '../Assets/download_icon.png';
+import ResumePDF from "../Assets/Elliot_Mangini_Resume.pdf";
+
 
 
 export default function Resume ({closePopUps}) {
@@ -18,6 +21,13 @@ export default function Resume ({closePopUps}) {
         };
     }, []);
 
+    const onDownload = () => {
+        const link = document.createElement("a");
+        link.download = 'Elliot_Mangini_Resume.pdf';
+        link.href = ResumePDF;
+        link.click();
+    };
+
 
     return (
         <>
@@ -25,6 +35,9 @@ export default function Resume ({closePopUps}) {
             <div className={style.fade_container}>
                 <div className={`${style.resume_container} ${style.dev_box}`}>
                     <div className={style.scroll_paper}>
+                        <div className={style.download_container}>
+                            <img id={style.download_icon} src={DownloadIcon} onClick={onDownload}/>
+                        </div>
 
                         <div className={style.text_margin}>
                             {/* <div className={`${style.header_box} ${style.dev_box}`}>

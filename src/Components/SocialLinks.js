@@ -58,7 +58,7 @@ export default function SocialLinks ({effect, isLeaving , handlePopups}) {
             <a className={style.local_icon_container}
              onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}
             >
-                <img tooltip="Contact Form" onClick={() => handlePopups("email")} src={Airplane} className={style.social_icon} />
+                <img tooltip="Contact" onClick={() => handlePopups("email")} src={Airplane} className={style.social_icon} />
             </a>
         </div>
     )
