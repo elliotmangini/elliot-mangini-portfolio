@@ -143,8 +143,15 @@
 
 #download_icon {
     width: 3rem;
+    animation: slow-strobe 2s steps(1, end) infinite;
+}
+
+@keyframes slow-strobe {
+    0% { opacity: 40% }
+    50% { opacity: 80%}
 }
 
 #download_icon:hover {
+    animation: none;
     opacity: .6;
 }
