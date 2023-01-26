@@ -69,15 +69,6 @@ h1 span {
   height: 100%;
 }
 
-#myVideo {
-  position: sticky;
-  right: 0;
-  bottom: 0;
-  width: 116%;
-  height: 116%;
-  z-index: -100;
-}
-
 .darken {
   position: fixed;
   width: 100%;

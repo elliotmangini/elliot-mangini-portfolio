@@ -5,8 +5,11 @@ import { useState } from "react";
 import Elliot from "./Components/Elliot";
 import CaseStudy from "./Components/CaseStudy";
 
-import planetariyumVideo from './Assets/LargeFiles/planetariyumVideo.mp4';
-import otherVideo from './Assets/enterbkg.mp4';
+import PlanetariyumVideo from './Assets/LargeFiles/PlanetariyumStudy.mp4';
+import FoleyVideo from './Assets/LargeFiles/FoleyStudy.mp4';
+import TraydPostVideo from './Assets/LargeFiles/TraydPostStudy.mp4';
+import UpQuestVideo from './Assets/LargeFiles/UpQuestStudy.mp4';
+
 
 
 
@@ -22,7 +25,7 @@ export default function App() {
         tagline: "Collaborative Engine",
         body: "Planetariyum is a social platform for creators featuring a digital asset marketplace wrapped in a mini-game.",
         route: "planetariyum",
-        video: planetariyumVideo,
+        video: PlanetariyumVideo,
     },
     {
         index: 1,
@@ -33,7 +36,7 @@ export default function App() {
         tagline: "NFT Gallery & Trading dApp",
         body: "Created as a capstone project for Encode Club's Solidity Bootcamp, TraydPost is an ERC721 minting and managing dApp which is optimized for digital asset marketplaces and games. It was built to be ported into Planetariyum.",
         route: "traydpost",
-        video: otherVideo,
+        video: TraydPostVideo,
     },
     {
         index: 2,
@@ -44,7 +47,7 @@ export default function App() {
         tagline: "Track Your Fun",
         body: "UpQuest is a social app for creating city-wide treasure hunts as collections of places to visit and visualizing them as interactive maps.",
         route: "upquest",
-        video: otherVideo,
+        video: UpQuestVideo,
     },
     {
         index: 3,
@@ -55,7 +58,7 @@ export default function App() {
         tagline: "Real-Time API Powered Audio Engine",
         body: "Using voice recognition and the Freesound API to dynamically generate soundscapes alongside a speaker. Ideal for DnD campaigns, children's storytelling, and musicians.",
         route: "foley",
-        video: otherVideo,
+        video: FoleyVideo,
     },
 ]
 
