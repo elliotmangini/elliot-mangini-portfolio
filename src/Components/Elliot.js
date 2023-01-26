@@ -183,7 +183,7 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
                 <div id={style.video_container}>
                     <div id={style.cover}></div>
                     <div className={`${style.darken} ${selectedProject ? style.darkenest : null}`}></div>
-                    <video id="myVideo" loop autoPlay muted><source src={video} type="video/mp4" /></video>
+                    <video id={style.myVideo} loop autoPlay muted><source src={video} type="video/mp4" /></video>
                 </div>
 
                 { isLeaving ? <>
