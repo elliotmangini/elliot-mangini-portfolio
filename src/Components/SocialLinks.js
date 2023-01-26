@@ -5,8 +5,6 @@ import Blog from '../Assets/blog_icon_1.png';
 import ResumeIcon from '../Assets/resume_icon.png';
 import Airplane from '../Assets/airplane_icon.png';
 
-import TooltipWrapper from './TooltipWrapper';
-
 
 
 
