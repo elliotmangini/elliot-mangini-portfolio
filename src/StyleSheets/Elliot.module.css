@@ -296,8 +296,8 @@ input[type="checkbox"]:not(:checked) ~ div {
   top: 45%;
   left: 0px;
   height: 30vh;
-  width: 100%;
-  /* border: 2px solid red; */
+  width: 100vw;
+  border: 2px solid red;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -333,6 +333,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   width: 100%;
   left: 0%;
   opacity: 100%;
+  pointer-events: none;
 }
 
 .selected_project {
@@ -543,7 +544,7 @@ input[type="checkbox"]:not(:checked) ~ div {
 
 .project_text_container {
   position: absolute;
-  top: 14%;
+  top: 7%;
   /* right: 25%; */
   border: .2rem solid transparent;
   height: 100vh;
@@ -654,11 +655,14 @@ input[type="checkbox"]:not(:checked) ~ div {
 }
 
 .tagline {
-  font-size: calc(1.2rem + .5vw);
+  font-size: calc(1.2rem + .25vw);
   position: relative;
   margin-bottom: 0;
   /* right: 5%; */
   text-align: left;
+  font-style: italic;
+  margin-top: -1rem;
+  font-weight: 250;
 }
 
 #thin_tagline_line {
@@ -726,6 +730,10 @@ input[type="checkbox"]:not(:checked) ~ div {
   position: relative;
   display: inline-block;
   font-size: calc(.5rem + .2vw);
+}
+
+.language_p::before {
+  content: "\A0\A0\A0.\A0.\A0. ";
 }
 
 /* transitions */
@@ -969,4 +977,13 @@ p {
     filter: blur(0rem);
     opacity: 100%;
   }
+}
+
+.project_name {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.project_description {
+  font-size: .9rem;
 }

@@ -7,6 +7,7 @@ import gif3 from '../Assets/CubeGifs/TraydPostGif.gif';
 import gif4 from '../Assets/CubeGifs/UpQuestGif.gif';
 import gif5 from '../Assets/CubeGifs/BigSisHypeGif.gif';
 import gif6 from '../Assets/CubeGifs/BigSisHypeGif.gif';
+import broken from '../Assets/CubeGifs/brokencube2.gif';
 
 
 
@@ -43,22 +44,22 @@ export default function Cube ({selectedProject, isLeaving}) {
 
           <div className={`brokencube ${selectedProject && !isLeaving ? "brokenslide_up" : "brokenslide_down" }`} ref={cubeRef}>
                 <div className="brokenface brokenfront">
-                <img src={gif2} alt="front gif" />
+                <img src={broken} alt="front gif" />
                 </div>
                 <div className="brokenface brokenback">
-                <img src={gif2} alt="back gif" />
+                <img src={broken} alt="back gif" />
                 </div>
                 <div className="brokenface brokenleft">
-                <img src={gif2} alt="left gif" />
+                <img src={broken} alt="left gif" />
                 </div>
                 <div className="brokenface brokenright">
-                <img src={gif2} alt="right gif" />
+                <img src={broken} alt="right gif" />
                 </div>
                 <div className="brokenface brokentop">
-                <img src={gif2} alt="top gif" />
+                <img src={broken} alt="top gif" />
                 </div>
                 <div className="brokenface brokenbottom">
-                <img src={gif2} alt="bottom gif" />
+                <img src={broken} alt="bottom gif" />
                 </div>
           </div>
           <div className={`smokecontainer ${selectedProject && !isLeaving ? "smoke_in" : "smoke_out"}`}>

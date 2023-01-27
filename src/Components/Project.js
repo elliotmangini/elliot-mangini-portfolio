@@ -40,7 +40,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
 
     const languages = p.languages.map((l) =>{
         return (
-            <p key={uuid()} className={style.language_p}>&nbsp;&nbsp; . . . {l}</p>
+            <li key={uuid()} className={style.language_p}>{l}</li>
         )
     })
 
@@ -115,11 +115,18 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
 
                 <div className={style.project_text_container}>
                     <div className={`${style.project_details}`}>
-                        <h1 className={`${style.tagline} ${style.slide_in} ${style.off_left}`}>{p.tagline} . . .&nbsp;&nbsp;</h1>
+                        <h1 className={`${style.project_name} ${style.slide_in} ${style.off_left}`}>{p.title}</h1>
+                        <h2 className={`${style.tagline} ${style.slide_in} ${style.off_left}`}>{p.tagline} . . .&nbsp;&nbsp;</h2>
                         <div id={`${style.thin_tagline_line}`}></div>
-                        <p className={`${style.fade_in_2}`}>{p.body}</p>
+                        <p className={`${style.fade_in_2} ${style.project_description}`}>{p.body}</p>
                         <br />
-                        <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>{languages}&nbsp;<span>:</span>&nbsp;<br />: {p.timeframe}</h2>
+                        <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>
+                            <ul>
+                                {languages}&nbsp;<span>:</span>&nbsp;
+                            </ul>
+                            <br />
+                            : {p.timeframe}
+                        </h2>
                         <>
                         {/* Large mask Title */}
                             <div className={style.delay_fade}>
@@ -127,7 +134,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                                     <div className={style.video_container}>
                                         <video src={ink} loop autoPlay muted className={style.ink}></video>
                                     </div>
-                                    <h1 onClick={() => goToCaseStudy()} className={`${style.project_title_basic} ${style.selected_project}`}>{p.title}</h1>
+                                    <h1 onClick={() => goToCaseStudy()} className={`${style.project_title_basic} ${style.selected_project}`}>Video Walkthrough</h1>
 
                                     <div className={`${style.arrows_container} ${style.short_delay_fade}`}>
                                         <img className={style.arrow_one} src={arrow}></img>
@@ -155,9 +162,10 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
 
                 <div  className={`${style.project_text_container} ${style.fade_out_3}`}>
                     <div className={`${style.project_details}`}>
-                        <h1 className={`${style.tagline}`}>{p.tagline} . . .&nbsp;&nbsp;</h1>
+                        <h1 className={`${style.project_name} ${style.slide_in} ${style.off_left}`}>{p.title}</h1>
+                        <h2 className={`${style.tagline}`}>{p.tagline} . . .&nbsp;&nbsp;</h2>
                         <div id={`${style.thin_tagline_stabilized}`}></div>
-                        <p className={``}>{p.body}</p>
+                        <p className={`${style.fade_in_2} ${style.project_description}`}>{p.body}</p>
                         <br />
                         <h2 className={`${style.timeframe}`}>{languages}&nbsp;<span>:</span>&nbsp;<br />: {p.timeframe}</h2>
                         <>
@@ -167,7 +175,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                                     <div className={style.video_container}>
                                         <video src={ink} loop autoPlay muted className={style.ink}></video>
                                     </div>
-                                    <h1 className={`${style.project_title_basic} ${style.selected_project}`}>{p.title}</h1>
+                                    <h1 className={`${style.project_title_basic} ${style.selected_project}`}>Video Walkthrough</h1>
 
                                     <div className={`${style.arrows_container} ${style.long_delay_fade}`}>
                                         <img className={style.arrow_one} src={arrow}></img>
