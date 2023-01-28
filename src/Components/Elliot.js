@@ -22,15 +22,15 @@ export default function Elliot ({updateTooltip, projectsData , setIsInternalRout
     const [ hasEverSelected , setHasEverSelected ] = useState(false);
     const [ targetString, setTargetString] = useState("Software Engineer ::");
 
-    console.log({
-        selectedProject,
-        isClicked,
-        go,
-        isLeaving,
-        popUpOpen,
-        hasEverSelected,
-        targetString,
-    })
+    // console.log({
+    //     selectedProject,
+    //     isClicked,
+    //     go,
+    //     isLeaving,
+    //     popUpOpen,
+    //     hasEverSelected,
+    //     targetString,
+    // })
 
     const phrases = [
         "Audio Engineer Turned Software Developer",

@@ -21,24 +21,28 @@
   }
 
   .smokecontainer {
+    transition: all 2s ease-in-out;
     width: 160px;
     height: 160px;
     position: absolute;
-    right: 22vw;
+    /* right: 22vw; */
     top: 12%;
+    opacity: 0%;
   }
 
   .smoke_in {
-    transition: opacity 3.5s ease-in-out;
+    transition: opacity 3.5s ease-in-out 1.2s, right 2s ease-in-out 0s;
     opacity: 100%;
-    transition-delay: 2.2s;
+    /* transition-delay: 2.2s; */
+    right: 22vw;
   }
 
   .smoke_out {
-    transition: opacity .4s ease-in-out;
-    transition-delay: 0s;
+    transition: opacity 1s ease-in-out 0s, right 2s ease-in-out 0s;
+    /* transition-delay: 0s; */
     opacity: 0%;
-
+    /* right: -100%; */
+    right: 22vw;
   }
 
   @keyframes brokenslide-up {

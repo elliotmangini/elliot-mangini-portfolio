@@ -129,14 +129,14 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                         {/* Large mask Title */}
                             <div className={style.delay_fade}>
                                 <div className={style.stay_on_bottom}>
-                                    <div className={style.video_container}>
+                                    <div>
                                         <video src={ink} loop autoPlay muted className={style.ink}></video>
                                     </div>
                                     <h1 onClick={() => goToCaseStudy()} className={`${style.project_title_basic} ${style.selected_project}`}>Video Walkthrough</h1>
 
-                                    <div className={`${style.arrows_container} ${style.short_delay_fade}`}>
+                                    {/* <div className={`${style.arrows_container} ${style.short_delay_fade}`}>
                                         <img className={style.arrow_one} src={arrow}></img>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </>
@@ -174,14 +174,14 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                         {/* Large mask Title */}
                             <div className={``}>
                                 <div className={style.stay_on_bottom}>
-                                    <div className={style.video_container}>
+                                    <div>
                                         <video src={ink} loop autoPlay muted className={style.ink}></video>
                                     </div>
                                     <h1 className={`${style.project_title_basic} ${style.selected_project}`}>Video Walkthrough</h1>
 
-                                    <div className={`${style.arrows_container} ${style.long_delay_fade}`}>
+                                    {/* <div className={`${style.arrows_container} ${style.long_delay_fade}`}>
                                         <img className={style.arrow_one} src={arrow}></img>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </>

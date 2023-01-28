@@ -59,19 +59,18 @@ transition towards using scalable font sizes— because you cant zoom in on them
 <!-- change the devblog icon to something that looks more like a blog -->
 <!-- -for each button at the bottom do a tooltip -->
 
-Title swingaway animation gets retriggered with the matrix text efect
+<!-- Title swingaway animation gets retriggered with the matrix text efect -->
 
 <!-- remove technical projects from resume -->
 
 add a Personal Interests / Skills section to my resume “unique and approachable”
 
-Reword my resume so that the things I’ve done are more related to ME and less related to the technical projects.
-
+<!-- Reword my resume so that the things I’ve done are more related to ME and less related to the technical projects.
 how to build a database
 had to build a backend routing framework
 how to build a frontend
 basics of CSS javascript
-how asynchronous patterns work
+how asynchronous patterns work -->
 
 WISHES
 -incorporate more of the gifs I made
