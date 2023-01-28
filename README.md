@@ -49,6 +49,8 @@ fix the full screen little video glitch with the mask thing
 
 back and forward arrows look weird
 
+on really big screens the curtains stay completely closed and the title is always on screen
+
 <!-- use li before and after decoration to do styling -->
 <!-- using before and after
 AS WELL AS

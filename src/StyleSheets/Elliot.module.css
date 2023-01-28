@@ -217,6 +217,10 @@ input[type="checkbox"]:not(:checked) ~ div {
   /* z-index: 2; */
 }
 
+.make_unclickable {
+  pointer-events: none;
+}
+
 .add_drift_up {
   animation: driftup 2.2s ease-in-out forwards;
   -webkit-animation: driftup 1.5s ease-in-out forwards;
@@ -321,8 +325,10 @@ input[type="checkbox"]:not(:checked) ~ div {
   width: 100%;
   left: 0%;
   opacity: 100%;
-  pointer-events: none;
-  border: 2px solid blue;
+  /* pointer-events: none; */
+  /* border: 2px solid blue; */
+  z-index: -2;
+  margin-top: 1rem;
 }
 
 .selected_project {
@@ -337,24 +343,12 @@ input[type="checkbox"]:not(:checked) ~ div {
   color: rgb(255, 255, 255);
   background-color: black;
   mix-blend-mode: multiply;
-  margin: 0;
+  margin: 1rem 0 0 0 ;
   opacity: 100%;
   -webkit-text-stroke-width: 0.05rem;
   /* -webkit-text-stroke-color: black; */
   text-shadow: 0 0 20px cyan;
-  pointer-events: none;
-}
-
-.stay_on_bottom {
-  /* position: fixed;
-  top: 45%;
-  left: 0px;
-  height: 30vh;
-  width: 100vw;
-  border: 2px solid red;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center; */
+  /* pointer-events: none; */
 }
 
 @keyframes special-fade {
@@ -497,7 +491,7 @@ input[type="checkbox"]:not(:checked) ~ div {
 }
 
 .cycle_buttons_enter {
-  animation: delayed-slide-up 9s ease-out forwards;
+  animation: delayed-slide-up 2s ease-out forwards;
   /* animation-delay: 2s; */
 }
 
@@ -566,7 +560,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   margin: auto;
   min-width: 50vw;
   /* max-width: calc(21rem + 10vw); */
-  max-width: 30vh;
+  max-width: 35vh;
   height: 100vh;
   /* border: .2rem solid red; */
   box-sizing: border-box;
@@ -677,7 +671,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   right: 0%;
   /* margin-left: 3rem; */
   margin-top: .3rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   height: .1rem;
   width: 100%;
   background-image: linear-gradient(to right, rgb(157, 63, 110, 0), rgb(157, 63, 110, 1));
@@ -694,7 +688,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   right: 0%;
   /* margin-left: 3rem; */
   margin-top: .3rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   height: .1rem;
   width: 100%;
   background-image: linear-gradient(to right, rgb(157, 63, 110, 0), rgb(157, 63, 110, 1));
@@ -988,11 +982,13 @@ p {
 .project_name {
   font-weight: 800;
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .project_description {
   font-size: .9rem;
   max-height: 16vh;
+  padding: .5rem 0 0rem 0;
   overflow-y: scroll;
   mask-image: linear-gradient(transparent 0%, black 5%, black 70%, transparent);
 }
