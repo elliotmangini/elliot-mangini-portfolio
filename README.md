@@ -31,8 +31,8 @@ make sure the upper right indicators are on screen despite curtains
 <!-- putting the name of the project where the tagline is now -->
 <!-- do the whole broken cube thing -->
 <!-- background video doesnt stick to the main size -->
-Expand on the descriptions so they are a bit longer
-the quick-look can be wider on mobile
+<!-- Expand on the descriptions so they are a bit longer -->
+<!-- the quick-look can be wider on mobile -->
 
 Watch Walkthrough instead of where the title is now
 add video playback controls
@@ -42,29 +42,26 @@ fix the full screen little video glitch with the mask thing
 
 <!-- font-weight 800 as an example of css for bolding -->
 <!-- italicize the tagline -->
-use UL and LI for the languages being used
+<!-- use UL and LI for the languages being used -->
 
-resume formatting - italicize some of the nouns and buzzwords
-wrap that stuff in a P (font-weight 500)
+<!-- resume formatting - italicize some of the nouns and buzzwords -->
+<!-- wrap that stuff in a P (font-weight 500) -->
 
 back and forward arrows look weird
 
-use li before and after decoration to do styling
-
-using before and after
+<!-- use li before and after decoration to do styling -->
+<!-- using before and after
 AS WELL AS
-notoftype last
+notoftype last -->
 
-transition using scalable font sizes— because you cant zoom in on them.
+transition towards using scalable font sizes— because you cant zoom in on them.
 
-change the devblog icon to something that looks more like a blog XXX
--for each button at the bottom do a tooltip XXXX
+<!-- change the devblog icon to something that looks more like a blog -->
+<!-- -for each button at the bottom do a tooltip -->
 
 Title swingaway animation gets retriggered with the matrix text efect
 
-remove technical projects from resume
-
-add more—
+<!-- remove technical projects from resume -->
 
 add a Personal Interests / Skills section to my resume “unique and approachable”
 

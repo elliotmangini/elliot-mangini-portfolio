@@ -8,28 +8,39 @@ import Cube from './Cube';
 import BrokenCube from './BrokenCube';
 import EmailPopup from './EmailPopup';
 import { v4 as uuid } from "uuid";
-import SlotMachine from './SlotMachine';
+import MatrixTitle from './MatrixTitle';
 import StageBack from './StageBack';
 import Curtains from './Curtains';
 
 
-export default function Elliot ({projectsData , setIsInternalRoute}) {
+export default function Elliot ({updateTooltip, projectsData , setIsInternalRoute}) {
     const [ selectedProject , setSelectedProject ] = useState("")
     const [ isClicked , setIsClicked ] = useState(false);
     const [ go , setGo ] = useState(false);
     const [ isLeaving, setIsLeaving ] = useState(false);
     const [ popUpOpen , setPopUpOpen ] = useState("");
     const [ hasEverSelected , setHasEverSelected ] = useState(false);
-    // const [ readyForMatrix , setReadyForMatrix ] = useState(false);
+    const [ targetString, setTargetString] = useState("Software Engineer ::");
 
+    console.log({
+        selectedProject,
+        isClicked,
+        go,
+        isLeaving,
+        popUpOpen,
+        hasEverSelected,
+        targetString,
+    })
 
     const phrases = [
-    "Audio Engineer Turned Software Developer",
-    "Lifelong Creator · Problem Solver · Maker",
-    "Humorist · Explorer · Humble Human",
-    "Enthusiastic · Flexible · Focused",
-    "Student · Teacher · Seeker",
+        "Audio Engineer Turned Software Developer",
+        "Lifelong Creator · Problem Solver · Maker",
+        "Humorist · Explorer · Humble Human",
+        "Enthusiastic · Flexible · Focused",
+        "Student · Teacher · Seeker",
     ]
+
+    
 
     const projects = projectsData.map((p) => {
         return (
@@ -58,11 +69,8 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
             openPopUp(popUpClicked);
             if (popUpClicked === "email") {
                 setTargetString("Looking forward to meeting you ^_^")
-                setStringStable(false);
-            } else {
-                // setTimeout(() => {
-                    // setReadyForMatrix(true);
-                // }, 4500)
+                // FORSEEING A PROBLEM HERE ??
+                // setStringStable(false);
             }
         }
     }
@@ -74,7 +82,8 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
         setSelectedProject("");
         // setReadyForMatrix(false);
         setTargetString("Software Engineer ::");
-        SetIsDelayNeeded(true);
+        // FORSEEING A PROBLEM HERE ??
+        // setIsDelayNeeded(true);
     }
 
     function openPopUp (popUpClicked) {
@@ -84,95 +93,6 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
         setSelectedProject(null);
         setHasEverSelected(true);
     }
-
-    let [currentString, setCurrentString] = useState("Software Engineer ::");
-    let [targetString, setTargetString] = useState("Software Engineer ::");
-    let [stringStable , setStringStable] = useState(true);
-
-
-    // if EVER the target string and current string arent the same, it will start animating
-    function matrixString (difficulty) {
-        if (currentString !== targetString) {
-            let newString = "";
-            for (let i = 0; i < targetString.length; i++) {
-                if (targetString[i] !== currentString[i]) {
-                    // make the following line cleaner
-                    if (targetString[i] === " " || targetString[i] === "·" || targetString[i] === ":" || targetString[i] === "^" || targetString[i] === "_") {
-                        newString += targetString[i];
-                    }
-                    if (targetString[i] !== " ") {
-                        let newCharacter = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-                        // it breaks if the random character it chooses is the same twice in a row
-                        if (newCharacter === currentString[i]) {
-                            if (currentString[i] === "x") {
-                                newString += "o";
-                            } else {
-                                newCharacter = "x";
-                            }
-                        }
-                        newString += (Math.random() < difficulty ? targetString[i] : newCharacter);
-                    }
-                } else {
-                    newString += targetString[i];
-                }
-            }
-            setCurrentString(newString);
-        } else {
-            // console.log("")
-            SetIsDelayNeeded(true);
-        }
-    }
-    useEffect(() => {
-        if ((currentString !== targetString) && (currentString !== "Looking forward to meeting you ^_^")) {
-            setTimeout(() => {
-                matrixString(.09);
-                // console.log("action")
-            }, 55)
-        } else {
-            setStringStable(true);
-            SetIsDelayNeeded(true);
-        }
-    }, [currentString, targetString])
-
-    // Handle Phrase Target Setting
-    useEffect(() => {
-        setTimeout(() => {
-            if (stringStable && popUpOpen && isDelayNeeded) {
-                SetIsDelayNeeded(false);
-            }
-        }, 3500);
-    }, [stringStable, popUpOpen])
-
-    const [ isDelayNeeded , SetIsDelayNeeded ] = useState(true);
-    // console.log(isDelayNeeded);
-
-    function nextPhrase () {
-        // console.log("inside nextPhrase popUpOpen is . . .")
-        // console.log(popUpOpen)
-        if (stringStable && popUpOpen) {
-            let newString = phrases[0];
-            for (let i = 0; i < phrases.length; i++) {
-                if (currentString === phrases[i]) {
-                    newString = phrases[(i + 1) % phrases.length]
-                }
-            }
-            // console.log("setting target to: " + newString);
-            setTargetString(newString);
-            setStringStable(false);
-        }
-    }
-
-    useEffect(() => {
-        if (!isDelayNeeded && stringStable && popUpOpen) {
-            nextPhrase()
-        } else {
-            SetIsDelayNeeded(true);
-        }
-    }, [isDelayNeeded])
-
-    // useEffect(() => {
-    //     console.log("anytime popUpOpen changes ... : " + popUpOpen);
-    // }, [popUpOpen])
 
     return (
         <>
@@ -207,7 +127,15 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
                 <div className={style.reactive_width_container}>
 
                     {/* site title */}
-                    <h1 className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title} ${isLeaving ? style.main_title_away : null }`}>Elliot Mangini<span>{currentString}</span></h1>
+                    <MatrixTitle 
+                        targetString={targetString}
+                        setTargetString={setTargetString}
+                        popUpOpen={popUpOpen}
+                        isLeaving={isLeaving}
+                        phrases={phrases}
+                        selectedProject={selectedProject}
+                        
+                    />
 
                     {/* projects list */}
                     <div className={`${style.add_drift_up} ${style.position_projects}`}>
@@ -220,12 +148,12 @@ export default function Elliot ({projectsData , setIsInternalRoute}) {
                 </> : null }
                     
                 {/* links */}
-                <SocialLinks isLeaving={isLeaving} handlePopups={handlePopups} />
+                <SocialLinks updateTooltip={updateTooltip} isLeaving={isLeaving} handlePopups={handlePopups} />
 
 
                 {/* popups! */}
                 { popUpOpen === "resume" ?
-                <Resume closePopUps={() => handlePopups("resume")} />
+                <Resume closePopUps={() => handlePopups("resume")} updateTooltip={updateTooltip} />
                 : null}
 
                 { popUpOpen === "email" ?

@@ -588,6 +588,11 @@ input[type="checkbox"]:not(:checked) ~ div {
   -webkit-animation: slide-in 1.5s ease-in-out forwards;
 }
 
+.slide_in_quick {
+  animation: slide-in 1.25s ease-in-out forwards;
+  -webkit-animation: slide-in 1.25s ease-in-out forwards;
+}
+
 .delay_1 {
   animation-delay: .2s;
 }

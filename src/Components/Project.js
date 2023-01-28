@@ -115,17 +115,15 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
 
                 <div className={style.project_text_container}>
                     <div className={`${style.project_details}`}>
-                        <h1 className={`${style.project_name} ${style.slide_in} ${style.off_left}`}>{p.title}</h1>
+                        <h1 className={`${style.project_name} ${style.slide_in_quick} ${style.off_left}`}>{p.title}</h1>
                         <h2 className={`${style.tagline} ${style.slide_in} ${style.off_left}`}>{p.tagline} . . .&nbsp;&nbsp;</h2>
                         <div id={`${style.thin_tagline_line}`}></div>
                         <p className={`${style.fade_in_2} ${style.project_description}`}>{p.body}</p>
                         <br />
                         <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>
                             <ul>
-                                {languages}&nbsp;<span>:</span>&nbsp;
+                                {languages}&nbsp;<span>:</span>: {p.timeframe}
                             </ul>
-                            <br />
-                            : {p.timeframe}
                         </h2>
                         <>
                         {/* Large mask Title */}
@@ -162,12 +160,16 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
 
                 <div  className={`${style.project_text_container} ${style.fade_out_3}`}>
                     <div className={`${style.project_details}`}>
-                        <h1 className={`${style.project_name} ${style.slide_in} ${style.off_left}`}>{p.title}</h1>
+                        <h1 className={`${style.project_name} ${style.slide_in_quick} ${style.off_left}`}>{p.title}</h1>
                         <h2 className={`${style.tagline}`}>{p.tagline} . . .&nbsp;&nbsp;</h2>
                         <div id={`${style.thin_tagline_stabilized}`}></div>
                         <p className={`${style.fade_in_2} ${style.project_description}`}>{p.body}</p>
                         <br />
-                        <h2 className={`${style.timeframe}`}>{languages}&nbsp;<span>:</span>&nbsp;<br />: {p.timeframe}</h2>
+                        <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>
+                            <ul>
+                                {languages}&nbsp;<span>:</span>: {p.timeframe}
+                            </ul>
+                        </h2>
                         <>
                         {/* Large mask Title */}
                             <div className={``}>

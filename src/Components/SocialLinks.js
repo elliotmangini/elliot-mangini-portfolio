@@ -8,29 +8,7 @@ import Airplane from '../Assets/airplane_icon.png';
 
 
 
-export default function SocialLinks ({effect, isLeaving , handlePopups}) {
-
-    // Make our tooltip
-    function updateTooltip(mouseEvent) {
-        let tooltip = document.querySelector("#tooltip");
-        // Move tooltip to our current cursor position
-        tooltip.style.top = mouseEvent.pageY+"px"
-        tooltip.style.left = mouseEvent.pageX+"px"
-        
-        switch(mouseEvent.type) {
-            case "mouseenter":
-            // update text and show tooltip when we hover
-            console.log(mouseEvent.target);
-            console.log(mouseEvent.target.getAttribute("tooltip"));
-            tooltip.innerHTML = mouseEvent.target.getAttribute("tooltip")
-            tooltip.style.visibility = "visible"
-            break;
-        case "mouseleave":
-            // hide the tooltip when we are no longer above a tooltip element
-            tooltip.style.visibility = "hidden"
-            break;
-        }
-    }
+export default function SocialLinks ({updateTooltip, effect, isLeaving , handlePopups}) {
     
 
     return (

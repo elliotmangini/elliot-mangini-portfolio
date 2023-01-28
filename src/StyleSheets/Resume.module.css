@@ -3,10 +3,9 @@
     /* border: 2px solid red; */
 }
 
-/* .fade_container {
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    -webkit-mask-image: -webkit-gradient(linear, right bottom, right top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-} */
+h2 {
+    margin-bottom: 0;
+}
 
 .resume_container {
     position: absolute;
@@ -66,16 +65,33 @@
     margin: 2vmin 4vmin 3vmin 4vmin;
 }
 
-.resume_container span {
-    font-size: 2.9vmin;
-    /* font-weight: bold; */
-    color: var(--txt);
-    text-align: center;
-}
-
-.name {
+.mission_statement_title {
     font-size: 3.4vmin;
     font-weight: bold;
+}
+
+.mission_statement_body {
+    font-weight: 450;
+}
+
+.competency_list {
+    display: inline-block;
+}
+
+.competency_list li {
+    display: inline-block;
+    font-weight: 300;
+}
+
+.competency_list li:not(:last-child)::after {
+    content: "\A0|\A0";
+
+}
+
+.mission_statement_body span {
+    font-style: italic;
+    color: rgb(179, 97, 138);
+    font-weight: 300;
 }
 
 .center_text {
@@ -97,18 +113,6 @@
 .competencies_box {
     /* height: 6%; */
     text-align: center;
-}
-
-.projects_box {
-    /* height: 48%; */
-}
-
-.experience_box {
-    /* height: 8%; */
-}
-
-.education_box {
-    /* height: 14%; */
 }
 
 .mission_header {
