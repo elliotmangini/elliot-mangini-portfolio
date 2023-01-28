@@ -23,9 +23,13 @@ export default function Cube ({selectedProject}) {
 
   useEffect(() => {
     if (selectedProject === "") {
-      setRandomGif(videos[Math.floor(Math.random() * videos.length)]);
+      changeVideo();
     }
   }, [selectedProject])
+
+  function changeVideo () {
+    setRandomGif(videos[Math.floor(Math.random() * videos.length)]);
+  }
 
 
   const cubeRef = useRef();
@@ -50,7 +54,7 @@ export default function Cube ({selectedProject}) {
   
     return (
         <>
-          <div className={`cube ${selectedProject ? "slide_down" : "slide_up"}`} ref={cubeRef}>
+          <div onClick={() => changeVideo()} className={`cube ${selectedProject ? "slide_down" : "slide_up"}`} ref={cubeRef}>
               <div className="face front">
               <img src={randomGif} alt="front gif" />
               </div>

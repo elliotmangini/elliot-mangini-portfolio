@@ -90,6 +90,9 @@ WISHES
 -on successful message send, put an easter egg sequence
 -main cube has the whole animation vs transition problem
 
+EASY EXTRA IMPROVEMENTS:
+Crop the gifs so that they are all square
+
 STRETCH GOALS:
 
 Sound implementation:

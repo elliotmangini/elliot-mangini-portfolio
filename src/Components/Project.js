@@ -97,9 +97,6 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
             {/* Project Details */}
             { isClicked && (p.title === selectedProject) ?
             <>
-            { !isLeaving ?
-            // show the project's quick breakdown
-            <>
                 
                 {/* forward and backward arrows */}
                 <div className={`${style.cycle_buttons_container}`}>
@@ -119,7 +116,6 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                         <h2 className={`${style.tagline} ${style.slide_in} ${style.off_left}`}>{p.tagline} . . .&nbsp;&nbsp;</h2>
                         <div id={`${style.thin_tagline_line}`}></div>
                         <p className={`${style.fade_in_2} ${style.project_description}`}>{p.body}<br/><br/></p>
-                        <br />
                         <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>
                             <ul>
                                 {languages}&nbsp;<span>:</span>: {p.timeframe}
@@ -132,7 +128,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                                     <div>
                                         <video src={ink} loop autoPlay muted className={style.ink}></video>
                                     </div>
-                                    <h1 onClick={() => goToCaseStudy()} className={`${style.project_title_basic} ${style.selected_project}`}>Watch Walkthrough</h1>
+                                    <h1 onClick={() => goToCaseStudy()} className={`${style.project_title_basic} ${style.selected_project}`}>Watch<br/>Walkthrough</h1>
 
                                     {/* <div className={`${style.arrows_container} ${style.short_delay_fade}`}>
                                         <img className={style.arrow_one} src={arrow}></img>
@@ -143,55 +139,6 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                     </div>
                 </div>
             </> 
-            :
-            // isLeaving is true, details and site title fade away
-            <>
-            {/* forward and backward arrows */}
-                <div className={`${style.cycle_buttons_container}`}>
-                    <div className={`${style.cycle_button_animation_container} ${style.fade_out_2}`}>
-                        <div className={`${style.cycle_button} ${style.cycle_previous}`}>
-                            <img className={style.cycle_icon} src={arrowIcon}></img>
-                        </div>
-                        <div className={`${style.cycle_button} ${style.cycle_next}`}>
-                            <img className={style.cycle_icon} src={arrowIcon}></img>
-                        </div>
-                    </div>
-                </div>
-
-                <div  className={`${style.project_text_container} ${style.fade_out_3}`}>
-                    <div className={`${style.project_details}`}>
-                        <h1 className={`${style.project_name} ${style.slide_in_quick} ${style.off_left}`}>{p.title}</h1>
-                        <h2 className={`${style.tagline}`}>{p.tagline} . . .&nbsp;&nbsp;</h2>
-                        <div id={`${style.thin_tagline_stabilized}`}></div>
-                        <p className={`${style.fade_in_2} ${style.project_description}`}>{p.body}</p>
-                        <br />
-                        <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>
-                            <ul>
-                                {languages}&nbsp;<span>:</span>: {p.timeframe}
-                            </ul>
-                        </h2>
-                        <>
-                        {/* Large mask Title */}
-                            <div className={``}>
-                                <div className={style.stay_on_bottom}>
-                                    <div>
-                                        <video src={ink} loop autoPlay muted className={style.ink}></video>
-                                    </div>
-                                    <h1 className={`${style.project_title_basic} ${style.selected_project}`}>Video Walkthrough</h1>
-
-                                    {/* <div className={`${style.arrows_container} ${style.long_delay_fade}`}>
-                                        <img className={style.arrow_one} src={arrow}></img>
-                                    </div> */}
-                                </div>
-                            </div>
-                        </>
-                    </div>
-                </div>
-            </>
-            }
-            </>
-
-
             : null }
             
         </>
