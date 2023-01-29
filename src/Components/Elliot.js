@@ -94,6 +94,17 @@ export default function Elliot ({updateTooltip, projectsData , setIsInternalRout
         setHasEverSelected(true);
     }
 
+    // "back" button function
+    function clickDeselect () {
+        if (popUpOpen) {
+            closePopUps();
+        }
+        setHasEverSelected(false);
+        setIsLeaving(false);
+        setIsClicked(false);
+        setSelectedProject("");
+    }
+
     return (
         <>
             <div className={style.elliot}>
@@ -134,6 +145,7 @@ export default function Elliot ({updateTooltip, projectsData , setIsInternalRout
                         isLeaving={isLeaving}
                         phrases={phrases}
                         selectedProject={selectedProject}
+                        clickDeselect={clickDeselect}
                         
                     />
 

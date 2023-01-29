@@ -56,7 +56,7 @@ export default function App() {
         languages: ["Javascript", "CSS", "HTML"],
         timeframe: "Sept. 2022",
         tagline: "Real-Time API Powered Audio Engine",
-        body: "This simple web app uses voice recognition and an API maintained by Freesound to dynamically generate soundscapes alongside a speaker. Ideal for DnD campaigns, children's storytelling, and musicians. I was responsible for generating the concept and writing the code (JS, CSS, HTML) while working with and helping to teach a partner less experienced in web development who acted as our project manager.",
+        body: "This simple web app uses voice recognition and an API offered by Freesound to dynamically generate soundscapes alongside a speaker. Ideal for DnD campaigns, children's storytelling, and musicians. I was responsible for generating the concept and writing the code (JS, CSS, HTML) while working with and helping to teach a partner less experienced in web development who acted as our project manager.",
         route: "foley",
         video: FoleyVideo,
     },

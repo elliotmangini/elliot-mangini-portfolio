@@ -97,7 +97,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
             {/* Project Details */}
             { isClicked && (p.title === selectedProject) ?
             <>
-                
+                {/* Need to account for the isLeaving state with animations off screen */}
                 {/* forward and backward arrows */}
                 <div className={`${style.cycle_buttons_container}`}>
                     <div className={`${style.cycle_button_animation_container} ${!hasEverSelected ? style.cycle_buttons_enter : null }`}>
@@ -118,7 +118,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                         <p className={`${style.fade_in_2} ${style.project_description}`}>{p.body}<br/><br/></p>
                         <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>
                             <ul>
-                                {languages}&nbsp;<span>:</span>: {p.timeframe}
+                                {languages}&nbsp;::&nbsp;{p.timeframe}
                             </ul>
                         </h2>
                         <>

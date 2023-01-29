@@ -20,6 +20,10 @@ PROBLEMS
 <!-- -lighting inconsistency in transition to theatre -->
 <!-- -when you click resume from project focus the list comes back -->
 
+MAIN THINGS!!!!!!!!!!!!
+use react video player so there are controls
+
+
 VIDEO IMPROVEMENTS
 fast-forward clock
 fix glitch edit into “choose your vibe”

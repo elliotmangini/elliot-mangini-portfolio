@@ -3,7 +3,7 @@ import style from '../StyleSheets/Elliot.module.css'
 
 
 
-export default function MatrixTitle ({selectedProject, popUpOpen, isLeaving, targetString, setTargetString, phrases}) {
+export default function MatrixTitle ({clickDeselect, selectedProject, popUpOpen, isLeaving, targetString, setTargetString, phrases}) {
     const [currentString, setCurrentString] = useState("Software Engineer ::");
     const [ stringStable , setStringStable] = useState(true);
     const [ isDelayNeeded , setIsDelayNeeded ] = useState(true);
@@ -92,7 +92,7 @@ export default function MatrixTitle ({selectedProject, popUpOpen, isLeaving, tar
 
     return (
         <>
-            <h1 className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title} ${isLeaving ? style.main_title_away : null }`}>Elliot Mangini<span>{currentString}</span></h1>
+            <h1 onClick={clickDeselect} className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title} ${isLeaving ? style.main_title_away : null }`}>Elliot Mangini<span>{currentString}</span></h1>
         </>
     )
 }

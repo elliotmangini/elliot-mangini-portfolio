@@ -31,14 +31,14 @@
   }
 
   .smoke_in {
-    transition: opacity 3.5s ease-in-out 1.2s, right 2s ease-in-out 0s;
+    transition: opacity 3.5s ease-in-out 3.2s, right 2s ease-in-out 1.5s;
     opacity: 100%;
     /* transition-delay: 2.2s; */
-    right: 22vw;
+    right: 23.5vw;
   }
 
   .smoke_out {
-    transition: opacity 1s ease-in-out 0s, right 2s ease-in-out 0s;
+    transition: opacity 1.3s ease-out 0s, right 2s ease-in-out 0s;
     /* transition-delay: 0s; */
     opacity: 0%;
     /* right: -100%; */

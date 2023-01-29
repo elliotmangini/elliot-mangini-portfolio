@@ -18,23 +18,29 @@ export default function SocialLinks ({updateTooltip, effect, isLeaving , handleP
             >
                 <img tooltip="Resume"  src={ResumeIcon} className={style.social_icon} />
             </a>}
-            <a href="https://www.linkedin.com/in/elliotmangini/" className={style.social_icon_container}
-             onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}
+            <a href="https://www.linkedin.com/in/elliotmangini/" 
+                target="_blank"
+                className={style.social_icon_container}
+                onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}
              >
                 <img tooltip="LinkedIn" src={LinkedIn} className={style.social_icon} />
             </a>
-            <a href="https://github.com/elliotmangini" className={style.social_icon_container}
-             onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}
+            <a href="https://github.com/elliotmangini" 
+                target="_blank"
+                className={style.social_icon_container}
+                onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}
             >
                 <img tooltip="GitHub" src={OctoCat} className={style.social_icon} />
             </a>
-            <a href="https://dev.to/elliotmangini" className={style.social_icon_container}
-             onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}
+            <a href="https://dev.to/elliotmangini" 
+                target="_blank"
+                className={style.social_icon_container}
+                onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}
             >
                 <img tooltip="Blog" src={Blog} className={style.social_icon} />
             </a>
             <a className={style.local_icon_container}
-             onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}
+                onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}
             >
                 <img tooltip="Contact" onClick={() => handlePopups("email")} src={Airplane} className={style.social_icon} />
             </a>
