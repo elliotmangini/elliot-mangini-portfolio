@@ -8,6 +8,7 @@ import Curtains from './Curtains';
 import StageBack from './StageBack';
 import Resume from './Resume';
 import EmailPopup from './EmailPopup';
+import ReactPlayer from 'react-player';
 
 
 export default function CaseStudy ({isInternalRoute , project, projectsData}) {
@@ -71,13 +72,13 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
 
             { !isIntroing ? 
             <>
-                <video id={style.caseVideo} autoPlay ref={videoRef} onEnded={() => videoEnded()}>
-                    <source src={project.video} type="video/mp4" />
-                </video>
+                <ReactPlayer id={style.caseVideo} url={project.videoURL} playing={true} width="70%" height="80%" controls="true">
+                    {/* <source src={project.video} type="video/mp4" /> */}
+                </ReactPlayer>
                 {/* play button! */}
-                {!isPlaying ?
+                {/* {!isPlaying ?
                 <div onClick={() => handlePlay()} className={style.play_button}></div>
-                : null }
+                : null } */}
             </>
             : null }
 

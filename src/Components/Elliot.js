@@ -113,7 +113,7 @@ export default function Elliot ({updateTooltip, projectsData , setIsInternalRout
                 {/* background video */}
                 <div id={style.video_container}>
                     <div id={style.cover}></div>
-                    <div className={`${style.darken} ${selectedProject ? style.darkenest : null}`}></div>
+                    <div onClick={() => console.log("click")}  className={`${style.darken} ${selectedProject ? style.darkenest : null}`}></div>
                     <video id={style.myVideo} loop autoPlay muted><source src={video} type="video/mp4" /></video>
                 </div>
 
@@ -150,7 +150,7 @@ export default function Elliot ({updateTooltip, projectsData , setIsInternalRout
                     />
 
                     {/* projects list */}
-                    <div className={`${style.add_drift_up} ${style.position_projects}`}>
+                    <div className={`${isLeaving ? style.reverse : null} ${style.add_drift_up} ${style.position_projects}`}>
                         {projects}
                     </div>
                 </div>

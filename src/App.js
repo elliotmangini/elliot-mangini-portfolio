@@ -26,6 +26,7 @@ export default function App() {
         body: "Planetariyum is a social platform for creators featuring a digital asset marketplace wrapped in a mini-game. The project was developed independently with a React front end and a Ruby on Rails back end. The database and routing systems were designed and built to support interconnected social and asset collection (game) features. The UI was made directly in CSS and the visual aesthetic is one of the strongest aspects of the project, along with the product design and broad concept which creates solutions for many of the problems with existing platforms.",
         route: "planetariyum",
         video: PlanetariyumVideo,
+        videoURL: "https://youtu.be/l6DdQkyzhv4",
     },
     {
         index: 1,
@@ -37,6 +38,7 @@ export default function App() {
         body: "TraydPost is an ERC721 minting and managing dApp optimized for digital asset marketplaces and games. It was built to be ported into Planetariyum. Traydpost, like most dApps, relies heavily on management of asynchronous behavior. The CSS was designed from scratch. My role required me to make decisions about the overall direction and concept as well as generating the front end from start to finish and overseeing smart contract development.",
         route: "traydpost",
         video: TraydPostVideo,
+        videoURL: "https://youtu.be/OwzSiaeidlg",
     },
     {
         index: 2,
@@ -48,6 +50,7 @@ export default function App() {
         body: "UpQuest is a social app for creating city-wide treasure hunts as collections of places to visit and visualizing them as interactive maps. During development I managed our team and developed wireframes, designed and built the back end, and built the front end excluding the CSS.",
         route: "upquest",
         video: UpQuestVideo,
+        videoURL: "https://youtu.be/Yw2ty4nJ6Yc",
     },
     {
         index: 3,
@@ -59,6 +62,7 @@ export default function App() {
         body: "This simple web app uses voice recognition and an API offered by Freesound to dynamically generate soundscapes alongside a speaker. Ideal for DnD campaigns, children's storytelling, and musicians. I was responsible for generating the concept and writing the code (JS, CSS, HTML) while working with and helping to teach a partner less experienced in web development who acted as our project manager.",
         route: "foley",
         video: FoleyVideo,
+        videoURL: "https://youtu.be/VJtrTmkG9ic",
     },
 ]
 

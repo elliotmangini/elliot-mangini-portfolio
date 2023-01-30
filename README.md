@@ -21,7 +21,7 @@ PROBLEMS
 <!-- -when you click resume from project focus the list comes back -->
 
 MAIN THINGS!!!!!!!!!!!!
-use react video player so there are controls
+<!-- use react video player so there are controls -->
 
 
 VIDEO IMPROVEMENTS
@@ -38,11 +38,12 @@ make sure the upper right indicators are on screen despite curtains
 <!-- Expand on the descriptions so they are a bit longer -->
 <!-- the quick-look can be wider on mobile -->
 
-Watch Walkthrough instead of where the title is now
-add video playback controls
+<!-- Watch Walkthrough instead of where the title is now -->
+<!-- add video playback controls -->
 the playability doesnt really work on mobile because of the full screening
-hitbox on the go to video button is fucked.
+<!-- hitbox on the go to video button is fucked. -->
 fix the full screen little video glitch with the mask thing
+bottom buttons hitboxes are wonky
 
 <!-- font-weight 800 as an example of css for bolding -->
 <!-- italicize the tagline -->

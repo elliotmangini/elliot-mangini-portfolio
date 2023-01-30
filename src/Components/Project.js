@@ -113,7 +113,10 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                 <div className={style.project_text_container}>
                     <div className={`${style.project_details}`}>
                         <h1 className={`${style.project_name} ${style.slide_in_quick} ${style.off_left}`}>{p.title}</h1>
-                        <h2 className={`${style.tagline} ${style.slide_in} ${style.off_left}`}>{p.tagline} . . .&nbsp;&nbsp;</h2>
+                        <div className={style.tagline_group}>
+                            <h2 className={`${style.tagline} ${style.slide_in} ${style.off_left}`}>{p.tagline} . . .&nbsp;&nbsp;</h2>
+                            <div className={`${style.slide_in} ${style.esc_key}`} onClick={() => deselect()}>esc</div>
+                        </div>
                         <div id={`${style.thin_tagline_line}`}></div>
                         <p className={`${style.fade_in_2} ${style.project_description}`}>{p.body}<br/><br/></p>
                         <h2 className={`${style.timeframe} ${style.slide_in} ${style.off_right}`}>

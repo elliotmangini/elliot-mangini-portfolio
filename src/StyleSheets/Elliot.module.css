@@ -145,6 +145,7 @@ h1 span {
 .social_icon {
   filter: invert(54%) sepia(96%) saturate(804%) hue-rotate(295deg) brightness(99%) contrast(105%);
   width: 100%;
+  cursor: pointer;
 }
 
 .social_icon:hover {
@@ -665,8 +666,9 @@ input[type="checkbox"]:not(:checked) ~ div {
   /* right: 5%; */
   text-align: left;
   font-style: italic;
-  margin-top: -1rem;
+  /* margin-top: -1rem; */
   font-weight: 250;
+  margin-top: 0;
 }
 
 #thin_tagline_line {
@@ -995,4 +997,31 @@ p {
   padding: .5rem 0 0rem 0;
   overflow-y: scroll;
   mask-image: linear-gradient(transparent 0%, black 5%, black 70%, transparent);
+}
+
+.reverse {
+  /* animation-direction: reverse; */
+}
+
+.esc_key {
+  margin-left: auto;
+  border: 1.5px solid hotpink;
+  border-radius: 15%;
+  padding: 2px;
+  font-size: 16px;
+  text-align: center;
+  transform: translateX(40vw);
+  -webkit-transform: translateX(40vw);
+  animation-delay: .3s;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+
+.esc_key:hover {
+  color: rgb(160, 65, 112);
+  border-color: rgb(160, 65, 112);
+}
+
+.tagline_group {
+  display: flex;
 }

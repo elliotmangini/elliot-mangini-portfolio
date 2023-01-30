@@ -24,7 +24,7 @@
     margin-top: calc(63vh - (15vw)) */
     margin-top: 1400px;
   }
-/* 
+
   @keyframes slide-up {
     0% { 
       margin-top: 1300px;
@@ -41,7 +41,7 @@
     100% {
       margin-top: 1400px;
     }
-  } */
+  }
   
   .face {
     position: absolute;
