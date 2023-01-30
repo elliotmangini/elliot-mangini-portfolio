@@ -1025,3 +1025,7 @@ p {
 .tagline_group {
   display: flex;
 }
+
+.disappear {
+  opacity: 0;
+}

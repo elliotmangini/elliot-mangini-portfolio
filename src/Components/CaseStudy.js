@@ -83,7 +83,6 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
             : null }
 
             </div>
-            <SocialLinks handlePopups={handlePopUps} effect={"longest sneakin"} />
             <Curtains effect={isIntroing ? "swoosh" : "stable"} />
             <div className={style.theatre_controls}>
                 <div className={`${style.theatre_button} ${style.exit_theatre}`}><Link className={style.exit_link} to="/">Exit Theatre</Link></div>
@@ -96,6 +95,8 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
                 Get in <span onClick={() => handlePopUps("email")}>Contact</span> with me or-- <br />check out <Link onClick={() => findNextVideo()} className={style.exit_link} to={`/${nextRoute.route}`}>Next Film</Link>!
             </div>
             : null }
+            
+            <SocialLinks handlePopups={handlePopUps} effect={"longest sneakin"} />
 
             {/* popups! */}
             { popUpOpen === "resume" ?

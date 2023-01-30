@@ -52,7 +52,7 @@ bottom buttons hitboxes are wonky
 <!-- resume formatting - italicize some of the nouns and buzzwords -->
 <!-- wrap that stuff in a P (font-weight 500) -->
 
-back and forward arrows look weird
+<!-- back and forward arrows look weird -->
 
 on really big screens the curtains stay completely closed and the title is always on screen
 
