@@ -21,17 +21,20 @@ PROBLEMS
 <!-- -when you click resume from project focus the list comes back -->
 
 MAIN THINGS!!!!!!!!!!!!
+make it so that the words "watch walkthrough" must themself be clicked.
+
+
 <!-- use react video player so there are controls -->
-the playability doesnt really work on mobile because of the full screening (check this now that its react-player)
-fix the full screen little video glitch with the mask thing (check this now that its react-player)
+<!-- the playability doesnt really work on mobile because of the full screening (check this now that its react-player) -->
+<!-- fix the full screen little video glitch with the mask thing (check this now that its react-player) -->
 
 <!-- on really big screens the curtains stay completely closed and the title is always on screen -->
 <!-- transition towards using scalable font sizes on resume because you cant zoom in on them. -->
 <!-- escape button should be less subtle and maybe top left -->
 
-mask is fullscreening on mobile
-background video doesnt play on mobile
-full screen doesnt really work on mobile, like the url and controls are always there.
+<!-- mask is fullscreening on mobile -->
+<!-- background video doesnt play on mobile -->
+<!-- full screen doesnt really work on mobile, like the url and controls are always there. -->
 
 get the domain name forwarding/hosting working
 
