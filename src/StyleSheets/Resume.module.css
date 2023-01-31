@@ -3,8 +3,29 @@
     /* border: 2px solid red; */
 }
 
+h1 {
+    /* font-size: 30px; */
+}
+
 h2 {
     margin-bottom: 0;
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+
+li {
+    font-size: 14px;
+}
+
+.experience_box div {
+    font-size: 16px;
+}
+
+.education_box div {
+    font-size: 16px;
 }
 
 .resume_container {
@@ -66,7 +87,7 @@ h2 {
 }
 
 .mission_statement_title {
-    font-size: 3.4vmin;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -117,7 +138,7 @@ h2 {
 
 .mission_header {
     color: hotpink;
-    font-size: 4rem;
+    font-size: 30px;
     position: absolute;
     top: 18%;
     font-style: oblique;
