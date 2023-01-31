@@ -532,8 +532,10 @@ input[type="checkbox"]:not(:checked) ~ div {
   pointer-events: auto;
 }
 
-.cycle_button:hover {
-  background-color: var(--dimtxt);
+@media (hover: hover) {
+  .cycle_button:hover {
+    background-color: var(--dimtxt);
+  }
 }
 
 .cycle_icon {
