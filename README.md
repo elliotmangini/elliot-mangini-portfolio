@@ -29,6 +29,10 @@ fix the full screen little video glitch with the mask thing (check this now that
 <!-- transition towards using scalable font sizes on resume because you cant zoom in on them. -->
 <!-- escape button should be less subtle and maybe top left -->
 
+mask is fullscreening on mobile
+background video doesnt play on mobile
+full screen doesnt really work on mobile, like the url and controls are always there.
+
 get the domain name forwarding/hosting working
 
 fix links on my resume pdf version

@@ -130,7 +130,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                                 <div className={style.delay_fade}>
                                     <div className={style.stay_on_bottom}>
                                         <div>
-                                            <video src={ink} loop autoPlay muted className={style.ink}></video>
+                                            <video src={ink} loop autoPlay playsinline muted className={style.ink}></video>
                                         </div>
                                         <h1 onClick={() => goToCaseStudy()} className={`${style.project_title_basic} ${style.selected_project}`}>Watch<br/>Walkthrough</h1>
 
