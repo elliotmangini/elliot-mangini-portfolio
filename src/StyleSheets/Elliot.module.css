@@ -148,10 +148,13 @@ h1 span {
   cursor: pointer;
 }
 
-.social_icon:hover {
-  /* cursor: pointer; */
-  opacity: .85;
-  transform: scale(.95);
+@media (hover: hover) {
+
+  .social_icon:hover {
+    /* cursor: pointer; */
+    opacity: .85;
+    transform: scale(.95);
+  }
 }
 
 .fill_square {
@@ -537,7 +540,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   position: absolute;
   margin-right: -4vmin;
   box-sizing: border-box;
-  height: 3.5rem;
+  height: 5vh;
   filter: hue-rotate(90deg);
 }
 
@@ -1005,7 +1008,7 @@ p {
 
 .project_description {
   font-size: .9rem;
-  max-height: 18vh;
+  max-height: 22vh;
   padding: .5rem 0 0rem 0;
   overflow-y: scroll;
   mask-image: linear-gradient(transparent 0%, black 5%, black 70%, transparent);
