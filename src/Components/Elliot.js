@@ -114,7 +114,7 @@ export default function Elliot ({updateTooltip, projectsData , setIsInternalRout
                 <div id={style.video_container}>
                     <div id={style.cover}></div>
                     <div onClick={() => console.log("click")}  className={`${style.darken} ${selectedProject ? style.darkenest : null}`}></div>
-                    <video id={style.myVideo} loop autoPlay playsinline muted><source src={video} type="video/mp4" /></video>
+                    <video id={style.myVideo} loop autoPlay playsInline controls={false} muted><source src={video} type="video/mp4" /></video>
                 </div>
 
                 { isLeaving ? <>

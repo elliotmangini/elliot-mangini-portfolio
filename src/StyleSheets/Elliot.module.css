@@ -334,7 +334,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   /* pointer-events: none; */
   /* border: 2px solid blue; */
   z-index: -2;
-  margin-top: 1rem;
+  margin-top: 0rem;
 }
 
 .selected_project {
@@ -349,12 +349,12 @@ input[type="checkbox"]:not(:checked) ~ div {
   color: rgb(255, 255, 255);
   background-color: black;
   mix-blend-mode: multiply;
-  margin: 1rem 0 0 0 ;
+  margin: 0 0 0 0 ;
   opacity: 100%;
   -webkit-text-stroke-width: 0.05rem;
   /* -webkit-text-stroke-color: black; */
   text-shadow: 0 0 20px cyan;
-  font-size: calc(1.5rem + 2vw);
+  font-size: calc(1rem + 2vw);
   padding: 1vw;
   box-sizing: border-box;
   /* pointer-events: none; */
@@ -569,8 +569,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   left: 0%;
   margin: auto;
   min-width: 50vw;
-  /* max-width: calc(21rem + 10vw); */
-  max-width: 35vh;
+  max-width: 45vh;
   height: 100vh;
   /* border: .2rem solid red; */
   box-sizing: border-box;
