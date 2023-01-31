@@ -1,12 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import '../StyleSheets/BrokenCube.css';
 
-import gif1 from '../Assets/CubeGifs/planetariyumGif.gif';
-import gif2 from '../Assets/CubeGifs/174Gif.gif';
-import gif3 from '../Assets/CubeGifs/TraydPostGif.gif';
-import gif4 from '../Assets/CubeGifs/UpQuestGif.gif';
-import gif5 from '../Assets/CubeGifs/BigSisHypeGif.gif';
-import gif6 from '../Assets/CubeGifs/BigSisHypeGif.gif';
 import broken from '../Assets/CubeGifs/brokencube2.gif';
 
 

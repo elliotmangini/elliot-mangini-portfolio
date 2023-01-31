@@ -5,7 +5,6 @@ import gif1 from '../Assets/CubeGifs/planetariyumGif.gif';
 import gif2 from '../Assets/CubeGifs/174Gif.gif';
 import gif3 from '../Assets/CubeGifs/TraydPostGif.gif';
 import gif4 from '../Assets/CubeGifs/UpQuestGif.gif';
-import gif5 from '../Assets/CubeGifs/BigSisHypeGif.gif';
 
 
 
@@ -16,7 +15,6 @@ export default function Cube ({selectedProject}) {
     gif2,
     gif3,
     gif4,
-    gif5,
   ]
 
   const [ randomGif , setRandomGif ] = useState(videos[Math.floor(Math.random() * videos.length)]);
