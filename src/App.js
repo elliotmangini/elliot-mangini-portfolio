@@ -37,7 +37,7 @@ export default function App() {
         index: 2,
         chapter: "02 ::",
         title: "UpQuest!",
-        languages: ["CSS", "Ruby", "React", "Sinatra", "SQL"],
+        languages: ["CSS", "React", "Sinatra"],
         timeframe: "Oct. 2022",
         tagline: "Track Your Fun",
         body: "UpQuest is a social app for creating city-wide treasure hunts as collections of places to visit and visualizing them as interactive maps. During development I managed our team and developed wireframes, designed and built the back end, and built the front end excluding the CSS.",
