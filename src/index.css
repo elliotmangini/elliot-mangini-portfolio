@@ -29,3 +29,10 @@ code {
   border-radius: 1em;
   transform: translateX(-50%) translateY(-120%);
 }
+
+/* no tooltips on mobile */
+@media (pointer: coarse) {
+  #tooltip {
+    visibility: hidden;
+  }
+}

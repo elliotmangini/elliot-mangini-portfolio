@@ -30,7 +30,7 @@ li {
 
 .resume_container {
     position: absolute;
-    top: calc(10% + 8vmax);
+    top: calc(16% + 4vmax);
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, 0%);

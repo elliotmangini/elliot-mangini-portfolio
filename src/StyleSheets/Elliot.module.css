@@ -562,9 +562,17 @@ input[type="checkbox"]:not(:checked) ~ div {
   box-sizing: border-box;
 }
 
+@media (max-width: 900px) {
+  .project_text_container {
+    top: 0%;
+  }
+}
+
+
+
 .project_details {
   /* position: absolute; */
-  margin: auto;
+  /* margin: auto; */
   color: hotpink;
   left: 0%;
   margin: auto;
