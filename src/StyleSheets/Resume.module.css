@@ -162,13 +162,15 @@ li {
     margin-top: 1rem;
     filter: invert(54%) sepia(96%) saturate(804%) hue-rotate(295deg) brightness(99%) contrast(105%);
     width: 90%;
+    max-width: 900px;
     display: flex;
     justify-content: flex-end;
 }
 
 #download_icon {
-    width: 3rem;
+    width: calc(1rem + 2vw);
     animation: slow-strobe 2s steps(1, end) infinite;
+    margin-right: 1.4rem;
 }
 
 @keyframes slow-strobe {
