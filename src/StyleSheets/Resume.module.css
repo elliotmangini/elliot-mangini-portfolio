@@ -20,6 +20,14 @@ li {
     font-size: 12px;
 }
 
+ul {
+    padding-left: 0;
+}
+
+ul:not(.competency_list) {
+padding-left: 4%;
+}
+
 .experience_box div {
     font-size: 14px;
 }

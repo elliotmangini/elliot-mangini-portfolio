@@ -291,12 +291,12 @@ input[type="checkbox"]:not(:checked) ~ div {
 
 /* THIS IS THE MATRIX TEXT STUFF */
 .absolute_title span {
-  margin-top: 1vmin;
+  margin-top: .5vmin;
   margin-left: 5px;
   color: var(--dimtxt);
   display: block;
   font-family: monospace;
-  font-size: calc(5px + 1.8vmax);
+  font-size: calc(5px + 1.4vmax);
 }
 
 .name_plate {
