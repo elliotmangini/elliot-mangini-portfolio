@@ -104,7 +104,7 @@ export default function Resume ({closePopUps, updateTooltip}) {
                                 <h2 className={style.center_text}>Education</h2>
 
                                 <div>
-                                    <div><strong>Full Stack Software Engineering</strong></div>
+                                    <div style={{marginTop: "6px"}}><strong>Full Stack Software Engineering</strong></div>
                                     <div className={style.alignright}>Denver, CO</div>
                                     <div>Certificate, Flatiron School</div>
                                     <div className={style.alignright}>08/2022 – 11/2022</div>
