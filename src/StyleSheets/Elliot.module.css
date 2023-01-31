@@ -288,7 +288,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   color: var(--dimtxt);
   display: block;
   font-family: monospace;
-  font-size: calc(1.8vmax);
+  font-size: calc(5px + 1.8vmax);
 }
 
 .name_plate {
@@ -357,7 +357,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   -webkit-text-stroke-width: 0.05rem;
   /* -webkit-text-stroke-color: black; */
   text-shadow: 0 0 20px cyan;
-  font-size: calc(1rem + 2vw);
+  font-size: calc(1.2rem + 2.5vw);
   padding: 1vw;
   box-sizing: border-box;
   /* pointer-events: none; */
