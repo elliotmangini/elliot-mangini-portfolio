@@ -11,7 +11,7 @@
     /* animation: brokenslide-up 2s ease-out;
     animation-fill-mode: forwards;
     animation-delay: .6s; */
-    right: 25vw;
+    right: 15vw;
   }
 
   .brokenslide_down {
@@ -34,7 +34,7 @@
     transition: opacity 3.5s ease-in-out 3.2s, right 2s ease-in-out 1.5s;
     opacity: 100%;
     /* transition-delay: 2.2s; */
-    right: 23.5vw;
+    right: 13vw;
   }
 
   .smoke_out {
@@ -42,7 +42,7 @@
     /* transition-delay: 0s; */
     opacity: 0%;
     /* right: -100%; */
-    right: 22vw;
+    right: 13vw;
   }
 
   @keyframes brokenslide-up {
@@ -50,13 +50,13 @@
       right: -100%;
     }
     100% {
-      right: 25vw;
+      right: 15vw;
     }
   }
 
   @keyframes brokenslide-down {
     0% { 
-      right: 25vw;
+      right: 15vw;
     }
     100% {
       right: -100%;
