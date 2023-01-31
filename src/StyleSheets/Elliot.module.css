@@ -129,15 +129,20 @@ h1 span {
 
 .social_icon_container {
   width: 8vmin;
-  max-width: 4rem;
+  max-width: 5rem;
   /* border: 2px solid red; */
   /* box-sizing: border-box; */
+  display: flex;
+  margin: 10px;
 }
 
 .local_icon_container {
   width: 8.6vmin;
-  max-width: 4rem;
+  max-width: 5rem;
   transform: scale(.7);
+  display: flex;
+  margin: 10px;
+
   /* border: 2px solid red; */
   /* margin: 5px; */
 }
@@ -146,6 +151,9 @@ h1 span {
   filter: invert(54%) sepia(96%) saturate(804%) hue-rotate(295deg) brightness(99%) contrast(105%);
   width: 100%;
   cursor: pointer;
+  max-width: calc(2vw + 24px);
+  margin: auto;
+  align-self: center;
 }
 
 @media (hover: hover) {
@@ -482,7 +490,7 @@ input[type="checkbox"]:not(:checked) ~ div {
   z-index: 1;
   width: 80%;
   left: 10%;
-  bottom: 19%;
+  bottom: 17.5%;
   margin: auto;
   height: 20%;
   transform: translateY(-10vh);
