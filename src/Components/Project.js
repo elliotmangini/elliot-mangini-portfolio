@@ -103,10 +103,10 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                     <div className={`${style.cycle_buttons_container}`}>
                         <div className={`${style.cycle_button_animation_container} ${!hasEverSelected ? style.cycle_buttons_enter : null }`}>
                             <div onClick={() => switchProject(-1)} className={`${style.cycle_button} ${style.cycle_previous}`}>
-                                <img className={style.cycle_icon} src={arrowIcon}></img>
+                                <img alt="arrow icon left" className={style.cycle_icon} src={arrowIcon}></img>
                             </div>
                             <div onClick={() => switchProject(1)} className={`${style.cycle_button} ${style.cycle_next}`}>
-                                <img className={style.cycle_icon} src={arrowIcon}></img>
+                                <img alt="arrow icon right" className={style.cycle_icon} src={arrowIcon}></img>
                             </div>
                         </div>
                     </div>

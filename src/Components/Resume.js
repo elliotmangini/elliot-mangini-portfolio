@@ -36,7 +36,7 @@ export default function Resume ({closePopUps, updateTooltip}) {
                 <div className={`${style.resume_container} ${style.dev_box}`}>
                     <div className={style.scroll_paper}>
                         <div className={style.download_container}>
-                            <img tooltip="Download"  id={style.download_icon} src={DownloadIcon} onClick={onDownload} onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}/>
+                            <img alt="Download Icon" tooltip="Download"  id={style.download_icon} src={DownloadIcon} onClick={onDownload} onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}/>
                         </div>
 
                         <div className={style.text_margin}>
