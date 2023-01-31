@@ -72,7 +72,7 @@ export default function CaseStudy ({isInternalRoute , project, projectsData}) {
 
             { !isIntroing ? 
             <>
-                <ReactPlayer id={style.caseVideo} url={project.videoURL} playing={true} width="70%" height="80%" controls="true">
+                <ReactPlayer id={style.caseVideo} url={project.videoURL} playing={true} width="70%" height="80%" controls={true}>
                     {/* <source src={project.video} type="video/mp4" /> */}
                 </ReactPlayer>
                 {/* play button! */}

@@ -136,6 +136,10 @@ export default function Elliot ({updateTooltip, projectsData , setIsInternalRout
 
                 {/* main contained stuff */}
                 <div className={style.reactive_width_container}>
+                    {/* projects list */}
+                    <div className={`${isLeaving ? style.reverse : null} ${style.add_drift_up} ${style.position_projects}`}>
+                        {projects}
+                    </div>
 
                     {/* site title */}
                     <MatrixTitle 
@@ -146,13 +150,8 @@ export default function Elliot ({updateTooltip, projectsData , setIsInternalRout
                         phrases={phrases}
                         selectedProject={selectedProject}
                         clickDeselect={clickDeselect}
-                        
                     />
 
-                    {/* projects list */}
-                    <div className={`${isLeaving ? style.reverse : null} ${style.add_drift_up} ${style.position_projects}`}>
-                        {projects}
-                    </div>
                 </div>
 
                 { isLeaving ? <>

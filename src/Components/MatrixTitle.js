@@ -92,7 +92,16 @@ export default function MatrixTitle ({clickDeselect, selectedProject, popUpOpen,
 
     return (
         <>
-            <h1 onClick={clickDeselect} className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title} ${isLeaving ? style.main_title_away : null }`}>Elliot Mangini<span>{currentString}</span></h1>
+            <h1 onClick={clickDeselect} className={`${style.project_title_basic} ${style.name_plate} ${style.absolute_title} ${isLeaving ? style.main_title_away : null }`}>
+                Elliot Mangini
+                <span>{currentString}</span>
+
+                { selectedProject ? 
+                <div className={style.esc_shaderbox}>
+                    <div className={`${style.esc_key}`} onClick={clickDeselect}>esc</div>
+                </div>
+                : null }
+            </h1>
         </>
     )
 }

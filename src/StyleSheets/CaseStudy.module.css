@@ -130,18 +130,18 @@
 }
 
 @keyframes suspended-splash {
-  0% { transform: translateY(-700px) }
-  11% { transform: translateY(-100px)}
-  30% { transform: translateY(0px) }
-  32% { transform: translateY(-12px) }
-  34% { transform: translateY(0px) }
-  36% { transform: translateY(-6px) }
-  38% { transform: translateY(0px) }
-  40% { transform: translateY(-3px) }
-  42% { transform: translateY(0px) }
-  90% { transform: translateY(0px) }
-  92% { transform: translateY(5px)}
-  100% { transform: translateY(-700px) }
+  0% { transform: translateY(-150vh) }
+  11% { transform: translateY(-50vh)}
+  30% { transform: translateY(0vh) }
+  32% { transform: translateY(-3vh) }
+  34% { transform: translateY(0vh) }
+  36% { transform: translateY(-2vh) }
+  38% { transform: translateY(0vh) }
+  40% { transform: translateY(0vh) }
+  42% { transform: translateY(0vh) }
+  90% { transform: translateY(0vh) }
+  92% { transform: translateY(2.5vh)}
+  100% { transform: translateY(-150vh) }
 }
 
 .play_button {

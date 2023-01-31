@@ -80,7 +80,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
 
             {/* List of Projects */}
             {!hasEverSelected ?
-            <div>
+            <>
                 <div className={`${style.big_titles_container} ${selectedProject ? style.make_unclickable : null}`}>
                     {/* LOAD ALL SAME */}
                     {selectedProject === "" ?
@@ -90,7 +90,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                     { isClicked && !isLeaving ?
                     <h1 className={`${style.project_title_basic} ` + ((p.title !== selectedProject) ? `${style.project_title} ${style.swing_away}` : `${style.project_title} ${style.delay4} ${style.final_swing}` )}><span>{p.chapter}</span> {p.title}</h1> : null }
                 </div>
-            </div>
+            </>
             : null }
 
 
@@ -116,7 +116,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                             <h1 className={`${style.project_name} ${style.slide_in_quick} ${style.off_left}`}>{p.title}</h1>
                             <div className={style.tagline_group}>
                                 <h2 className={`${style.tagline} ${style.slide_in} ${style.off_left}`}>{p.tagline} . . .&nbsp;&nbsp;</h2>
-                                <div className={`${style.slide_in} ${style.esc_key}`} onClick={() => deselect()}>esc</div>
+                                {/* <div className={`${style.slide_in} ${style.esc_key}`} onClick={() => deselect()}>esc</div> */}
                             </div>
                             <div id={`${style.thin_tagline_line}`}></div>
                             <p className={`${style.fade_in_2} ${style.project_description}`}>{p.body}<br/><br/></p>

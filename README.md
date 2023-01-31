@@ -24,8 +24,10 @@ MAIN THINGS!!!!!!!!!!!!
 <!-- use react video player so there are controls -->
 the playability doesnt really work on mobile because of the full screening (check this now that its react-player)
 fix the full screen little video glitch with the mask thing (check this now that its react-player)
-on really big screens the curtains stay completely closed and the title is always on screen
+
+<!-- on really big screens the curtains stay completely closed and the title is always on screen -->
 transition towards using scalable font sizes— because you cant zoom in on them.
+escape button should be less subtle and maybe top left
 
 get the domain name forwarding/hosting working
 
