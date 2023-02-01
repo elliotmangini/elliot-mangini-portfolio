@@ -134,6 +134,7 @@ h1 span {
   /* box-sizing: border-box; */
   display: flex;
   margin: 10px;
+  cursor: initial;
 }
 
 .local_icon_container {
@@ -161,7 +162,7 @@ h1 span {
   .social_icon:hover {
     /* cursor: pointer; */
     opacity: .85;
-    transform: scale(.95);
+    transform: scale(1.05);
   }
 }
 

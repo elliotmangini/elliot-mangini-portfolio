@@ -24,6 +24,7 @@ MAIN THINGS!!!!!!!!!!!!
 <!-- make it so that the words "watch walkthrough" must themself be clicked. -->
 <!-- change esc to back :(  -->
 <!-- change font weight of italics sections in resume  -->
+<!-- figure out the tooltip bug -->
 
 
 <!-- use react video player so there are controls -->

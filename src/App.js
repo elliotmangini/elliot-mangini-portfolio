@@ -66,22 +66,20 @@ export default function App() {
 
   // Make our tooltip
   function updateTooltip(mouseEvent) {
-    if (!isTouchDevice) {
+    if (!isTouchDevice && mouseEvent.currentTarget) {
       let tooltip = document.querySelector("#tooltip");
       // Move tooltip to our current cursor position
       tooltip.style.top = mouseEvent.pageY+"px"
       tooltip.style.left = mouseEvent.pageX+"px"
+      tooltip.innerHTML = mouseEvent.target.getAttribute("tooltip")
+
+      console.log(mouseEvent);
       
       switch(mouseEvent.type) {
-          case "mouseenter":
-          // update text and show tooltip when we hover
-          // console.log(mouseEvent.target);
-          // console.log(mouseEvent.target.getAttribute("tooltip"));
-          tooltip.innerHTML = mouseEvent.target.getAttribute("tooltip")
+        case "mouseenter":
           tooltip.style.visibility = "visible"
           break;
       case "mouseleave":
-          // hide the tooltip when we are no longer above a tooltip element
           tooltip.style.visibility = "hidden"
           break;
       }
