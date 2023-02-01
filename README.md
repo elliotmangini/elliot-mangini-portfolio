@@ -21,7 +21,9 @@ PROBLEMS
 <!-- -when you click resume from project focus the list comes back -->
 
 MAIN THINGS!!!!!!!!!!!!
-make it so that the words "watch walkthrough" must themself be clicked.
+<!-- make it so that the words "watch walkthrough" must themself be clicked. -->
+<!-- change esc to back :(  -->
+<!-- change font weight of italics sections in resume  -->
 
 
 <!-- use react video player so there are controls -->

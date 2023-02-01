@@ -132,11 +132,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                                         <div>
                                             <video src={ink} loop autoPlay playsInline muted controls={false} className={style.ink}></video>
                                         </div>
-                                        <h1 onClick={() => goToCaseStudy()} className={`${style.project_title_basic} ${style.selected_project}`}>Watch<br/>Walkthrough</h1>
-
-                                        {/* <div className={`${style.arrows_container} ${style.short_delay_fade}`}>
-                                            <img className={style.arrow_one} src={arrow}></img>
-                                        </div> */}
+                                        <h1 className={`${style.project_title_basic} ${style.selected_project}`}><a onClick={() => goToCaseStudy()} >Watch<br/>Walkthrough</a></h1>
                                     </div>
                                 </div>
                             </>

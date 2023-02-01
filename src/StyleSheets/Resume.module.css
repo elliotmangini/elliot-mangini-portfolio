@@ -3,21 +3,17 @@
     /* border: 2px solid red; */
 }
 
-h1 {
-    /* font-size: 30px; */
-}
-
 h2 {
     margin-bottom: 0;
     font-size: 20px;
 }
 
 p {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 li {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 ul {
@@ -120,7 +116,8 @@ padding-left: 4%;
 .mission_statement_body span {
     font-style: italic;
     color: rgb(179, 97, 138);
-    font-weight: 300;
+    /* font-weight: 300; */
+    font-size: 14px;
 }
 
 .center_text {
