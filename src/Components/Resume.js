@@ -80,7 +80,9 @@ export default function Resume ({closePopUps, updateTooltip}) {
                                     <div>Flatiron - Denver, CO</div>
                                 </div>
                                 <ul>
-                                    <li className={style.nudgeBottom}>• Instructed database design, front end, back end, basics of CSS, Javascript, and HTML.</li>
+                                    <li className={style.nudgeBottom}>• Instructed relational database design, front end, back end, basics of CSS, Javascript, and HTML.</li>
+                                    <li className={style.nudgeBottom}>• Covered use of cookies & sessions, database relationships used for social and commerce apps, and active storage with Rails.</li>
+                                    <li className={style.nudgeBottom}>• Demonstrated project management strategies using wireframes, organizational tools, and GitHub workflows.</li>
                                     <li className={style.nudgeBottom}>• Led groups in using frameworks, outside technologies, and managing asynchronous patterns.</li>
                                     <li className={style.nudgeBottom}>• Performed code reviews, led pair coding, and aided in debugging when groups were stuck.</li>
                                     <li className={style.nudgeBottom}>• Created blogs, resources, and generated technical writing for students.</li>

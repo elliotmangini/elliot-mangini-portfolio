@@ -1,7 +1,6 @@
 TO DO
 
-
-PROBLEMS
+<!-- PROBLEMS -->
 <!-- -Make 3 more videos -->
 
 <!-- ??????? -->
@@ -39,7 +38,7 @@ MAIN THINGS!!!!!!!!!!!!
 <!-- background video doesnt play on mobile -->
 <!-- full screen doesnt really work on mobile, like the url and controls are always there. -->
 
-get the domain name forwarding/hosting working
+domain name forwarding/hosting working
 
 fix links on my resume pdf version
 
@@ -98,20 +97,18 @@ basics of CSS javascript
 how asynchronous patterns work -->
 
 WISHES
--incorporate more of the gifs I made
--overall site is too dark
--add the "please contact me" popup thing
+<!-- -incorporate more of the gifs I made -->
+<!-- -overall site is too dark -->
+<!-- -add the "please contact me" popup thing -->
 -the cycle button project-switching deserve a different animation
--the cube can be reused on the quick details page but in its glitch state only and top right, blurring in and out as well, smaller
--escape button should go from details to main page, and there should be an esc key on the top right of those details
--enter key in between the forward and backwards buttons that does te same thing as clicking.
--escape key should also exit the resume page, but not the message page
--when the quick details are in phone mode, they could maybe be wider
--the arrow gif is a bit close, the masked title could come down a little bit, and also there seems to be a scroll problem but only on mobile
--on mobile the video can sit right at the top, and the bottom part of the screen can be used for something else.
--the Exit Theatre and Next Film buttons need to come down slightly
--on successful message send, put an easter egg sequence
--main cube has the whole animation vs transition problem
+<!-- -the cube can be reused on the quick details page but in its glitch state only and top right, blurring in and out as well, smaller -->
+<!-- -escape button should go from details to main page, and there should be an esc key on the top right of those details -->
+<!-- -enter key in between the forward and backwards buttons that does te same thing as clicking. -->
+<!-- -escape key should also exit the resume page -->
+<!-- -when the quick details are in phone mode, they could maybe be wider -->
+<!-- -the arrow gif is a bit close, the masked title could come down a little bit, and also there seems to be a scroll problem but only on mobile -->
+<!-- -the Exit Theatre and Next Film buttons need to come down slightly -->
+<!-- -main cube has the whole animation vs transition problem -->
 
 EASY EXTRA IMPROVEMENTS:
 Crop the gifs so that they are all square
@@ -129,6 +126,3 @@ Sound implementation:
 -ASMRy keyboard click sounds for the social link buttons
 -beepy  sounds for resume
 -old-school email sound for email, which swoops into digital silence, which then makes the easter egg sequence more dramatic
-
-<!-- THEN DEPLOY on AWS -->
-
