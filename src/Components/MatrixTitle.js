@@ -98,7 +98,7 @@ export default function MatrixTitle ({clickDeselect, selectedProject, popUpOpen,
 
                 { selectedProject || popUpOpen ? 
                 <div className={style.esc_shaderbox}>
-                    <div className={`${style.esc_key}`} onClick={clickDeselect}>back</div>
+                    <div tabIndex="0" className={`${style.esc_key}`} onClick={clickDeselect}>back</div>
                 </div>
                 : null }
             </h1>

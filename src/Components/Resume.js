@@ -36,7 +36,7 @@ export default function Resume ({closePopUps, updateTooltip}) {
                 <div className={`${style.resume_container} ${style.dev_box}`}>
                     <div className={style.scroll_paper}>
                         <div className={style.download_container}>
-                            <img alt="Download Icon" tooltip="Download"  id={style.download_icon} src={DownloadIcon} onClick={onDownload} onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}/>
+                            <img alt="Download Icon" tooltip="Download"  id={style.download_icon} src={DownloadIcon} tabIndex="0" onClick={onDownload} onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip}/>
                         </div>
 
                         <div className={style.text_margin}>
@@ -123,7 +123,7 @@ export default function Resume ({closePopUps, updateTooltip}) {
                                 <br />
                                 <div>
                                     <div><strong>Audio Engineering & Music Production</strong></div>
-                                    <div className={style.alignright}>Denver, CO</div>
+                                    <div className={style.alignright}>New York, NY</div>
                                     <div>1300 hrs towards B.A. - w/ Ithaca College Professors/Staff</div>
                                     <div className={style.alignright}>08/2017 – 08/2021</div>
                                     <div>Music Production, Composition, Sound Design and Engineering</div>

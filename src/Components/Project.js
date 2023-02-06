@@ -84,7 +84,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                 <div className={`${style.big_titles_container} ${selectedProject ? style.make_unclickable : null}`}>
                     {/* LOAD ALL SAME */}
                     {selectedProject === "" ?
-                    <h1 onClick={() => bringUpDetails()} className={`${style.project_title_basic} ${style.project_title}`}><span>{p.chapter}</span> {p.title}</h1> : null }
+                    <h1 onClick={() => bringUpDetails()} tabIndex="0" className={`${style.project_title_basic} ${style.project_title}`}><span>{p.chapter}</span> {p.title}</h1> : null }
 
                     {/* Project w/ matching title swings slowly, others swing quickly. */}
                     { isClicked && !isLeaving ?
@@ -102,10 +102,10 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                 <div className={isLeaving ? style.disappear : null}>
                     <div className={`${style.cycle_buttons_container}`}>
                         <div className={`${style.cycle_button_animation_container} ${!hasEverSelected ? style.cycle_buttons_enter : null }`}>
-                            <div onClick={() => switchProject(-1)} className={`${style.cycle_button} ${style.cycle_previous}`}>
+                            <div tabIndex="0" onClick={() => switchProject(-1)} className={`${style.cycle_button} ${style.cycle_previous}`}>
                                 <img alt="arrow icon left" className={style.cycle_icon} src={arrowIcon}></img>
                             </div>
-                            <div onClick={() => switchProject(1)} className={`${style.cycle_button} ${style.cycle_next}`}>
+                            <div tabIndex="0" onClick={() => switchProject(1)} className={`${style.cycle_button} ${style.cycle_next}`}>
                                 <img alt="arrow icon right" className={style.cycle_icon} src={arrowIcon}></img>
                             </div>
                         </div>
@@ -132,7 +132,7 @@ export default function ElliotProject ({ setIsInternalRoute, hasEverSelected, se
                                         <div>
                                             <video src={ink} loop autoPlay playsInline muted controls={false} className={style.ink}></video>
                                         </div>
-                                        <h1 className={`${style.project_title_basic} ${style.selected_project}`}><a onClick={() => goToCaseStudy()} >Watch<br/>Walkthrough</a></h1>
+                                        <h1 className={`${style.project_title_basic} ${style.selected_project}`}><a tabIndex="0" onClick={() => goToCaseStudy()} >Watch<br/>Walkthrough</a></h1>
                                     </div>
                                 </div>
                             </>

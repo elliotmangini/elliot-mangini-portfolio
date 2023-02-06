@@ -15,7 +15,7 @@ export default function SocialLinks ({updateTooltip, effect, isLeaving , handleP
         <div className={`${style.social_icons_container} ${isLeaving || effect === "blurred" ? style.monochrome : null} ${effect === "longest sneakin" ? style.creep : null}`}>
             {<a onClick={() => handlePopups("resume")} className={style.local_icon_container}
             >
-                <img onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip} alt="Resume Icon" tooltip="Resume"  src={ResumeIcon} className={style.social_icon} />
+                <img  tabIndex="0" onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip} alt="Resume Icon" tooltip="Resume"  src={ResumeIcon} className={style.social_icon} />
             </a>}
             <a href="https://www.linkedin.com/in/elliotmangini/" 
                 target="_blank"
@@ -37,7 +37,7 @@ export default function SocialLinks ({updateTooltip, effect, isLeaving , handleP
             </a>
             <a className={style.local_icon_container}
             >
-                <img onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip} alt="Contact Icon" tooltip="Contact" onClick={() => handlePopups("email")} src={Airplane} className={style.social_icon} />
+                <img  tabIndex="0" onMouseEnter={updateTooltip} onMouseLeave={updateTooltip} onMouseMove={updateTooltip} alt="Contact Icon" tooltip="Contact" onClick={() => handlePopups("email")} src={Airplane} className={style.social_icon} />
             </a>
         </div>
     )
