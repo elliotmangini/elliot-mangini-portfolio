@@ -566,6 +566,12 @@ input[type="checkbox"]:not(:checked) ~ div {
 
 .cycle_previous {
   transform: scaleX(-1);
+  box-sizing: border-box;
+
+}
+
+.cycle_next {
+  transform: scaleX(1);
 }
 
 

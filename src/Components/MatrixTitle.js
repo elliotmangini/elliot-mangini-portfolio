@@ -87,6 +87,12 @@ export default function MatrixTitle ({clickDeselect, selectedProject, popUpOpen,
             setIsDelayNeeded(true);
         }
     }, [isDelayNeeded])
+
+    function HandleKeyDown(event) {
+        if (event.key === "Enter") {
+          event.target.click();
+        }
+    }
     
 
 
@@ -98,7 +104,7 @@ export default function MatrixTitle ({clickDeselect, selectedProject, popUpOpen,
 
                 { selectedProject || popUpOpen ? 
                 <div className={style.esc_shaderbox}>
-                    <div tabIndex="0" className={`${style.esc_key}`} onClick={clickDeselect}>back</div>
+                    <div tabIndex="0" onKeyDown={HandleKeyDown} className={`${style.esc_key}`} onClick={clickDeselect}>back</div>
                 </div>
                 : null }
             </h1>
